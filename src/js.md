@@ -1,0 +1,376 @@
+# JavaScriptガイドライン
+
+🔰 当ドキュメントは「[コーディングガイドライン](./index.md)」の一部です。
+基本的なガイドライン・ルールについては先にそれから確認してください。
+
+## 💅 コードスタイル
+
+改行・スペースの有無や個数、ブロックのインデントルールはリンター・フォーマッターの設定に従ってください。[ESLint](http://eslint.org/)と[Prettier](https://prettier.io/)を利用します。
+
+## 🍴 トランスパイル・コンパイル環境
+
+[TypeScript](https://www.typescriptlang.org/)とJavaScriptが利用できる環境となっています。[Vite](https://ja.vitejs.dev/)を通して、最終的にひとつのJavaScriptファイルに結合されます。
+
+## 📂 ファイル構成
+
+#### 開発ファイル
+
+```
+📂 __assets/
+├── 📂 htdocs/
+│   └── 📂 js/
+│       └── script.ts
+└── 📂 _libs/
+    └── 📂 script/
+        ├── sub-script.ts
+        └── sub-script2.js
+```
+
+`__assets/htdocs/js/script.ts`がメインのファイルとなり、`__assets/_libs/script/`には`script.ts`で利用するモジュールを格納しています。
+
+`__assets/_libs`はエイリアス`@`で参照できるようになっています。
+
+```ts
+import { subScript } from '@/script/sub-script.js';
+```
+
+**module**の環境であるため、ファイルの参照に**拡張子は必須**です。TypeScriptファイルを参照する際は`.ts`拡張子を`.js`に変更する必要があります。
+
+::: tip エイリアスの変更
+エイリアスは変更可能または追加することができます。`tsconfig.json`の`paths`と、`eleventy.config.cjs`の`alias`を変更してください。
+
+```json
+{
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./__assets/_libs/*"]
+		}
+	}
+}
+```
+
+```js
+module.exports = function (eleventyConfig) {
+	eleventyConfig.addGlobalData('alias', {
+		'@': path.resolve(__dirname, '__assets', '_libs'),
+	});
+	return eleventy(eleventyConfig);
+};
+```
+
+この`alias`はViteの設定に影響します。
+
+:::
+
+#### 公開ファイル
+
+ひとつのJavaScriptファイルに結合され出力されます。
+
+```
+📂 htdocs/
+└── 📂 js/
+    └── script.js
+```
+
+## 📝 HTMLへの読み込み
+
+```html
+<script src="/js/script.ts" type="module"></script>
+```
+
+TypeScriptファイルであれば拡張子をそのまま読み込みます。これは開発中はそのまま機能し、ビルド時は書き出されたファイルに書き換えられます。
+
+```html
+<!-- ビルド後 -->
+<script src="/js/script.js" type="module"></script>
+```
+
+### 読み込み順とライブラリの依存関係
+
+`import`を使用せずに`script`要素から直接ライブラリを読み込む場合、依存関係にあるものは読み込み順番が重要になるので注意してください。
+
+```html
+<head>
+	<script src="/js/jquery.min.js" defer></script>
+	<!-- ⚠️ jQueryを利用する場合は先に読み込む -->
+
+	<script src="/js/script.ts" type="module"></script>
+</head>
+```
+
+### インラインJavaScript
+
+次の条件下では`script`要素を利用してそのままHTML内にJavaScriptを記述しても構いません。
+
+- Google Analyticsのトラッキングコードや、その他コンバージョンタグ
+- FacebookなどSNSの埋め込みコード
+- そのページにしか使わないことが保証されている再利用が難しいコード
+
+::: warning インラインで記述する場合の注意
+
+```html
+<!-- ✅ moduleで記述します -->
+<script type="module">
+	// ...
+</script>
+
+<!-- WIP: Google Analyticsなどはそのまま貼り付けてください -->
+<script>
+	ga();
+</script>
+
+<!-- ❌ IE3時代のHTMLコメントフォールバックは書きません -->
+<script>
+	<!--
+	// ↑↓このHTMLコメント
+	-->
+</script>
+```
+
+:::
+
+## ⚙ 開発ファイル
+
+### ファイル分割
+
+基本的に目的や機能ごとに分割します。また、実行タイミングをコントロールできるようにひとつの**関数**としてまとめるようにしてください。
+
+```ts
+// 関数としてexportする
+export default function () {
+	// 処理...
+}
+
+// 定数はexportしても構いません
+export const CONSTANT = '定数';
+```
+
+::: warning 処理の即時実行
+分割したモジュールの中で、`import`した時点で即座にブラウザやDOMに影響する処理が走る実装は避けてください。
+
+```js
+// ❌ exportする関数の外で処理を実行している。
+alert('💀');
+document.body.classList.add('💀');
+
+// ✅ モジュールの読み込みや変数・定数・関数の定義などはしてもよい
+import anyModule from 'anyModule';
+let flag = false;
+const CONSTANT = '定数';
+function foo() {
+	/* ... */
+}
+
+export function anyFunction() {
+	// 処理...
+	if (flag) {
+		foo();
+		anyModule(CONSTANT);
+	}
+}
+```
+
+`import`した後に**任意**に実行できる状態が望ましいです。
+
+```js
+import { anyFunction } from '@/script/any-function.js';
+
+document.querySelector('.c-component')?.addEventListener('click', () => {
+	// 任意のタイミングで実行できるようにする
+	anyFunction();
+});
+```
+
+:::
+
+## 📦 ライブラリ・モジュールの利用
+
+ライブラリやモジュールを活用してなるべく少ない工数で実装できることが望ましいですが、利用するライブラリが信用できるかどうかは十分に検証する必要があります。
+
+ライブラリを利用するということは、将来的にそのライブラリが提供する機能やセキュリティに問題が発生した場合、そのライブラリをアップデートまたは別のものに置き換えたりする必要があることを意味します。これはクライアントのウェブサイトを継続的に保守運用できるかどうかで慎重に判断する必要があります。また、**このリスクや責任範囲に関しては受注前にクライアントと十分な説明と合意を得ることが必要です。**
+
+次に上げるライブラリは利用しても構いません。ただし、**これら以外のライブラリを利用する場合は相談を必ずしてください**。
+
+- Polyfill
+  - [core-js](https://github.com/zloirock/core-js)
+  - [@oddbird/popover-polyfill](https://github.com/oddbird/popover-polyfill)
+  - [invokers-polyfill](https://github.com/keithamus/invokers-polyfill)
+- インタラクション検知
+  - [what-input](https://github.com/ten1seven/what-input)
+- DOM API ラッパー
+  - [jQuery](http://jquery.com/)
+- UIライブラリ
+  - [Splide](https://ja.splidejs.com/)
+
+### 利用方法
+
+基本的にはyarnでNPMからインストールして実装するファイルに`import`して利用します。
+
+```sh
+# NPMからインストールします。
+$ yarn add @splidejs/splide
+```
+
+::: warning インストールしたパッケージの共有
+
+追加インストールした際にpackage.jsonの`dependencies`にモジュールが追加されることを確認してください。package.jsonとyarn.lockの変更はコミットして共有する必要があります。
+
+:::
+
+```js
+// importして利用する
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
+
+new Splide('.c-carousel').mount();
+```
+
+CMSやその他の**制約がある場合は外部ファイルとして読み込んでも構いません**。その場合は**ダウンロード**してウェブサイトと同じサーバーにホストしてください。
+
+::: danger STOP
+CDNから直接参照は避けてください。
+
+```html
+<!-- ❌ CDNから参照している。 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- ✅ サイトと同じサーバに配置して参照する。 -->
+<script src="/js/jquery.min.js" defer></script>
+```
+
+CDNの配信サーバが障害を起こした際に影響を受けてしまうためです。
+:::
+
+### TypeScriptの型定義の読み込み
+
+TypeScriptでは利用する際に型定義ファイルが必要になる場合があります。`@types/`から始まるパッケージは必要に応じてインストールしても構いません。
+
+```sh
+yarn add -D @types/jquery
+```
+
+## 🎨 style属性をなるべく変更しない
+
+style属性からプロパティを直接書き換えて実装は避けてください。状態を変更する場合は、その状態を表す`data-*`属性を変更するようにしてください（「HTMLガイドライン コンポーネントとエレメントの状態管理」を参照）。状態変化によるスタイルはCSSで管理することによって、CSSにはスタイル、JavaScriptにはロジックと管理を分けることができます。
+
+```js
+// ❌ style属性で直接プロパティを書き換えている
+document.querySelector('.c-component')?.addEventListener('click', (el) => {
+	el.style.width = '300px';
+});
+
+// ✅ 状態を表す属性を変更する
+document.querySelector('.c-component')?.addEventListener('click', (el) => {
+	el.setAttribute('data-wide', 'true');
+});
+```
+
+<!-- prettier-ignore-start -->
+```css
+[data-wide="true"] {
+	width: 300px;
+}
+```
+<!-- prettier-ignore-end -->
+
+### 動的な値を反映する場合
+
+JavaScriptで動的な値を反映する場合は、カスタムプロパティを利用します。
+
+```js
+// ✅ カスタムプロパティを利用してスタイルを変更する
+document.querySelector('.c-component')?.addEventListener('click', (el) => {
+	el.style.setProperty('--height', anotherElement.clientHeight + 'px');
+});
+```
+
+## 🐎 パフォーマンスを意識した実装
+
+### 実行頻度の多い処理に気をつける
+
+ページが読み込まれた際に一度しか実行されない処理や、クリックなどのイベントは特に気にする必要は少ないですが、次に挙げるイベントはユーザーの自然な操作によってユーザーが気づかぬうちに頻繁に実行されます。処理の内容によってはパフォーマンスに影響を及ぼすので実装は十分に注意し、代替案やテクニックを使いパフォーマンスを向上させるようにしてください。
+
+- `scroll`イベント
+- `resize`イベント
+- `mousemove`イベント
+- `touchmove`イベント
+- `wheel`イベント
+- `setTimeout`
+- `setInterval`
+
+### イベントの代替となるAPIを利用する
+
+イベントではなくAPIを利用することでパフォーマンスを向上させることができます。
+
+#### Intersection Observer API
+
+[IntersectionObserver](https://developer.mozilla.org/ja/docs/Web/API/IntersectionObserver)はスクロールなどにより指定した要素がビューポート内に入った場合に、登録したリスナー関数を実行するAPIです。要素の位置を`scroll`イベントなどで監視する必要はありません。
+
+#### Resize Observer API
+
+[ResizeObserver](https://developer.mozilla.org/ja/docs/Web/API/ResizeObserver)は要素のサイズが変更されたときに登録したリスナー関数を実行するAPIです。要素の幅を`resize`イベントや`setTimeout`で監視する必要はありません。
+
+#### matchMedia API
+
+[window.matchMedia](https://developer.mozilla.org/ja/docs/Web/API/Window/matchMedia)はメディアクエリ文字列をパースして現在のメディア状態の真偽を判定したり、状態が変更されたときに登録したリスナー関数を実行するAPIです。ウィンドウの幅を`resize`イベントで監視する必要はありません。
+
+::: tip デスクトップとスマートフォンでの処理の書き分け
+
+```ts
+matchMedia(`(min-width: 768px)`).addEventListener('change', (media) => {
+	if (media.matches) {
+		// ブレークポイントの内側（スマートフォン）の処理
+	} else {
+		// ブレークポイントの外側（デスクトップ）の処理
+	}
+});
+```
+
+:::
+
+### Passive Event Listener を利用する
+
+```js
+Element.addEventListener('scroll', onScroll, { passive: true });
+```
+
+`passive`を有効にすると`preventDefault()`の呼び出しを待たずにリスナー関数を実行するため、その関数がブラウザの既定のアクション（たとえばスクロール）をブロックすることがなくなります。
+
+### 描画フレームを利用して処理を間引く
+
+同じフレーム内で2回以上の処理が走る場合があります。`requestAnimationFrame`を利用して処理を間引くことでパフォーマンスを向上させることができます。
+
+```ts
+let rafId;
+const update = function () {
+	// 実行したい処理
+};
+const onMove = function () {
+	cancelAnimationFrame(rafId);
+	rafId = requestAnimationFrame(update);
+};
+element.addEventListener('mousemove', onMove, { passive: true });
+```
+
+### 同じ処理を何度も繰り返さない
+
+戻り値が同じものが期待できる場合は変数化すること。
+
+```ts
+// ❌ `$('.c-component')` を繰り返している
+$('.c-component').on('click', function () {
+	const flag = $('.c-component').attr('data-flag');
+	if (flag !== 'true') {
+		$('.c-component').attr('data-flag', 'true');
+	}
+});
+
+// ✅ `$('.c-component')`を変数化して使いまわす
+const $component = $('.c-component');
+$component.on('click', function () {
+	const flag = $component.attr('data-flag');
+	if (flag !== 'true') {
+		$component.attr('data-flag', 'true');
+	}
+});
+```

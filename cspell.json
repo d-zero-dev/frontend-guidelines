@@ -1,0 +1,11 @@
+{
+	"import": ["@d-zero/cspell-config"],
+	"words": [
+		//
+		"huskyrc",
+		"nodist",
+		"Splide",
+		"splidejs",
+		"WCAG"
+	]
+}

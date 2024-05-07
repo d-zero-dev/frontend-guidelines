@@ -1,0 +1,36 @@
+{
+	"name": "@d-zero/frontend-guidelines",
+	"version": "5.0.0-alpha.0",
+	"description": "D-ZERO Frontend Developer's Guideline",
+	"repository": "https://github.com/d-zero-dev/frontend-env.git",
+	"author": "D-ZERO Co., Ltd.",
+	"license": "CC BY-NC-SA 4.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vitepress dev src",
+		"build": "vitepress build src",
+		"lint": "run-s lint:eslint lint:prettier lint:textlint lint:cspell",
+		"lint:cspell": "cspell --no-progress --show-suggestions \"{*,src/*}/\"",
+		"lint:eslint": "eslint --fix \"*.{js,cjs,mjs}\"",
+		"lint:prettier": "prettier --write \"{*,src/*}.{md,json,js,cjs,mjs,jsx,ts,cts,mts,tsx}\"",
+		"lint:textlint": "textlint --fix ./src/*.md; textlint ./src/*.md",
+		"up": "yarn upgrade-interactive --latest"
+	},
+	"devDependencies": {
+		"@d-zero/cspell-config": "5.0.0-alpha.23",
+		"@d-zero/eslint-config": "5.0.0-alpha.23",
+		"@d-zero/lint-staged-config": "5.0.0-alpha.23",
+		"@d-zero/prettier-config": "5.0.0-alpha.23",
+		"@d-zero/textlint-config": "5.0.0-alpha.23",
+		"@d-zero/tsconfig": "0.2.0",
+		"mermaid": "10.9.0",
+		"npm-run-all2": "6.1.2",
+		"vitepress": "1.1.4",
+		"vitepress-plugin-mermaid": "2.0.16"
+	},
+	"volta": {
+		"node": "22.1.0",
+		"yarn": "1.22.22"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"eslint.validate": ["javascript", "typescript"],
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"log": false,
+		"dotenv": false
+	}
+}

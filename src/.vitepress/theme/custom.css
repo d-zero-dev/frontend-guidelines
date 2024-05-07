@@ -1,0 +1,23 @@
+.vp-doc div[class*='language-'] + div[class*='language-'],
+.vp-doc div[class$='-api'] + div[class*='language-'],
+.vp-doc div[class*='language-'] + div[class$='-api'] > div[class*='language-'] {
+	margin-block-start: 1em;
+}
+
+@media print {
+	.VPNav {
+		position: relative !important;
+	}
+
+	.VPLocalNav {
+		display: none !important;
+	}
+
+	.vp-doc [class*='language-'] {
+		border: 1px solid gray;
+	}
+
+	.vp-doc [class*='language-'] :is(pre, code) {
+		white-space: pre-wrap;
+	}
+}

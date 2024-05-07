@@ -1,0 +1,37 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"configMigration": true,
+	"extends": [
+		"config:recommended",
+		"docker:pinDigests",
+		"helpers:pinGitHubActionDigests",
+		":pinDevDependencies",
+		":semanticCommitTypeAll(chore)"
+	],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"automerge": true
+	},
+	"autoApprove": true,
+	"labels": ["Dependencies", "Renovate"],
+	"packageRules": [
+		{
+			"matchDepTypes": ["optionalDependencies"],
+			"addLabels": ["Dependencies: Optional"]
+		},
+		{
+			"matchDepTypes": ["devDependencies"],
+			"addLabels": ["Dependencies: Development"]
+		},
+		{
+			"matchDepTypes": ["dependencies"],
+			"addLabels": ["Dependencies: Production"]
+		},
+		{
+			"description": "Automerge non-major updates",
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+			"matchCurrentVersion": "!/^0/",
+			"automerge": true
+		}
+	]
+}
