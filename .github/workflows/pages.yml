@@ -34,7 +34,7 @@ jobs:
       - name: Build Pages
         run: yarn build
       - name: Setup Pages
-        uses: actions/configure-pages@c5a3e1159e0cbdf0845eb8811bd39e39fc3099c2 # v2
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@84bb4cd4b733d5c320c9c9cfbc354937524f4d64 # v1
         with:
