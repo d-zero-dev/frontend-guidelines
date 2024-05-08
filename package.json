@@ -2,7 +2,7 @@
 	"name": "@d-zero/frontend-guidelines",
 	"version": "5.0.0-alpha.0",
 	"description": "D-ZERO Frontend Developer's Guideline",
-	"repository": "https://github.com/d-zero-dev/frontend-env.git",
+	"repository": "https://github.com/d-zero-dev/frontend-guidelines.git",
 	"author": "D-ZERO Co., Ltd.",
 	"license": "CC BY-NC-SA 4.0",
 	"private": true,
