@@ -41,6 +41,12 @@ WAI-ARIAは[WAI-ARIA 1.2](https://momdo.github.io/wai-aria-1.2/)を基本に、�
 
 _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定されているルールに則って記述します。エディタやコマンド実行時に警告が出た場合は**必ず修正してください**。
 
+各設定は以下のパッケージを利用しています。
+
+- [@d-zero/markuplint-config](https://github.com/d-zero-dev/linters/tree/main/packages/%40d-zero/markuplint-config)
+- [@d-zero/pug-lint-config](https://github.com/d-zero-dev/linters/tree/main/packages/%40d-zero/pug-lint-config)
+- [@d-zero/prettier-config](https://github.com/d-zero-dev/linters/tree/main/packages/%40d-zero/prettier-config)
+
 ::: danger リントエラーについて
 例外なく必ずリントエラーを修正してください。**リンターのルールが現状にそぐわない場合はルールの見直しを行ってください**。
 :::
