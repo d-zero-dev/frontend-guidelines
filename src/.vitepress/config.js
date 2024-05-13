@@ -17,6 +17,11 @@ export default async () => {
 					message: 'Licensed under CC BY-NC-SA 4.0',
 					copyright: 'Copyright © 2024 D-ZERO Co., Ltd.',
 				},
+				editLink: {
+					pattern:
+						'https://github.com/d-zero-dev/frontend-guidelines/edit/main/src/:path',
+					text: 'GitHubで編集する',
+				},
 			},
 		}),
 	);
