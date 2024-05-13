@@ -22,6 +22,12 @@ export default async () => {
 						'https://github.com/d-zero-dev/frontend-guidelines/edit/main/src/:path',
 					text: 'GitHubで編集する',
 				},
+				lastUpdated: {
+					text: '最終更新日',
+					formatOptions: {
+						dateStyle: 'long',
+					},
+				},
 			},
 		}),
 	);
