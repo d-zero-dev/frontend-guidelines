@@ -10,6 +10,9 @@ export default async () => {
 			description:
 				'株式会社ディーゼロの主にフロントエンド開発のために規定しているコーディンガイドラインです。',
 			themeConfig: {
+				search: {
+					provider: 'local',
+				},
 				footer: {
 					message: 'Licensed under CC BY-NC-SA 4.0',
 					copyright: 'Copyright © 2024 D-ZERO Co., Ltd.',
