@@ -1,0 +1,31 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version: 22
+      - name: Cache dependencies
+        id: cache-depends
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4
+        with:
+          path: '**/node_modules'
+          key: depends-${{ hashFiles('yarn.lock') }}
+      - name: Install dependencies
+        if: steps.cache-depends.outputs.cache-hit != 'true'
+        run: yarn --frozen-lockfile --check-files
+      - name: Lint
+        run: yarn lint
+      - name: Build
+        run: yarn build
