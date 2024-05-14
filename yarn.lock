@@ -548,10 +548,10 @@
   resolved "https://registry.yarnpkg.com/@cspell/strong-weak-map/-/strong-weak-map-8.8.1.tgz#05407ef00a5d216d4408c943f289b7a46e018088"
   integrity sha512-QNnMY5jKP/ItVYRGS4w3KF+1iXBUUjldZNVtEoQe2dFergxvbIYQ0S++TZb25G/o9nRF5GmOpecJaOvwUBZsiw==
 
-"@d-zero/cspell-config@5.0.0-alpha.25":
-  version "5.0.0-alpha.25"
-  resolved "https://registry.yarnpkg.com/@d-zero/cspell-config/-/cspell-config-5.0.0-alpha.25.tgz#2f145e76e42ffe19f3752eb1f16213dad7f5c606"
-  integrity sha512-aGiYYJlN5pk/YeWtTvlovTdJG3hrxxDbGS/OjaUKmEw9M8sAD7KpZ6bNWvgFmx0KLYoeib8n0TdJCfSK4gdfOw==
+"@d-zero/cspell-config@5.0.0-alpha.26":
+  version "5.0.0-alpha.26"
+  resolved "https://registry.yarnpkg.com/@d-zero/cspell-config/-/cspell-config-5.0.0-alpha.26.tgz#3cbac3ccf34dec045507d8bd97ab67bacbeeb1e1"
+  integrity sha512-Fvj/Vn//B/EVBz0Y+KrEVJ0TZ7K04kUV1VW/5trAeWaSAPb41BDs9Z9gKsSY3qB/W2xauHZxClp4SGZZ6/u4YQ==
   dependencies:
     cspell "8.8.1"
 
