@@ -9,6 +9,7 @@ export default async () => {
 			title: 'ディーゼロ フロントエンドガイドライン',
 			description:
 				'株式会社ディーゼロの主にフロントエンド開発のために規定しているガイドラインです。',
+			head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]],
 			themeConfig: {
 				search: {
 					provider: 'local',
