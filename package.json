@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"@d-zero/cspell-config": "5.0.0-alpha.26",
 		"@d-zero/eslint-config": "5.0.0-alpha.26",
-		"@d-zero/lint-staged-config": "5.0.0-alpha.25",
+		"@d-zero/lint-staged-config": "5.0.0-alpha.26",
 		"@d-zero/prettier-config": "5.0.0-alpha.25",
 		"@d-zero/textlint-config": "5.0.0-alpha.25",
 		"@d-zero/tsconfig": "0.2.0",
