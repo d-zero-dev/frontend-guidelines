@@ -11,10 +11,10 @@
 		"dev": "vitepress dev src",
 		"build": "vitepress build src",
 		"lint": "run-s lint:eslint lint:prettier lint:textlint lint:cspell",
-		"lint:cspell": "cspell --no-progress --show-suggestions \"{*,src/*}/\"",
+		"lint:cspell": "cspell --no-progress --show-suggestions \"{*,src/{**,.vitepress/**}/*}/\"",
 		"lint:eslint": "eslint --fix \"*.{js,cjs,mjs}\"",
-		"lint:prettier": "prettier --write \"{*,src/*}.{md,json,js,cjs,mjs,jsx,ts,cts,mts,tsx}\"",
-		"lint:textlint": "textlint --fix ./src/*.md; textlint ./src/*.md",
+		"lint:prettier": "prettier --write \"{*,src/{**,.vitepress/**}/*}.{md,json,js,cjs,mjs,jsx,ts,cts,mts,tsx}\"",
+		"lint:textlint": "textlint --fix ./src/{**,.vitepress/**}/*.md; textlint ./src/{**,.vitepress/**}/*.md",
 		"up": "yarn upgrade-interactive --latest"
 	},
 	"devDependencies": {
