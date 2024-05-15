@@ -6,9 +6,9 @@ export default async () => {
 		defineConfig({
 			outDir: process.cwd() + '/.dist',
 			lang: 'ja',
-			title: 'ディーゼロ コーディングガイドライン',
+			title: 'ディーゼロ フロントエンドガイドライン',
 			description:
-				'株式会社ディーゼロの主にフロントエンド開発のために規定しているコーディンガイドラインです。',
+				'株式会社ディーゼロの主にフロントエンド開発のために規定しているガイドラインです。',
 			themeConfig: {
 				search: {
 					provider: 'local',
