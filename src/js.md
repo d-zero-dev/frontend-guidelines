@@ -336,7 +336,7 @@ matchMedia(`(min-width: 768px)`).addEventListener('change', (media) => {
 ### Passive Event Listener を利用する
 
 ```js
-Element.addEventListener('scroll', onScroll, { passive: true });
+Element.addEventListener('wheel', onScroll, { passive: true });
 ```
 
 `passive`を有効にすると`preventDefault()`の呼び出しを待たずにリスナー関数を実行するため、その関数がブラウザの既定のアクション（たとえばスクロール）をブロックすることがなくなります。
