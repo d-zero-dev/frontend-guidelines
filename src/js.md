@@ -336,7 +336,7 @@ matchMedia(`(min-width: 768px)`).addEventListener('change', (media) => {
 ### Passive Event Listener を利用する
 
 ```js
-Element.addEventListener('wheel', onScroll, { passive: true });
+Element.addEventListener('wheel', onWheel, { passive: true });
 ```
 
 `passive`を有効にすると`preventDefault()`の呼び出しを待たずにリスナー関数を実行するため、その関数がブラウザの既定のアクション（たとえばスクロール）をブロックすることがなくなります。
@@ -354,7 +354,7 @@ const onMove = function () {
 	cancelAnimationFrame(rafId);
 	rafId = requestAnimationFrame(update);
 };
-element.addEventListener('mousemove', onMove, { passive: true });
+element.addEventListener('touchmove', onMove, { passive: true });
 ```
 
 ### 同じ処理を何度も繰り返さない
