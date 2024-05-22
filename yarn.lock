@@ -562,10 +562,10 @@
   dependencies:
     cspell "8.8.1"
 
-"@d-zero/eslint-config@5.0.0-alpha.28":
-  version "5.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.28.tgz#481b669ca0e19d74478ea7c12bd31266be6b1933"
-  integrity sha512-ZxJkM5AtXnudRqQqz2y/DO0pA85B0Ll6ZzxSV+lcqOOHr5jEvJeoOxl64RJv8cEfPUa4fha9NuEqTHliJ6GsNA==
+"@d-zero/eslint-config@5.0.0-alpha.30":
+  version "5.0.0-alpha.30"
+  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.30.tgz#662b3a3518ec640af9ff410df23f8281ceabd1b7"
+  integrity sha512-zslRC2P998TBMWHhjAHAI4JYV6KrE+9f0q/WMSkAiBnssq+VjfcAN120Rtmht/5V2DSOMcbThn5Y6M6LMvezHA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "7.10.0"
     "@typescript-eslint/parser" "7.10.0"
