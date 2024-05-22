@@ -441,13 +441,19 @@ yarn add -D iconv-lite
 
 ### include
 
-[Pugで他ファイルをインクルードする](https://pugjs.org/language/includes.html)場合、[basedirオプション](https://pugjs.org/api/reference.html)を設定することでルートパスを使ってファイルを指定できます。  
-`eleventy.config.cjs`でオプションを設定してください。
+[Pugでコンポーネントファイルなどをインクルードする](https://pugjs.org/language/includes.html)場合、[basedirオプション](https://pugjs.org/api/reference.html)を設定することでルートパスを使ってファイルを指定できます。  
+変更したい場合は、`eleventy.config.cjs`でオプションを設定してください。
 
 ```js
 eleventyConfig.setPugOptions({
 	basedir: path.resolve(__dirname, '__assets', '_libs'),
 });
+```
+
+上記の設定の場合で、`__assets/_libs/component/_c-header.pug`をインクルードする場合はこのような記述になります。
+
+```pug
+include /component/_c-header.pug
 ```
 
 ## 📜 DOCTYPE
