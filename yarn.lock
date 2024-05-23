@@ -562,10 +562,10 @@
   dependencies:
     cspell "8.8.2"
 
-"@d-zero/eslint-config@5.0.0-alpha.30":
-  version "5.0.0-alpha.30"
-  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.30.tgz#662b3a3518ec640af9ff410df23f8281ceabd1b7"
-  integrity sha512-zslRC2P998TBMWHhjAHAI4JYV6KrE+9f0q/WMSkAiBnssq+VjfcAN120Rtmht/5V2DSOMcbThn5Y6M6LMvezHA==
+"@d-zero/eslint-config@5.0.0-alpha.31":
+  version "5.0.0-alpha.31"
+  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.31.tgz#ea8c49d302404ccdba52b38f096db47c0ed6c0a8"
+  integrity sha512-uSC819PLZ149eH2Sf/RgUsXlPBb3XTXlJ52xEWs3uXYxjfRAthPCNeAgd4YoJGHWkYTJpebgLGM29m94HzAG9A==
   dependencies:
     "@typescript-eslint/eslint-plugin" "7.10.0"
     "@typescript-eslint/parser" "7.10.0"
@@ -573,7 +573,7 @@
     eslint-plugin-eslint-comments "3.2.0"
     eslint-plugin-import "2.29.1"
     eslint-plugin-jsdoc "48.2.5"
-    eslint-plugin-regexp "2.5.0"
+    eslint-plugin-regexp "2.6.0"
     eslint-plugin-sort-class-members "1.20.0"
     eslint-plugin-unicorn "51.0.1"
 
@@ -2783,10 +2783,10 @@ eslint-plugin-jsdoc@48.2.5:
     semver "^7.6.1"
     spdx-expression-parse "^4.0.0"
 
-eslint-plugin-regexp@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-regexp/-/eslint-plugin-regexp-2.5.0.tgz#8629fa7238f97d4d6cda58bb50b15c6e2f6bc387"
-  integrity sha512-I7vKcP0o75WS5SHiVNXN+Eshq49sbrweMQIuqSL3AId9AwDe9Dhbfug65vw64LxmOd4v+yf5l5Xt41y9puiq0g==
+eslint-plugin-regexp@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-regexp/-/eslint-plugin-regexp-2.6.0.tgz#54b9ca535662ca2c59ca211b7723ef22e2b6681b"
+  integrity sha512-FCL851+kislsTEQEMioAlpDuK5+E5vs0hi1bF8cFlPlHcEjeRhuAzEsGikXRreE+0j4WhW2uO54MqTjXtYOi3A==
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
     "@eslint-community/regexpp" "^4.9.1"
