@@ -583,10 +583,10 @@
     eslint-plugin-sort-class-members "1.20.0"
     eslint-plugin-unicorn "53.0.0"
 
-"@d-zero/lint-staged-config@5.0.0-alpha.31":
-  version "5.0.0-alpha.31"
-  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.31.tgz#0eb0bff5268941fe011b71202cf1d4ff90f43d06"
-  integrity sha512-FQnCo04W7yTIADky/5RjgOl03bYIp8X6Q/JfNPF3cDJ8NBvSvEhfguRjQpAG7vIjZOjCeGE7QUAWBsuQ+ot8Kw==
+"@d-zero/lint-staged-config@5.0.0-alpha.32":
+  version "5.0.0-alpha.32"
+  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.32.tgz#403866b3104c36b2017d8a0475ec0447daca77ea"
+  integrity sha512-2iFqYzUNYODKvCw+XS6viYqVdRZNvXxvD8fRusu9vYKlV0iy+hkH1HByS0KuUwRejWtGNFho63PwxkkEf+rb/g==
   dependencies:
     lint-staged "15.2.4"
 
