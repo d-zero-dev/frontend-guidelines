@@ -453,7 +453,10 @@ eleventyConfig.setPugOptions({
 上記の設定の場合で、`__assets/_libs/component/_c-header.pug`をインクルードする場合はこのような記述になります。
 
 ```pug
-include /component/_c-header.pug
+body.c-page-sub
+	.c-page-sub__base
+		.c-page-sub__header
+			include /component/_c-header.pug
 ```
 
 ## 📜 DOCTYPE
