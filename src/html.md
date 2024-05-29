@@ -439,6 +439,26 @@ yarn add -D iconv-lite
 
 この設定は[Astro](https://docs.astro.build/ja/getting-started/)の[`build.format`](https://docs.astro.build/ja/reference/configuration-reference/#buildformat)を参考にしています。
 
+### include
+
+[Pugでコンポーネントファイルなどをインクルードする](https://pugjs.org/language/includes.html)場合、[basedirオプション](https://pugjs.org/api/reference.html)を設定することでルートパスを使ってファイルを指定できます。  
+変更したい場合は、`eleventy.config.cjs`でオプションを設定してください。
+
+```js
+eleventyConfig.setPugOptions({
+	basedir: path.resolve(__dirname, '__assets', '_libs'),
+});
+```
+
+上記の設定の場合で、`__assets/_libs/component/_c-header.pug`をインクルードする場合はこのような記述になります。
+
+```pug
+body.c-page-sub
+	.c-page-sub__base
+		.c-page-sub__header
+			include /component/_c-header.pug
+```
+
 ## 📜 DOCTYPE
 
 DOCTYPEは必ず記述します。旧来の文書型宣言は使用しないでください。また、XML宣言は記述しません。
