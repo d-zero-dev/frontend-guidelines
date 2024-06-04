@@ -960,12 +960,12 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.18.0.tgz#5d694d345ce36b6ecf657349e03eb87297e68da4"
   integrity sha512-UOo5FdvOL0+eIVTgS4tIdbW+TtnBLWg1YBCcU2KWM7nuNwRz9bksDX1bekJJCpu25N1DVWaCwnT39dVQxzqS8g==
 
-"@shikijs/core@1.6.2", "@shikijs/core@^1.5.2":
+"@shikijs/core@1.6.2", "@shikijs/core@^1.6.2":
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/@shikijs/core/-/core-1.6.2.tgz#29be410e33e604c8ccc7d5ab75cade1a52db8ec2"
   integrity sha512-guW5JeDzZ7uwOjTfCOFZ2VtVXk5tmkMzBYbKGfXsmAH1qYOej49L5jQDcGmwd6/OgvpmWhzO2GNJkQIFnbwLPQ==
 
-"@shikijs/transformers@^1.5.2":
+"@shikijs/transformers@^1.6.2":
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/@shikijs/transformers/-/transformers-1.6.2.tgz#dab9f22531f1a16114a59f11e5d681edbd764970"
   integrity sha512-ndqTWyHnxmsLkowhKWTam26opw8hg5a34y6FAUG/Xf6E49n3MM//nenKxXiWpPYkNPl1KZnYXB1k+Ia46wjOZg==
@@ -1349,7 +1349,7 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vitejs/plugin-vue@^5.0.4":
+"@vitejs/plugin-vue@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.0.5.tgz#e3dc11e427d4b818b7e3202766ad156e3d5e2eaa"
   integrity sha512-LOjm7XeIimLBZyzinBQ6OSm3UBCNVCpLkxGC0oWmm2YPzVZoxMsdvNVimLTBzpAnR9hl/yn1SHGuRfe6/Td9rQ==
@@ -1396,7 +1396,7 @@
     "@vue/compiler-dom" "3.4.27"
     "@vue/shared" "3.4.27"
 
-"@vue/devtools-api@^7.2.0":
+"@vue/devtools-api@^7.2.1":
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-7.2.1.tgz#1eb3d33c85b76306106d5804bafa0d13178e9224"
   integrity sha512-6oNCtyFOrNdqm6GUkFujsCgFlpbsHLnZqq7edeM/+cxAbMyCWvsaCsIMUaz7AiluKLccCGEM8fhOsjaKgBvb7g==
@@ -1458,7 +1458,7 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.4.27.tgz#f05e3cd107d157354bb4ae7a7b5fc9cf73c63b50"
   integrity sha512-DL3NmY2OFlqmYYrzp39yi3LDkKxa5vZVwxWdQ3rG0ekuWscHraeIbnI8t+aZK7qhYqEqWKTUdijadunb9pnrgA==
 
-"@vueuse/core@10.10.0", "@vueuse/core@^10.9.0":
+"@vueuse/core@10.10.0", "@vueuse/core@^10.10.0":
   version "10.10.0"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-10.10.0.tgz#05a98d3c5674762455a2c552c915d461d83e6490"
   integrity sha512-vexJ/YXYs2S42B783rI95lMt3GzEwkxzC8Hb0Ndpd8rD+p+Lk/Za4bd797Ym7yq4jXqdSyj3JLChunF/vyYjUw==
@@ -1468,7 +1468,7 @@
     "@vueuse/shared" "10.10.0"
     vue-demi ">=0.14.7"
 
-"@vueuse/integrations@^10.9.0":
+"@vueuse/integrations@^10.10.0":
   version "10.10.0"
   resolved "https://registry.yarnpkg.com/@vueuse/integrations/-/integrations-10.10.0.tgz#31f413b88d7ed24213958eba6824d46b2bf71b5f"
   integrity sha512-vHGeK7X6mkdkpcm1eE9t3Cpm21pNVfZRwrjwwbrEs9XftnSgszF4831G2rei8Dt9cIYJIfFV+iyx/29muimJPQ==
@@ -5347,7 +5347,7 @@ shell-quote@^1.7.3:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.1.tgz#6dbf4db75515ad5bac63b4f1894c3a154c766680"
   integrity sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==
 
-shiki@1.6.2, shiki@^1.5.2:
+shiki@1.6.2, shiki@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/shiki/-/shiki-1.6.2.tgz#082db563387a94c10e4002e0c62c61bc78e9cae7"
   integrity sha512-X3hSm5GzzBd/BmPmGfkueOUADLyBoZo1ojYQXhd+NU2VJn458yt4duaS0rVzC+WtqftSV7mTVvDw+OB9AHi3Eg==
@@ -6189,7 +6189,7 @@ vfile@^5.0.0:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite@^5.2.11:
+vite@^5.2.12:
   version "5.2.12"
   resolved "https://registry.yarnpkg.com/vite/-/vite-5.2.12.tgz#3536c93c58ba18edea4915a2ac573e6537409d97"
   integrity sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==
@@ -6207,26 +6207,26 @@ vitepress-plugin-mermaid@2.0.16:
   optionalDependencies:
     "@mermaid-js/mermaid-mindmap" "^9.3.0"
 
-vitepress@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.2.2.tgz#7680c807ab62ece6edd1cd1ec41f8619860e9ba2"
-  integrity sha512-uZ3nXR5NY4nYj3RJWCo5jev9qlNZAQo5SUXu1U0QSUx84cUm/o7hCTDVjZ4njVSVui+PsV1oAbdQOg8ygbaf4w==
+vitepress@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.2.3.tgz#a507d2f5e86c1fbcdb5ec2212f1db4828504df34"
+  integrity sha512-GvEsrEeNLiDE1+fuwDAYJCYLNZDAna+EtnXlPajhv/MYeTjbNK6Bvyg6NoTdO1sbwuQJ0vuJR99bOlH53bo6lg==
   dependencies:
     "@docsearch/css" "^3.6.0"
     "@docsearch/js" "^3.6.0"
-    "@shikijs/core" "^1.5.2"
-    "@shikijs/transformers" "^1.5.2"
+    "@shikijs/core" "^1.6.2"
+    "@shikijs/transformers" "^1.6.2"
     "@types/markdown-it" "^14.1.1"
-    "@vitejs/plugin-vue" "^5.0.4"
-    "@vue/devtools-api" "^7.2.0"
+    "@vitejs/plugin-vue" "^5.0.5"
+    "@vue/devtools-api" "^7.2.1"
     "@vue/shared" "^3.4.27"
-    "@vueuse/core" "^10.9.0"
-    "@vueuse/integrations" "^10.9.0"
+    "@vueuse/core" "^10.10.0"
+    "@vueuse/integrations" "^10.10.0"
     focus-trap "^7.5.4"
     mark.js "8.11.1"
     minisearch "^6.3.0"
-    shiki "^1.5.2"
-    vite "^5.2.11"
+    shiki "^1.6.2"
+    vite "^5.2.12"
     vue "^3.4.27"
 
 vscode-languageserver-textdocument@^1.0.11:
