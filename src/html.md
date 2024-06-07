@@ -115,36 +115,38 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 このルールは*Prettier*によって自動修正されます。
 :::
 
-### タグのルール
+### タグ
 
-- タグ名や属性名は小文字に統一します
-- 空要素の閉じスラッシュをつけます
-- 閉じタグは省略しません
+- タグ名や属性名は小文字を使用します
+- 空要素の開始タグの末尾に`/`（スラッシュ）を記述します
+- 終了タグは省略しません
 
 <details>
-<summary>ルールの例</summary>
+<summary>コード例</summary>
 
 タグ名や属性名は小文字を使用します。
 
+<!-- prettier-ignore-start -->
 ```html
 <!-- ✅ 良い例 -->
 <a href="/path/to/link">...</a>
 
 <!-- ❌ 悪い例 -->
-<a href="/path/to/link">...</a>
+<A HREF="/path/to/link">...</A>
 ```
+<!-- prettier-ignore-end -->
 
-ただし SVG（インラインSVGも同様）は、属性名の大文字小文字を区別するため、仕様に従います。
+ただし SVG（インラインSVGも同様）は属性名の大文字小文字を区別するため、仕様に従います。
 
 ```html
 <!-- ✅ 良い例 -->
 <svg viewBox="0 0 400 300">...</svg>
 
-<!-- ❌ 悪い例 svg要素は正しく大文字小文字を指定しないと動作しない -->
+<!-- ❌ 悪い例: svg要素は正しく大文字小文字を指定しないと動作しない -->
 <svg viewbox="0 0 400 300">...</svg>
 ```
 
-空要素の閉じスラッシュは記述します。本来必要ありませんがPrettierの挙動に従います。
+空要素の開始タグの末尾に`/`（スラッシュ）を記述します。本来必要ありませんが、*Prettier*の挙動に従います。
 
 <!-- prettier-ignore-start -->
 ```html
@@ -156,7 +158,7 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 ```
 <!-- prettier-ignore-end -->
 
-閉じタグの省略はしません。
+終了タグは省略しません。
 
 <!-- prettier-ignore-start -->
 ```html
