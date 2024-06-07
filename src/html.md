@@ -538,6 +538,20 @@ URLのパスと同様に、`id`属性の値（URLのフラグメント）は適�
 <a href="//www.d-zero.co.jp" target="_blank" rel="noreferrer">...</a>
 ```
 
+### 外部リソース
+
+プライバシーやセキュリティ、パフォーマンス、堅牢性のため、外部リソースの読み込みは原則禁止します。特に、CDNのリソースが安易に読み込まれがちなので、それらを読み込まないように注意してください。ただし、クライアントの依頼または社内の許可がある場合に限り、外部リソースの読み込みを許容します。
+
+```html
+<!-- ✅ 良い例 -->
+<script src="/path/to/script.js"></script>
+<link rel="stylesheet" href="/path/to/style.css" />
+
+<!-- ❌ 悪い例 -->
+<script src="https//www.example.com/script.js"></script>
+<link rel="stylesheet" href="https//www.example.com/style.css" />
+```
+
 ## 💎 コンポーネント
 
 ページを構成するパーツを**コンポーネント**という単位で管理します。
