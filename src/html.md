@@ -222,25 +222,31 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 このルールは*Prettier*によって自動修正されます。
 :::
 
-### 属性の値のルール
+### 論理属性
 
-論理属性（値が不要の属性）に値を記述しません。
+論理属性の値は省略します。
 
 ```html
 <!-- ✅ 良い例 -->
+<input type="checkbox" disabled />
 <input type="checkbox" checked />
 
 <!-- ❌ 悪い例 -->
+<input type="checkbox" disabled="disabled" />
 <input type="checkbox" checked="checked" />
 ```
 
-デフォルトの属性値が決まっていて省略可能な属性は省略します。
+### 属性の省略
+
+省略可能な属性は省略します。
 
 ```html
 <!-- ✅ 良い例 -->
+<link rel="stylesheet" href="/path/to/style.css" />
 <script src="/path/to/script.js"></script>
 
-<!-- ❌ 悪い例: script要素のtype属性は省略できる -->
+<!-- ❌ 悪い例 -->
+<link type="text/css" rel="stylesheet" href="/path/to/style.css" />
 <script type="text/javascript" src="/path/to/script.js"></script>
 ```
 
