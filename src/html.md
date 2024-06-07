@@ -528,6 +528,8 @@ URLのパスと同様に、`id`属性の値（URLのフラグメント）は適�
 
 ソースコードの検索性を上げるために`//`で始まるパスは避け、`https://`で開始してください。
 
+必要に応じて、`target="_blank"`や`rel="noreferrer"`、その他の属性を指定してください。ただし、`target="_blank"`を指定すると、暗黙的に`rel`属性に`noopener`を指定した場合と同様の挙動になるので、明示的に`rel`属性に`noopener`を指定する必要はありません。
+
 ```html
 <!-- ✅ 良い例 -->
 <a href="https://www.d-zero.co.jp" target="_blank" rel="noreferrer">...</a>
