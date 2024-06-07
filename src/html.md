@@ -250,24 +250,29 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 <script type="text/javascript" src="/path/to/script.js"></script>
 ```
 
-### Pugでの属性指定
+### Pugの属性
 
-- id属性は `#` リテラルを利用します
-- class属性は `.` リテラルを利用します
-- 指定は次の順番で記述します
-  1. **id属性**
-  2. **class属性**
-  3. class/id以外の属性
+- `id`属性は`#`リテラルを使用します
+- `class`属性は`.`リテラルを使用します
+- 属性は次の順番で記述します
+  1. `id`属性
+  2. `class`属性
+  3. `class`/`id`以外の属性
+
+<details>
+<summary>コード例</summary>
 
 <!-- prettier-ignore-start -->
 ```pug
 //- ✅ 良い例
 div#id-name.c-class-name(data-attr="value")
 
-//- ❌ 悪い例: 順番どおりでない、そしてclass属性にドットリテラルを使っていない。
+//- ❌ 悪い例: class属性に.リテラルを使用しておらず、順番に従っていない
 div(data-attr="value" class="c-class-name")#id-name
 ```
 <!-- prettier-ignore-end -->
+
+</details>
 
 ::: tip 🔧 自動修正可能
 このルールは*Prettier*と*pug-lint*によって自動修正されます。
