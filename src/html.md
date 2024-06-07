@@ -184,23 +184,35 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 このルールは*Prettier*によって自動修正されます。
 :::
 
-### 属性の引用符ルール
+### 属性値の引用符
 
-属性値はダブルクォーテーション（二重引用符）を使用します。
+属性値の引用符に`"`（ダブルクォーテーション）を使用します。
 
 <details>
-<summary>ルールの例</summary>
+<summary>コード例</summary>
 
 <!-- prettier-ignore-start -->
 ```html
-<!-- ✅ 良い例: 属性の引用符にダブルクォーテーションを使用している -->
+<!-- ✅ 良い例: 属性値の引用符にダブルクォーテーションを使用している -->
 <a href="/path/to/link">...</a>
 
-<!-- ❌ 悪い例: 属性の引用符にシングルクォーテーションを使用している -->
+<!-- ❌ 悪い例: 属性値の引用符にシングルクォーテーションを使用している -->
 <a href='/path/to/link'>...</a>
 
-<!-- ❌ 悪い例: 属性に引用符を使用しない -->
-<input type=text />
+<!-- ❌ 悪い例: 属性値に引用符を使用していない -->
+<a href=/path/to/link>...</a>
+```
+<!-- prettier-ignore-end -->
+
+ただし、属性値に`"`を記述する場合は、属性値の引用符に`'`（シングルクォーテーション）を使用します。
+
+<!-- prettier-ignore-start -->
+```html
+<!-- ✅ 良い例: 属性値にダブルクォテーションが含まれているため、属性値の引用符にシングルクォーテーションを使用している -->
+<a href="/path/to/link" title='This title includes "double quotation".'>...</a>
+
+<!-- ❌ 悪い例: 属性値にダブルクォテーションが含まれているのに、属性値の引用符にダブルクォーテーションを使用している -->
+<a href="/path/to/link" title="This title includes "double quotation".">...</a>
 ```
 <!-- prettier-ignore-end -->
 
