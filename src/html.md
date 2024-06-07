@@ -280,7 +280,7 @@ div(data-attr="value" class="c-class-name")#id-name
 
 ### 文字参照
 
-次に挙げる文字は[文字参照](https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8F%82%E7%85%A7)にします。
+次に挙げる文字はHTMLの特殊文字です。これらの文字をコードとして解釈させず、文字として表示したい場合、[文字参照](https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8F%82%E7%85%A7)を使用します。
 
 | 文字   | 文字参照 |
 | ------ | -------- |
@@ -288,31 +288,39 @@ div(data-attr="value" class="c-class-name")#id-name
 | &gt;   | `&gt;`   |
 | &amp;  | `&amp;`  |
 | &quot; | `&quot;` |
+| &apos; | `&apos;` |
 
-上記以外の文字は、可読性の観点から文字参照にする必要はありません。コピーライトマークは`&copy;`でなく`©`にします。
-
-属性の文字列内でも文字参照に統一します。
+特に、URL内の`&`も`&amp;`と記述します。
 
 ```html
 <!-- ✅ 良い例: &が文字参照になっている -->
-<a href="/path/to/link?key=val&amp;key=val">...</a>
+<a href="/path/to/link?key1=val1&amp;key2=val2">...</a>
 
 <!-- ❌ 悪い例: &が文字参照になっていない -->
-<a href="/path/to/link?key=val&key=val">...</a>
+<a href="/path/to/link?key1=val1&key2=val2">...</a>
 ```
 
-::: tip Pugでの属性値の文字参照
+可読性のため、上記以外の文字に文字参照を使用する必要はありません。例えば、コピーライトマークは`&copy;`ではなく`©`と記述します。
 
+```html
+<!-- ✅ 良い例: ©をそのまま記述している -->
+<p><small>© 2024 D-ZERO Co., Ltd.</small></p>
+
+<!-- ❌ 悪い例: &copy;を記述している -->
+<p><small>&copy; 2024 D-ZERO Co., Ltd.</small></p>
+```
+
+::: tip Pugの文字参照
 Pugでは属性値の文字参照は自動で行われるため、手動で記述する必要はありません。
 
 ```pug
 //- 入力
-a(href="/path/to/link?key=val&key=val")
+a(href="/path/to/link?key1=val1&key1=val1")
 ```
 
 ```html
-<!-- 出力結果 -->
-<a href="/path/to/link?key=val&amp;key=val"></a>
+<!-- 出力 -->
+<a href="/path/to/link?key1=val1&amp;key2=val2"></a>
 ```
 
 :::
