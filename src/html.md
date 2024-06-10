@@ -545,9 +545,25 @@ html
 <a href="../path/to/link">...</a>
 ```
 
+### ページ内リンク
+
+URLのパスと同様に、`id`属性の値（URLのフラグメント）は適切に命名してください（👉[識別子の命名規則](./naming.md)）。また、安易に削除・変更しないでください。たとえページ内リンクを使用していなかったとしても、外部からリンクされている可能性があります。`id`属性の値を（安易に）削除・変更すると、リンク切れと似た状態になりユーザー体験を損なってしまいます。
+
+```html
+<!-- ✅ 良い例 -->
+<a href="#about">...</a>
+<section id="about"></section>
+
+<!-- ❌ 悪い例: 不適切な命名をしている -->
+<a href="#foo">...</a>
+<section id="foo"></section>
+```
+
 ### 外部リンク
 
 ソースコードの検索性を上げるために`//`で始まるパスは避け、`https://`で開始してください。
+
+必要に応じて、`target="_blank"`や`rel="noreferrer"`、その他の属性を指定してください。ただし、`target="_blank"`を指定すると、暗黙的に`rel`属性に`noopener`を指定した場合と同様の挙動になるので、明示的に`rel`属性に`noopener`を指定する必要はありません。
 
 ```html
 <!-- ✅ 良い例 -->
@@ -555,6 +571,20 @@ html
 
 <!-- ❌ 悪い例 -->
 <a href="//www.d-zero.co.jp" target="_blank" rel="noreferrer">...</a>
+```
+
+### 外部リソース
+
+プライバシーやセキュリティ、パフォーマンス、堅牢性のため、外部リソースの読み込みは原則禁止します。特に、CDNのリソースが安易に読み込まれがちなので、それらを読み込まないように注意してください。ただし、クライアントの依頼または社内の許可がある場合に限り、外部リソースの読み込みを許容します。
+
+```html
+<!-- ✅ 良い例 -->
+<script src="/path/to/script.js"></script>
+<link rel="stylesheet" href="/path/to/style.css" />
+
+<!-- ❌ 悪い例 -->
+<script src="https//www.example.com/script.js"></script>
+<link rel="stylesheet" href="https//www.example.com/style.css" />
 ```
 
 ## 💎 コンポーネント
