@@ -51,12 +51,12 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 例外なく必ずリントエラーを修正してください。**リンターのルールが現状にそぐわない場合はルールの見直しを行ってください**。
 :::
 
-### 改行・インデントのルール
+### 改行・インデント
 
-原則としてネストしたタグは行を落としてインデントしてください。親子・兄弟関係を明確にし、エディタのコード折りたたみ機能が有効になりコードが読みやに繋がります。ただし要素のスタイルがインライン（`inline` `inline-block` など）で、前後のホワイトスペースがレンダリングに影響を及ぼす可能性のある箇所についてはこの限りではありません。
+原則、ネストしたタグは改行・インデントしてください。親子・兄弟関係を明確にし、エディタのコード折りたたみ機能が有効になり、コードの読みやすさに繋がります。ただし、要素のスタイルがインライン（`inline`、`inline-block`など）で、前後のホワイトスペースがレンダリングに影響を及ぼす可能性のあるタグについてはこの限りではありません。
 
 <details>
-<summary>ルールの例</summary>
+<summary>コード例</summary>
 
 <!-- prettier-ignore-start -->
 ```html
@@ -74,7 +74,7 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 <li>banana</li>
 </ul>
 
-<!-- ❌ 悪い例: インデントされている箇所とされてない箇所がある -->
+<!-- ❌ 悪い例: インデントが揃っていない -->
 <ul>
 	<li>apple</li>
 <li>orange</li>
@@ -115,36 +115,38 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 このルールは*Prettier*によって自動修正されます。
 :::
 
-### タグのルール
+### タグ
 
-- タグ名や属性名は小文字に統一します
-- 空要素の閉じスラッシュをつけます
-- 閉じタグは省略しません
+- タグ名や属性名は小文字を使用します
+- 空要素の開始タグの末尾に`/`（スラッシュ）を記述します
+- 終了タグは省略しません
 
 <details>
-<summary>ルールの例</summary>
+<summary>コード例</summary>
 
 タグ名や属性名は小文字を使用します。
 
+<!-- prettier-ignore-start -->
 ```html
 <!-- ✅ 良い例 -->
 <a href="/path/to/link">...</a>
 
 <!-- ❌ 悪い例 -->
-<a href="/path/to/link">...</a>
+<A HREF="/path/to/link">...</A>
 ```
+<!-- prettier-ignore-end -->
 
-ただし SVG（インラインSVGも同様）は、属性名の大文字小文字を区別するため、仕様に従います。
+ただし SVG（インラインSVGも同様）は属性名の大文字小文字を区別するため、仕様に従います。
 
 ```html
 <!-- ✅ 良い例 -->
 <svg viewBox="0 0 400 300">...</svg>
 
-<!-- ❌ 悪い例 svg要素は正しく大文字小文字を指定しないと動作しない -->
+<!-- ❌ 悪い例: svg要素は正しく大文字小文字を指定しないと動作しない -->
 <svg viewbox="0 0 400 300">...</svg>
 ```
 
-空要素の閉じスラッシュは記述します。本来必要ありませんがPrettierの挙動に従います。
+空要素の開始タグの末尾に`/`（スラッシュ）を記述します。本来必要ありませんが、*Prettier*の挙動に従います。
 
 <!-- prettier-ignore-start -->
 ```html
@@ -156,7 +158,7 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 ```
 <!-- prettier-ignore-end -->
 
-閉じタグの省略はしません。
+終了タグは省略しません。
 
 <!-- prettier-ignore-start -->
 ```html
@@ -182,23 +184,35 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 このルールは*Prettier*によって自動修正されます。
 :::
 
-### 属性の引用符ルール
+### 属性値の引用符
 
-属性値はダブルクォーテーション（二重引用符）を使用します。
+属性値の引用符に`"`（ダブルクォーテーション）を使用します。
 
 <details>
-<summary>ルールの例</summary>
+<summary>コード例</summary>
 
 <!-- prettier-ignore-start -->
 ```html
-<!-- ✅ 良い例: 属性の引用符にダブルクォーテーションを使用している -->
+<!-- ✅ 良い例: 属性値の引用符にダブルクォーテーションを使用している -->
 <a href="/path/to/link">...</a>
 
-<!-- ❌ 悪い例: 属性の引用符にシングルクォーテーションを使用している -->
+<!-- ❌ 悪い例: 属性値の引用符にシングルクォーテーションを使用している -->
 <a href='/path/to/link'>...</a>
 
-<!-- ❌ 悪い例: 属性に引用符を使用しない -->
-<input type=text />
+<!-- ❌ 悪い例: 属性値に引用符を使用していない -->
+<a href=/path/to/link>...</a>
+```
+<!-- prettier-ignore-end -->
+
+ただし、属性値に`"`を記述する場合は、属性値の引用符に`'`（シングルクォーテーション）を使用します。
+
+<!-- prettier-ignore-start -->
+```html
+<!-- ✅ 良い例: 属性値にダブルクォテーションが含まれているため、属性値の引用符にシングルクォーテーションを使用している -->
+<a href="/path/to/link" title='This title includes "double quotation".'>...</a>
+
+<!-- ❌ 悪い例: 属性値にダブルクォテーションが含まれているのに、属性値の引用符にダブルクォーテーションを使用している -->
+<a href="/path/to/link" title="This title includes "double quotation".">...</a>
 ```
 <!-- prettier-ignore-end -->
 
@@ -208,46 +222,57 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 このルールは*Prettier*によって自動修正されます。
 :::
 
-### 属性の値のルール
+### 論理属性
 
-論理属性（値が不要の属性）に値を記述しません。
+論理属性の値は省略します。
 
 ```html
 <!-- ✅ 良い例 -->
+<input type="checkbox" disabled />
 <input type="checkbox" checked />
 
 <!-- ❌ 悪い例 -->
+<input type="checkbox" disabled="disabled" />
 <input type="checkbox" checked="checked" />
 ```
 
-デフォルトの属性値が決まっていて省略可能な属性は省略します。
+### 属性の省略
+
+省略可能な属性は省略します。
 
 ```html
 <!-- ✅ 良い例 -->
+<link rel="stylesheet" href="/path/to/style.css" />
 <script src="/path/to/script.js"></script>
 
-<!-- ❌ 悪い例: script要素のtype属性は省略できる -->
+<!-- ❌ 悪い例 -->
+<link type="text/css" rel="stylesheet" href="/path/to/style.css" />
 <script type="text/javascript" src="/path/to/script.js"></script>
 ```
 
-### Pugでの属性指定
+### Pugの属性
 
-- id属性は `#` リテラルを利用します
-- class属性は `.` リテラルを利用します
-- 指定は次の順番で記述します
-  1. **id属性**
-  2. **class属性**
-  3. class/id以外の属性
+- `id`属性は`#`リテラルを使用します
+- `class`属性は`.`リテラルを使用します
+- 属性は次の順番で記述します
+  1. `id`属性
+  2. `class`属性
+  3. `class`/`id`以外の属性
+
+<details>
+<summary>コード例</summary>
 
 <!-- prettier-ignore-start -->
 ```pug
 //- ✅ 良い例
 div#id-name.c-class-name(data-attr="value")
 
-//- ❌ 悪い例: 順番どおりでない、そしてclass属性にドットリテラルを使っていない。
+//- ❌ 悪い例: class属性に.リテラルを使用しておらず、順番に従っていない
 div(data-attr="value" class="c-class-name")#id-name
 ```
 <!-- prettier-ignore-end -->
+
+</details>
 
 ::: tip 🔧 自動修正可能
 このルールは*Prettier*と*pug-lint*によって自動修正されます。
@@ -255,7 +280,7 @@ div(data-attr="value" class="c-class-name")#id-name
 
 ### 文字参照
 
-次に挙げる文字は[文字参照](https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8F%82%E7%85%A7)にします。
+次に挙げる文字はHTMLの特殊文字です。これらの文字をコードとして解釈させず、文字として表示したい場合、[文字参照](https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%97%E5%8F%82%E7%85%A7)を使用します。
 
 | 文字   | 文字参照 |
 | ------ | -------- |
@@ -263,40 +288,50 @@ div(data-attr="value" class="c-class-name")#id-name
 | &gt;   | `&gt;`   |
 | &amp;  | `&amp;`  |
 | &quot; | `&quot;` |
+| &apos; | `&apos;` |
 
-上記以外の文字は、可読性の観点から文字参照にする必要はありません。コピーライトマークは`&copy;`でなく`©`にします。
-
-属性の文字列内でも文字参照に統一します。
+特に、URL内の`&`も`&amp;`と記述します。
 
 ```html
 <!-- ✅ 良い例: &が文字参照になっている -->
-<a href="/path/to/link?key=val&amp;key=val">...</a>
+<a href="/path/to/link?key1=val1&amp;key2=val2">...</a>
 
 <!-- ❌ 悪い例: &が文字参照になっていない -->
-<a href="/path/to/link?key=val&key=val">...</a>
+<a href="/path/to/link?key1=val1&key2=val2">...</a>
 ```
 
-::: tip Pugでの属性値の文字参照
+可読性のため、上記以外の文字に文字参照を使用する必要はありません。例えば、コピーライトマークは`&copy;`ではなく`©`と記述します。
 
+```html
+<!-- ✅ 良い例: ©をそのまま記述している -->
+<p><small>© 2024 D-ZERO Co., Ltd.</small></p>
+
+<!-- ❌ 悪い例: &copy;を記述している -->
+<p><small>&copy; 2024 D-ZERO Co., Ltd.</small></p>
+```
+
+::: tip Pugの文字参照
 Pugでは属性値の文字参照は自動で行われるため、手動で記述する必要はありません。
 
 ```pug
 //- 入力
-a(href="/path/to/link?key=val&key=val")
+a(href="/path/to/link?key1=val1&key1=val1")
 ```
 
 ```html
-<!-- 出力結果 -->
-<a href="/path/to/link?key=val&amp;key=val"></a>
+<!-- 出力 -->
+<a href="/path/to/link?key1=val1&amp;key2=val2"></a>
 ```
 
 :::
 
 ### コメント
 
+`<!--` の後と `-->` の前にはスペースまたは改行を記述します。
+
 <!-- prettier-ignore-start -->
 ```html
-<!-- ✅ 良い例: ハイフンとコメント文の間に最低1つはスペースか改行を入れる -->
+<!-- ✅ 良い例: ハイフンとコメント文の間にスペースがある -->
 <!-- コメント -->
 
 <!-- ❌ 悪い例: ハイフンとコメント文の間にスペースがない -->
