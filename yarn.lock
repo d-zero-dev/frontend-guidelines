@@ -561,10 +561,10 @@
   resolved "https://registry.yarnpkg.com/@cspell/strong-weak-map/-/strong-weak-map-8.8.4.tgz#1040b09b5fcbd81eba0430d98580b3caf0825b2a"
   integrity sha512-gticEJGR6yyGeLjf+mJ0jZotWYRLVQ+J0v1VpsR1nKnXTRJY15BWXgEA/ifbU/+clpyCek79NiCIXCvmP1WT4A==
 
-"@d-zero/cspell-config@5.0.0-alpha.34":
-  version "5.0.0-alpha.34"
-  resolved "https://registry.yarnpkg.com/@d-zero/cspell-config/-/cspell-config-5.0.0-alpha.34.tgz#b1c52bf222c73effcce3c40cabc5fca27ac348fc"
-  integrity sha512-CSRK42UfyKjT65bHiraMOcdJ8pxv+MP0zRbFl74fkBDFVhMrSnOEc67kVZsr8hWHy3udmOSks+cyXEHNO8zNOQ==
+"@d-zero/cspell-config@5.0.0-alpha.35":
+  version "5.0.0-alpha.35"
+  resolved "https://registry.yarnpkg.com/@d-zero/cspell-config/-/cspell-config-5.0.0-alpha.35.tgz#8a77fb07570244f383d02b04aded54664b7a620b"
+  integrity sha512-sjnm5hS9SnAoDwfIj1dkTGj+Zg1R7vsS1PR/cM8rvfAA8s99IPV2DnKQ7aMbYlw4SWFQJcZmMuUko7Gl7r46lw==
   dependencies:
     cspell "8.8.4"
 
