@@ -598,10 +598,10 @@
     "@prettier/plugin-pug" "3.0.0"
     prettier "3.3.1"
 
-"@d-zero/textlint-config@5.0.0-alpha.33":
-  version "5.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@d-zero/textlint-config/-/textlint-config-5.0.0-alpha.33.tgz#34ada4a2154fd69396b852f8a215e58628620444"
-  integrity sha512-WOdi1uDkLMLJoGd0ksxUGniZwwV6HoGBPcydAkl/7HIXoeF+qNfrFq8gryrG3oic/J/8/Z0aQdAcaFcKFOkNwA==
+"@d-zero/textlint-config@5.0.0-alpha.35":
+  version "5.0.0-alpha.35"
+  resolved "https://registry.yarnpkg.com/@d-zero/textlint-config/-/textlint-config-5.0.0-alpha.35.tgz#985642464c8b605638e90a39d7d7d4df64734574"
+  integrity sha512-69aDVOg2F4c985ylfT/OwfuJ2VOCb+dxD9F9t9/iXB0szB2lXkSjZi8y9kjA87KrTJFuCGXeh6cqHJ/4NXsFuw==
   dependencies:
     textlint "14.0.4"
     textlint-plugin-html "1.0.0"
