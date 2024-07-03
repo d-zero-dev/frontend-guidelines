@@ -614,13 +614,13 @@
     textlint-rule-preset-japanese "10.0.3"
     textlint-rule-preset-jtf-style "2.3.14"
 
-"@d-zero/tsconfig@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.3.0.tgz#edc05e888837e53a64f6b77fdc94d89f44eb768d"
-  integrity sha512-8rYjjkYFURNw3xpSScwqCqdK4io+QnYVTNemxsnqtgqy9ce1VF8At5gpWNgzO5wMYbb+tV6ykqfxeFKjjgqqxQ==
+"@d-zero/tsconfig@0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.3.1.tgz#0bf5ac25935c7288c814e19e92f6b40bc8eec343"
+  integrity sha512-Tw37xG64pZVFrvGxQXFhZdjXFUyXk4tncBV2aXvMW2soRfnTNjRhs3XxqP3tNSH7qL7eJNYjbv6Ar4h9aWMs4A==
   dependencies:
     "@tsconfig/node-lts" "20.1.3"
-    "@tsconfig/recommended" "1.0.6"
+    "@tsconfig/recommended" "1.0.7"
     "@tsconfig/strictest" "2.0.5"
 
 "@docsearch/css@3.6.0", "@docsearch/css@^3.6.0":
@@ -1164,10 +1164,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-20.1.3.tgz#8cdf6fa6c593bf5e16e53134ed377627a58a746e"
   integrity sha512-m3b7EP2U+h5tNSpaBMfcTuHmHn04wrgRPQQrfKt75YIPq6kPs2153/KfPHdqkEWGx5pEBvS6rnvToT+yTtC1iw==
 
-"@tsconfig/recommended@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.6.tgz#217b78f9601215939d566a79d202a760ae185114"
-  integrity sha512-0IKu9GHYF1NGTJiYgfWwqnOQSlnE9V9R7YohHNNf0/fj/SyOZWzdd06JFr0fLpg1Mqw0kGbYg8w5xdkSqLKM9g==
+"@tsconfig/recommended@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.7.tgz#fdd95fc2c8d643c8b4a8ca45fd68eea248512407"
+  integrity sha512-xiNMgCuoy4mCL4JTywk9XFs5xpRUcKxtWEcMR6FNMtsgewYTIgIR+nvlP4A4iRCAzRsHMnPhvTRrzp4AGcRTEA==
 
 "@tsconfig/strictest@2.0.5":
   version "2.0.5"
