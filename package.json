@@ -25,7 +25,7 @@
 		"@d-zero/textlint-config": "5.0.0-alpha.37",
 		"@d-zero/tsconfig": "0.3.0",
 		"mermaid": "10.9.1",
-		"npm-run-all2": "6.2.1",
+		"npm-run-all2": "6.2.2",
 		"vitepress": "1.2.3",
 		"vitepress-plugin-mermaid": "2.0.16"
 	},
