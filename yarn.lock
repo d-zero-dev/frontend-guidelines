@@ -588,12 +588,13 @@
     eslint-plugin-sort-class-members "1.20.0"
     eslint-plugin-unicorn "54.0.0"
 
-"@d-zero/lint-staged-config@5.0.0-alpha.37":
-  version "5.0.0-alpha.37"
-  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.37.tgz#cabd1e259a984e70d10d7e2a384e464e5e4ad1f1"
-  integrity sha512-O4ASrNP+vA5gRzuC7D4zVO5souPLs/oy5UYqCRUYY/GsH5DjCso+N8hQhpLlJWgZ08CfnP2sEcl61Vj0yzpbpg==
+"@d-zero/lint-staged-config@5.0.0-alpha.39":
+  version "5.0.0-alpha.39"
+  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.39.tgz#b5c6387191ca0b721f0531119d3bfa223d158382"
+  integrity sha512-QK7tkI7ITCa0jS++2uVLRz7T6QvpJllANCwZNvvOYw15wLueElc3UggAvdAVoDr8jlNTjFI5Huk68tR+oXXxbA==
   dependencies:
     lint-staged "15.2.7"
+    micromatch "4.0.7"
 
 "@d-zero/prettier-config@5.0.0-alpha.39":
   version "5.0.0-alpha.39"
@@ -4512,7 +4513,7 @@ micromark@^3.0.0:
     micromark-util-types "^1.0.1"
     uvu "^0.5.0"
 
-micromatch@^4.0.4, micromatch@^4.0.7, micromatch@~4.0.7:
+micromatch@4.0.7, micromatch@^4.0.4, micromatch@^4.0.7, micromatch@~4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.7.tgz#33e8190d9fe474a9895525f5618eee136d46c2e5"
   integrity sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==
