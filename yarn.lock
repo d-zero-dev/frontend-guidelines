@@ -588,10 +588,10 @@
     eslint-plugin-sort-class-members "1.20.0"
     eslint-plugin-unicorn "55.0.0"
 
-"@d-zero/lint-staged-config@5.0.0-alpha.40":
-  version "5.0.0-alpha.40"
-  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.40.tgz#80cae5bd4b988d2d098cf3008c94fc97a8d0c842"
-  integrity sha512-fLrtzRwN7jC7wHZZxT/86gUV85ew9OrCwwuIAuINHJgYWSR1IdsaeR+CkUAbYQqXs3t8gSYlabBzv20X49Gx7Q==
+"@d-zero/lint-staged-config@5.0.0-alpha.41":
+  version "5.0.0-alpha.41"
+  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.41.tgz#d44e8c1f6d9193032809c4e2aa9e2cbf298e5981"
+  integrity sha512-nVqVG9OzbfCr/96oZ7jV4jo9Ky+zbUKGeucN3LpcAx9YKmW/kGdC7oapYD3qSlFwnG/qd9PWExu1k3u8zRN7Vw==
   dependencies:
     lint-staged "15.2.7"
     micromatch "4.0.7"
