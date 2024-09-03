@@ -23,7 +23,7 @@
 		"@d-zero/lint-staged-config": "5.0.0-alpha.42",
 		"@d-zero/prettier-config": "5.0.0-alpha.42",
 		"@d-zero/textlint-config": "5.0.0-alpha.42",
-		"@d-zero/tsconfig": "0.3.1",
+		"@d-zero/tsconfig": "0.3.2",
 		"mermaid": "11.1.0",
 		"npm-run-all2": "6.2.2",
 		"vitepress": "1.3.4",
