@@ -27,7 +27,7 @@
 		"mermaid": "11.2.1",
 		"npm-run-all2": "6.2.3",
 		"vitepress": "1.3.4",
-		"vitepress-plugin-mermaid": "2.0.16"
+		"vitepress-plugin-mermaid": "2.0.17"
 	},
 	"volta": {
 		"node": "22.9.0",
