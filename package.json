@@ -26,7 +26,7 @@
 		"@d-zero/tsconfig": "0.3.2",
 		"mermaid": "11.3.0",
 		"npm-run-all2": "6.2.3",
-		"vitepress": "1.4.0",
+		"vitepress": "1.4.1",
 		"vitepress-plugin-mermaid": "2.0.17"
 	},
 	"volta": {
