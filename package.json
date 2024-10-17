@@ -30,7 +30,7 @@
 		"vitepress-plugin-mermaid": "2.0.17"
 	},
 	"volta": {
-		"node": "22.9.0",
+		"node": "22.10.0",
 		"yarn": "1.22.22"
 	}
 }
