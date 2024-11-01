@@ -692,12 +692,12 @@
     textlint-rule-preset-japanese "10.0.3"
     textlint-rule-preset-jtf-style "2.3.14"
 
-"@d-zero/tsconfig@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.3.3.tgz#e46b9cacfea34262ca21b9a29dd35fe9a8e95869"
-  integrity sha512-ASCTMeK3lEFParGNYgeWLS8mK6zNKJAlBGo3BMLL0tTMDX+XrDarj1GILwH2VjBsoNp6CrAwrapNopaP7Uwkog==
+"@d-zero/tsconfig@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.4.0.tgz#a710fee2f2cbe48e67f05ce95da6142fa5bc049b"
+  integrity sha512-6Rr3uoPQmDh5viZM4hszzvwr9J5fwHVHlpNj1I+JYf8PNZ+JrVtlsAU1mMoM1YsYy34msG8KHWvWxjPjBoDa/Q==
   dependencies:
-    "@tsconfig/node-lts" "20.1.3"
+    "@tsconfig/node-lts" "22.0.0"
     "@tsconfig/recommended" "1.0.8"
     "@tsconfig/strictest" "2.0.5"
 
@@ -1308,10 +1308,10 @@
   resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-14.3.0.tgz#0a288b7f24a9b587b13d408007ad5eeba9d0c802"
   integrity sha512-Q7bKiPobKCDXM5z+xByLZzSjcOBhvlDufQGHNgHR8EFie2/AFc68cN8RYCY0MmwCMBMuHuYaOzfIOpQpK9oTcQ==
 
-"@tsconfig/node-lts@20.1.3":
-  version "20.1.3"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-20.1.3.tgz#8cdf6fa6c593bf5e16e53134ed377627a58a746e"
-  integrity sha512-m3b7EP2U+h5tNSpaBMfcTuHmHn04wrgRPQQrfKt75YIPq6kPs2153/KfPHdqkEWGx5pEBvS6rnvToT+yTtC1iw==
+"@tsconfig/node-lts@22.0.0":
+  version "22.0.0"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-22.0.0.tgz#3b3c5eeeca0c5aa06774c2642720c30dbee13d27"
+  integrity sha512-6y6CBFe0etz2xU1s0rGOj7pLsvbYXM9l/RNmBQOKI3S5DFrp1jigxx8uYupG5O6cCNXNlOE/1gquoQH01+kz5w==
 
 "@tsconfig/recommended@1.0.8":
   version "1.0.8"
