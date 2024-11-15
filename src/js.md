@@ -114,7 +114,7 @@ export default function (eleventyConfig) {
 
 次の条件下では`script`要素を利用してそのままHTML内にJavaScriptを記述しても構いません。
 
-- Google Analyticsのトラッキングコードや、その他コンバージョンタグ
+- タグマネージャーやトラッキングコードや、その他コンバージョンタグ
 - FacebookなどSNSの埋め込みコード
 - そのページにしか使わないことが保証されている再利用が難しいコード
 
@@ -126,9 +126,14 @@ export default function (eleventyConfig) {
 	// ...
 </script>
 
-<!-- WIP: Google Analyticsなどはそのまま貼り付けてください -->
+<!--
+  タグマネージャーなど属性も含めて加工せずそのまま貼り付けてください
+  ※ビルドされたファイル上ではPrettierなどの影響でコードが整形される場合があります
+-->
 <script>
-	ga();
+	(function (w, d, s, l, i) {
+		/* ... */
+	})(window, document, 'script', 'dataLayer', 'GTM-XXXXXXXX');
 </script>
 
 <!-- ❌ IE3時代のHTMLコメントフォールバックは書きません -->
@@ -277,13 +282,11 @@ document.querySelector('.c-component')?.addEventListener('click', (el) => {
 });
 ```
 
-<!-- prettier-ignore-start -->
 ```css
-[data-wide="true"] {
+[data-wide='true'] {
 	width: 300px;
 }
 ```
-<!-- prettier-ignore-end -->
 
 ### 動的な値を反映する場合
 
@@ -294,6 +297,13 @@ JavaScriptで動的な値を反映する場合は、カスタムプロパティ�
 document.querySelector('.c-component')?.addEventListener('click', (el) => {
 	el.style.setProperty('--height', anotherElement.clientHeight + 'px');
 });
+```
+
+```css
+.c-component {
+	--height: 10em;
+	height: var(--height);
+}
 ```
 
 ## 🐎 パフォーマンスを意識した実装
@@ -346,7 +356,7 @@ matchMedia(`(min-width: 768px)`).addEventListener('change', (media) => {
 Element.addEventListener('wheel', onWheel, { passive: true });
 ```
 
-`passive`を有効にすると`preventDefault()`の呼び出しを待たずにリスナー関数を実行するため、その関数がブラウザの既定のアクション（たとえばスクロール）をブロックすることがなくなります。
+`passive`を有効にすると`preventDefault()`の呼び出しを待たずにリスナー関数を実行するため、その関数がブラウザの既定のアクション（たとえばマウスホイール操作）をブロックすることがなくなります。
 
 ### 描画フレームを利用して処理を間引く
 
