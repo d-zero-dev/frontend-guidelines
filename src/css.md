@@ -552,6 +552,20 @@ PostCSSによりカスタムクエリーは値に展開されます。
 ```
 <!-- prettier-ignore-end -->
 
+::: tip `image-set`の利用
+もしくは解像度による出し分けは`image-set`を利用しても構いません。
+
+```scss
+.c-anonymous {
+	background-image: image-set(
+		url('/img/bg-anonymous.png') 1x,
+		url('/img/bg-anonymous@2x.png') 2x
+	);
+}
+```
+
+:::
+
 ### 変数
 
 `$`で始まるSASSの変数が使用できます。色や数値は基本的に変数化してください。
