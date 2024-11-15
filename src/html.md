@@ -48,7 +48,7 @@ _editorconfig_、_Markuplint_、_pug-lint_、_Prettier_ それぞれに設定さ
 - [@d-zero/prettier-config](https://github.com/d-zero-dev/linters/tree/main/packages/%40d-zero/prettier-config)
 
 ::: danger リントエラーについて
-例外なく必ずリントエラーを修正してください。**リンターのルールが現状にそぐわない場合はルールの見直しを行ってください**。
+例外なく必ずリントエラーを修正してください。**リンターのルールが現状にそぐわない場合はルールの見直し、つまりConfigファイルの変更を行ってください**。
 :::
 
 ### 改行・インデント

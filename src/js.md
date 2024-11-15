@@ -12,6 +12,10 @@ _editorconfig_、_ESLint_、_Prettier_ それぞれに設定されているル�
 - [@d-zero/eslint-config](https://github.com/d-zero-dev/linters/tree/main/packages/%40d-zero/eslint-config)
 - [@d-zero/prettier-config](https://github.com/d-zero-dev/linters/tree/main/packages/%40d-zero/prettier-config)
 
+::: danger リントエラーについて
+例外なく必ずリントエラーを修正してください。**リンターのルールが現状にそぐわない場合はルールの見直し、つまりConfigファイルの変更を行ってください**。
+:::
+
 ## 🍴 トランスパイル・コンパイル環境
 
 [TypeScript](https://www.typescriptlang.org/)とJavaScriptが利用できる環境となっています。[Vite](https://ja.vitejs.dev/)を通して、最終的にひとつのJavaScriptファイルに結合されます。
