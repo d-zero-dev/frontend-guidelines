@@ -110,6 +110,20 @@ export default function (eleventyConfig) {
 </head>
 ```
 
+::: danger 基本的には`import`を利用する
+
+あくまでも`script`要素でライブラリを利用する場合です。基本的には`import`を利用してください。
+
+```ts
+import $ from 'jquery';
+
+$('.c-component').on('click', function () {
+	/* ... */
+});
+```
+
+:::
+
 ### インラインJavaScript
 
 次の条件下では`script`要素を利用してそのままHTML内にJavaScriptを記述しても構いません。
