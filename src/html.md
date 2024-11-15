@@ -401,46 +401,127 @@ CMSへの組み込みなどでメモ代わりに利用する場合は、組み�
 
 ```mermaid
 flowchart LR
-	#in["*.pug"]
-	#out["*.html"]
-	#11ty(["11ty"])
-	#prettier(["整形 (prettier)"])
-	#minifier(["最適化 (minifier)"])
-	#lineBreak(["改行コード変換(lineBreak)"])
-	#charset(["文字コード変換 (charset)"])
-	#pathFormat(["出力ファイルの形式変更 (pathFormat)"])
+	#inHTML["*.html"]
+	#inPug["*.pug"]
+	#inSCSS["*.scss"]
+	#inJS["*.{js,cjs,mjs}"]
+	#inTS["*.ts"]
+	#outHTML["*.html"]
+	#outCSS["*.css"]
+	#outJS["*.js"]
 
-	#in --> #dzBuilder --> #out
+	#inHTML --> #dzBuilder
+	#inPug --> #dzBuilder
+	#inSCSS --> #dzBuilder
+	#inJS --> #dzBuilder
+	#inTS --> #dzBuilder
+	#dzBuilder --> #outHTML
+	#dzBuilder --> #outCSS
+	#dzBuilder --> #outJS
 
 	subgraph #dzBuilder["@d-zero/builder"]
 		direction LR
-		#11ty --> #options
 
-		subgraph #options["変換オプション"]
-			direction TB
-			#prettier --> #minifier --> #lineBreak --> #charset --> #pathFormat
+		subgraph #eleventy["11ty"]
+			#html["*.html"]
+			#pug["*.pug"]
+			#scss["*.scss"]
+			#js["*.{js,cjs,mjs}"]
+			#ts["*.ts"]
+
+			subgraph #transformPug["addTransform"]
+				direction TB
+
+				#pugCompiler["Pug Compiler"]
+			end
+
+			subgraph #transformHTML["addTransform"]
+				direction TB
+
+				#prettier(["整形 (prettier)"])
+				#minifier(["最適化 (minifier)"])
+				#lineBreak(["改行コード変換(lineBreak)"])
+				#charset(["文字コード変換 (charset)"])
+
+				#prettier --> #minifier --> #lineBreak --> #charset
+			end
+
+			subgraph #transpileCSS["addExtension"]
+				direction TB
+
+				#vite
+			end
+
+			subgraph #transpileJS["addExtension"]
+				direction TB
+
+				#esbuild
+			end
+
+			#html --> #transformHTML
+			#pug --> #transformPug --> #transformHTML
+			#scss --> #transpileCSS
+			#js --> #transpileJS
+			#ts --> #transpileJS
 		end
+
+		subgraph #pathFormat["出力ファイルのパス変更 (pathFormat)"]
+		end
+
+		#eleventy --> #pathFormat
 	end
 ```
 
-製品ソースコードの納品要件によっては、改行コードや文字コードの変換が必要なケースがあります。その場合は`eleventy.config.cjs`に変換オプションを追加してください。
+製品ソースコードの納品要件によっては、改行コードや文字コードの変換が必要なケースがあります。その場合は`eleventy.config.mjs`に変換オプションを追加してください。
 
 ```js
-module.exports = function (eleventyConfig) {
-	if (process.env.NODE_ENV === 'production') {
-		eleventyConfig.addGlobalData('prettier', true);
-		eleventyConfig.addGlobalData('minifier', { minifyJS: false });
-		eleventyConfig.addGlobalData('lineBreak', '\r\n');
-		eleventyConfig.addGlobalData('charset', 'shift_jis');
-		eleventyConfig.addGlobalData('pathFormat', 'preserve');
-	}
-	return eleventy(eleventyConfig);
-};
+import path from 'node:path';
+
+import eleventy from '@d-zero/builder/11ty';
+
+export default function (eleventyConfig) {
+	return eleventy(eleventyConfig, {
+		alias: {
+			'@': path.resolve(import.meta.dirname, '__assets', '_libs'),
+		},
+		outputCssDir: 'css',
+		outputJsDir: 'js',
+		outputImgDir: 'img',
+		imageSizes: { selector: '*' },
+		prettier: false,
+		minifier: { minifyJS: false },
+		lineBreak: '\n', // or '\r\n'
+		charset: 'utf8', // or 'shift_jis',
+		pathFormat: 'preserve', // or 'file' or 'directory'
+		autoDecode: false, // or true
+		ssi: {
+			'**/*': {
+				encoding: 'utf8', // or 'shift_jis',
+			},
+		},
+	});
+}
 ```
 
 ### 変換オプション
 
-`eleventyConfig.addGlobalData`にオプションを渡します。
+`@d-zero/builder/11ty`からインポートしたコンフィギュレーション関数`eleventy()`の第二引数にオプションを渡します。
+
+#### `alias`
+
+パスのエイリアスを設定します。
+
+Pugでは`@`に指定したパスがルートとして解釈されます。次のパスは同じ場所を参照します。
+
+| ファイル   | ベースディレクトリへの参照         |
+| ---------- | ---------------------------------- |
+| Pug        | `include /same-dir/a.pug`          |
+| SASS       | `@import '@/same-dir/a.scss'`      |
+| TypeScript | `import {} from '@/same-dir/a.js'` |
+
+#### `imageSizes`
+
+画像の`width`/`height`属性を自動付与します。`selector`オプションにCSSセレクタを指定することで、対象範囲を限定することができます。
 
 #### `prettier`
 
@@ -456,10 +537,20 @@ Prettierによる整形を行います。デフォルトは`true`です。
 
 #### `charset`
 
-文字コードを変換します。文字コードは**UTF-8**（`utf8`）と**Shift-JIS**（`shift_jis`）のみ対応しています。デフォルトは**UTF-8**（`utf8`）です。**Shift-JIS**にするには`shift_jis`を指定し、別途`iconv-lite`のインストールが必要です。
+HTMLを出力する際に文字コードを変換します。文字コードは**UTF-8**（`utf8`）と**Shift-JIS**（`shift_jis`）のみ対応しています。デフォルトは**UTF-8**（`utf8`）です。
 
-```sh
-yarn add -D iconv-lite
+`overrides`オプションで特定のファイルに限定することが可能です。
+
+```js
+eleventy(eleventyConfig, {
+	charset: {
+		encoding: 'utf8', // グローバル設定
+		overrides: {
+			paths: ['legacy/pages/**/*'],
+			encoding: 'shift_jis', // 特定のページへの設定
+		},
+	},
+});
 ```
 
 #### `pathFormat`
@@ -474,29 +565,19 @@ yarn add -D iconv-lite
 
 この設定は[Astro](https://docs.astro.build/ja/getting-started/)の[`build.format`](https://docs.astro.build/ja/reference/configuration-reference/#buildformat)を参考にしています。
 
-### include
+### 開発用ローカルサーバーのオプション
 
-[Pugでコンポーネントファイルなどをインクルードする](https://pugjs.org/language/includes.html)場合、[basedirオプション](https://pugjs.org/api/reference.html)を設定することでルートパスを使ってファイルを指定できます。  
-変更したい場合は、`eleventy.config.cjs`でオプションを設定してください。
+#### `autoDecode`
 
-```js
-eleventyConfig.setPugOptions({
-	basedir: path.resolve(__dirname, '__assets', '_libs'),
-});
-```
+自動デコードを有効にします。開発用ローカルサーバーは**UTF-8**しか対応していないため、**Shift-JIS**のファイルを開いた場合に自動でUTF-8に変換します。
 
-上記の設定の場合で、`__assets/_libs/component/_c-header.pug`をインクルードする場合はこのような記述になります。
+#### `ssi`
 
-```pug
-body.c-page-sub
-	.c-page-sub__base
-		.c-page-sub__header
-			include /component/_c-header.pug
-```
+開発用ローカルサーバーでSSI（Server Side Includes）を再現する設定です。簡易的なものになるので`#include`ディレクティブのみに対応しています。文字コードを自動で判定できないのでUTF-8以外に変更する必要がある場合は、対象ファイルのパターンに対して`encoding`を指定します。
 
 ## 📜 DOCTYPE
 
-DOCTYPEは必ず記述します。旧来の文書型宣言は使用しないでください。また、XML宣言は記述しません。
+DOCTYPEは記述します。旧来の文書型宣言は使用しないでください。また、XML宣言は記述しません。
 
 <!-- prettier-ignore-start -->
 ```html
@@ -505,13 +586,7 @@ DOCTYPEは必ず記述します。旧来の文書型宣言は使用しないで�
 ````
 <!-- prettier-ignore-end -->
 
-ただしPugの場合は自動付与されるので記述不要です。
-
-```pug
-html
-	head
-	body
-```
+記述がない場合、ビルド時に自動で付与されます。
 
 ## 🔖 メタ要素
 

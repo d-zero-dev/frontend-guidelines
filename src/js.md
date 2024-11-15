@@ -18,7 +18,7 @@ _editorconfig_、_ESLint_、_Prettier_ それぞれに設定されているル�
 
 ## 🍴 トランスパイル・コンパイル環境
 
-[TypeScript](https://www.typescriptlang.org/)とJavaScriptが利用できる環境となっています。[Vite](https://ja.vitejs.dev/)を通して、最終的にひとつのJavaScriptファイルに結合されます。
+[TypeScript](https://www.typescriptlang.org/)とJavaScriptが利用できる環境となっています。[esbuild](https://esbuild.github.io/)を通して、調整されたJavaScriptファイルに出力します。
 
 ## 📂 ファイル構成
 
@@ -35,15 +35,13 @@ _editorconfig_、_ESLint_、_Prettier_ それぞれに設定されているル�
         └── sub-script2.js
 ```
 
-`__assets/htdocs/js/script.ts`がメインのファイルとなり、`__assets/_libs/script/`には`script.ts`で利用するモジュールを格納しています。
+**`type=module`**の環境であるため、ファイルの参照に**拡張子は必須**です。TypeScriptファイルを参照する際は`.ts`拡張子を`.js`に変更する必要があります。
 
 `__assets/_libs`はエイリアス`@`で参照できるようになっています。
 
 ```ts
 import { subScript } from '@/script/sub-script.js';
 ```
-
-**module**の環境であるため、ファイルの参照に**拡張子は必須**です。TypeScriptファイルを参照する際は`.ts`拡張子を`.js`に変更する必要があります。
 
 ::: tip エイリアスの変更
 エイリアスは変更可能または追加することができます。`tsconfig.json`の`paths`と、`eleventy.config.cjs`の`alias`を変更してください。
@@ -59,40 +57,45 @@ import { subScript } from '@/script/sub-script.js';
 ```
 
 ```js
-module.exports = function (eleventyConfig) {
-	eleventyConfig.addGlobalData('alias', {
-		'@': path.resolve(__dirname, '__assets', '_libs'),
+import path from 'node:path';
+import eleventy from '@d-zero/builder/11ty';
+
+export default function (eleventyConfig) {
+	return eleventy(eleventyConfig, {
+		alias: {
+			'@': path.resolve(import.meta.dirname, '__assets', '_libs'),
+		},
 	});
-	return eleventy(eleventyConfig);
-};
+}
 ```
 
-この`alias`はViteの設定に影響します。
+この`alias`はesbuildの設定に影響します。
 
 :::
 
 #### 公開ファイル
 
-ひとつのJavaScriptファイルに結合され出力されます。
+`__assets/htdocs/`配下のファイルがビルドされて`htdocs/`に出力されます。パス構造は維持されます。
 
 ```
+📂 __assets/
+├── 📂 htdocs/
+│   └── 📂 js/
+│       ├── script.ts
+│       └── sub-script.ts
 📂 htdocs/
 └── 📂 js/
-    └── script.js
+    ├── script.js
+    └── sub-script.js
 ```
 
 ## 📝 HTMLへの読み込み
 
 ```html
-<script src="/js/script.ts" type="module"></script>
-```
-
-TypeScriptファイルであれば拡張子をそのまま読み込みます。これは開発中はそのまま機能し、ビルド時は書き出されたファイルに書き換えられます。
-
-```html
-<!-- ビルド後 -->
 <script src="/js/script.js" type="module"></script>
 ```
+
+`type="module"`は必要です。
 
 ### 読み込み順とライブラリの依存関係
 
