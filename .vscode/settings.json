@@ -10,6 +10,7 @@
 		"*": true,
 		"plaintext": false,
 		"log": false,
-		"dotenv": false
+		"dotenv": false,
+		"markdown": true
 	}
 }
