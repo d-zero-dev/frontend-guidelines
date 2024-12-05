@@ -662,17 +662,17 @@
   dependencies:
     cspell "8.16.1"
 
-"@d-zero/eslint-config@5.0.0-alpha.51":
-  version "5.0.0-alpha.51"
-  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.51.tgz#d3495dfdc6ff1d5c7a7fe00b8e8dcbdf217cb14f"
-  integrity sha512-9ZWCXuvqhVAs2XdesL6xO7ON1yfh79Cwvb4XXtUAmNOD3pfsGsq+s3Bc3IhNcd246gnh0tNUs272bEVCg4pCww==
+"@d-zero/eslint-config@5.0.0-alpha.52":
+  version "5.0.0-alpha.52"
+  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.52.tgz#d82aade37bdca881283443b4ab8f290a268a3d1e"
+  integrity sha512-BfJea3z4l2jJBfwM2fi9CcAeTmWeeUWqNlTkLScGWkHVvX8gTxVLPfHrFTI/FyuNjbwUY7nv6dPP7UnsslE+fw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "8.17.0"
     "@typescript-eslint/parser" "8.17.0"
     eslint "8.57.1"
     eslint-plugin-eslint-comments "3.2.0"
     eslint-plugin-import "2.31.0"
-    eslint-plugin-jsdoc "50.5.0"
+    eslint-plugin-jsdoc "50.6.0"
     eslint-plugin-regexp "2.7.0"
     eslint-plugin-sort-class-members "1.21.0"
     eslint-plugin-unicorn "56.0.1"
@@ -3200,10 +3200,10 @@ eslint-plugin-import@2.31.0:
     string.prototype.trimend "^1.0.8"
     tsconfig-paths "^3.15.0"
 
-eslint-plugin-jsdoc@50.5.0:
-  version "50.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-50.5.0.tgz#3b34b7846eb6c40750e68e97ae9441455fde7a75"
-  integrity sha512-xTkshfZrUbiSHXBwZ/9d5ulZ2OcHXxSvm/NPo494H/hadLRJwOq5PMV0EUpMqsb9V+kQo+9BAgi6Z7aJtdBp2A==
+eslint-plugin-jsdoc@50.6.0:
+  version "50.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-50.6.0.tgz#2c6049a40305313174a30212bc360e775b797a0a"
+  integrity sha512-tCNp4fR79Le3dYTPB0dKEv7yFyvGkUCa+Z3yuTrrNGGOxBlXo9Pn0PEgroOZikUQOGjxoGMVKNjrOHcYEdfszg==
   dependencies:
     "@es-joy/jsdoccomment" "~0.49.0"
     are-docs-informative "^0.0.2"
