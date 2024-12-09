@@ -670,10 +670,10 @@
     lint-staged "15.2.10"
     micromatch "4.0.8"
 
-"@d-zero/prettier-config@5.0.0-alpha.52":
-  version "5.0.0-alpha.52"
-  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.52.tgz#7761ee999b3740a0aa979e76d61048e047b506d2"
-  integrity sha512-7F0MMpxTl3PFTDFLHlOU+s93X7MgSUoeNiCc9yi+JFToq6UaJl9SA6f8oZFcMSPuGOpZu0cY2pHICeoPevLrDg==
+"@d-zero/prettier-config@5.0.0-alpha.53":
+  version "5.0.0-alpha.53"
+  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.53.tgz#593745e2c9d708b143d29aae112adb11a28ee7d1"
+  integrity sha512-AdGuj+Efjlw9TXfly2US1Be0/ogdFSMvFFmxJkzMVeEudHkwrgl43Onsx0C0ljKXqTU4YD6v9S9Or4JJ/328Ng==
   dependencies:
     "@prettier/plugin-pug" "3.2.0"
     prettier "3.4.2"
