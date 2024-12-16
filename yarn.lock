@@ -679,16 +679,16 @@
     "@prettier/plugin-pug" "3.2.0"
     prettier "3.4.2"
 
-"@d-zero/textlint-config@5.0.0-alpha.53":
-  version "5.0.0-alpha.53"
-  resolved "https://registry.yarnpkg.com/@d-zero/textlint-config/-/textlint-config-5.0.0-alpha.53.tgz#b4d3a7e9ca7f1ec85e2e197e16b6cb3b68b92f2e"
-  integrity sha512-J+BzHNSxxcLaX1kmwr3bZe67KsbmlZeOSKnQYKyfyUcxL29QMpKANdGBiqp8JxJDMjFhjtLGV870FyxOtd/bzQ==
+"@d-zero/textlint-config@5.0.0-alpha.54":
+  version "5.0.0-alpha.54"
+  resolved "https://registry.yarnpkg.com/@d-zero/textlint-config/-/textlint-config-5.0.0-alpha.54.tgz#e1ad20bfce57db93cdee461a05c81f835f2a5480"
+  integrity sha512-/hxzxcM4XEK2xgMQWAL86juK64DjgAAPlj9wkKnvoPGG8SaCoUtTGTE5twDJ3tvKpe1dYnZ6laHXjsgshHW5eg==
   dependencies:
     textlint "14.4.0"
     textlint-plugin-html "1.0.1"
     textlint-rule-preset-ja-spacing "2.4.3"
     textlint-rule-preset-japanese "10.0.3"
-    textlint-rule-preset-jtf-style "3.0.0"
+    textlint-rule-preset-jtf-style "3.0.1"
 
 "@d-zero/tsconfig@0.4.1":
   version "0.4.1"
@@ -6429,10 +6429,10 @@ textlint-rule-preset-japanese@10.0.3:
     textlint-rule-prh "^5.2.0"
     textlint-rule-sentence-length "^5.0.0"
 
-textlint-rule-preset-jtf-style@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-3.0.0.tgz#f0eb214cff15354f72b75f780b6960a6934d9dbf"
-  integrity sha512-tPONJW5o9RRv9E3C2MY4v40UEtdtuexB6XCUiFh7whxqRnNhV3lbJlfCDPlxjpHlaX8IRHst42pkMkJhwuaWOQ==
+textlint-rule-preset-jtf-style@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-3.0.1.tgz#c388f0efff4d2fd83ecfbe3cf43afe47663e5fb6"
+  integrity sha512-61lRomNUWeOmL2dt+sTdqPUx2FRxXK+8sgVGC6OJrifj3taJZx1QoJucIeVrcPRNRxD1sqXFXM0s+o5W3Nb8lg==
   dependencies:
     analyze-desumasu-dearu "^2.1.2"
     japanese-numerals-to-number "^1.0.2"
