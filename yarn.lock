@@ -6940,10 +6940,10 @@ vitepress-plugin-mermaid@2.0.17:
   optionalDependencies:
     "@mermaid-js/mermaid-mindmap" "^9.3.0"
 
-vitepress@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.6.0.tgz#6d326bd69724e89239cb0bdfaeb4c3a4dbb83e03"
-  integrity sha512-cm7tyYoU1og9eYUA9YH65i2mzkr4cB3jzxYrvCcStfBxQIqeWWFRJQcQw5WMEmdZ1Z9zOK5kRapydG4FGzK5zQ==
+vitepress@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.6.1.tgz#e63b3261908d1cfddb577b59e56285aa6709ba58"
+  integrity sha512-n41KBL08aonxaWMnk5V+TkpZ29rZF4sgYjvIqU2k0foteNhgms5BmbVWw9xTqD5hps12H1W+EZUwc7NlHh1s3g==
   dependencies:
     "@docsearch/css" "^3.8.2"
     "@docsearch/js" "^3.8.2"
