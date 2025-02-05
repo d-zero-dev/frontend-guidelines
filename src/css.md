@@ -343,6 +343,9 @@ headerコンポーネントの場合を例に解説します。
 
 ```scss
 .c-header {
+	--foo-bar: 0; // カスタムプロパティ
+	--foo-baz: calc(32 / 16 * 1em); // カスタムプロパティ
+
 	/* declaration */
 
 	@media (--sm-lte) { /* declaration */ } // メディアクエリ
