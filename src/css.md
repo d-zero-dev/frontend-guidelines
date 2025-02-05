@@ -687,8 +687,8 @@ selector {
 	font-size: 4vw; // ❌
 	font-size: calc(14 / 16 * 1em); // ✅ 親要素が16pxだったときに14pxになる相対値を表わす 「.875em」に変換される
 	font-size: calc(36 / 320 * 100vw); // ✅ ビューポートが320pxだったときに35pxになるvw値を表わす 「11.25vw」に変換される
-	font-size: calc(36 / $width * 100vw); // ✅ ビューポートが変数$widthだったときに35pxになるvw値を表わす 値は$widthの内容によって変化する
-	font-size: calc($font-size / $width * 100vw); // ✅ ビューポートが変数$widthだったときに$font-sizeになるvw値を表わす 値は$widthと$font-sizeの内容によって変化する
+	font-size: calc(36 / var(--width) * 100vw); // ✅ ビューポートが変数--widthだったときに35pxになるvw値を表わす 値は--widthの内容によって変化する
+	font-size: calc(var(--font-size) / var(--width) * 100vw); // ✅ ビューポートが変数--widthだったときに--font-sizeになるvw値を表わす 値は--widthと--font-sizeの内容によって変化する
 }
 ```
 <!-- prettier-ignore-end -->
