@@ -18,7 +18,7 @@
 		"up": "yarn upgrade-interactive --latest"
 	},
 	"devDependencies": {
-		"@d-zero/cspell-config": "5.0.0-alpha.60",
+		"@d-zero/cspell-config": "5.0.0-alpha.61",
 		"@d-zero/eslint-config": "5.0.0-alpha.60",
 		"@d-zero/lint-staged-config": "5.0.0-alpha.60",
 		"@d-zero/prettier-config": "5.0.0-alpha.60",
