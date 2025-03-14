@@ -663,10 +663,10 @@
   dependencies:
     cspell "8.17.5"
 
-"@d-zero/eslint-config@5.0.0-alpha.61":
-  version "5.0.0-alpha.61"
-  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.61.tgz#a564dd132e61e3e8102b3f8e1c9184856e5aca9c"
-  integrity sha512-xER+GYzqN2ZRxTO33qQx48cbxqK7QA0bQqq0g7YYXZTNz/Ms5pxe8PP4cXo19ntEdvMFWhLTMxiNb8RiWl+99Q==
+"@d-zero/eslint-config@5.0.0-alpha.62":
+  version "5.0.0-alpha.62"
+  resolved "https://registry.yarnpkg.com/@d-zero/eslint-config/-/eslint-config-5.0.0-alpha.62.tgz#477dfa7042a28fa23fc0844119b843ab10be6cb0"
+  integrity sha512-FzfgYLHn2ah8xEx8e0lbvfuyB4wd1kyrhrrPFR+5ImktKTtVBuhh/9R4vO9UywMyOPLQ9mxMBzs4ilzm+NQxQg==
   dependencies:
     "@eslint/js" "9.22.0"
     eslint "9.22.0"
