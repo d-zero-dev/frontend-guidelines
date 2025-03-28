@@ -119,6 +119,9 @@ selector {
             ├── 📂 base/
             │   └── root.scss
             └── 📂 general/
+                ├── all.scss
+                ├── body.scss
+                ├── button.scss
                 ├── tag-name-a.scss
                 ︙
                 └── tag-name-z.scss
