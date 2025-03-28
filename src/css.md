@@ -45,7 +45,7 @@ _editorconfig_、_Stylelint_、_Prettier_ それぞれに設定されている�
 ```scss
 .c-header {
 	/* ❌ 実装上やむを得ない場合を除いてdisableコメントは使用しないこと */
-	width: 100px !important; // stylelint-disable-line declaration-no-important
+	inline-size: 100px !important; // stylelint-disable-line declaration-no-important
 }
 ```
 
@@ -690,8 +690,8 @@ selector {
 	font-size: 4vw; // ❌
 	font-size: calc(14 / 16 * 1em); // ✅ 親要素が16pxだったときに14pxになる相対値を表わす 「.875em」に変換される
 	font-size: calc(36 / 320 * 100vw); // ✅ ビューポートが320pxだったときに35pxになるvw値を表わす 「11.25vw」に変換される
-	font-size: calc(36 / var(--width) * 100vw); // ✅ ビューポートが変数--widthだったときに35pxになるvw値を表わす 値は--widthの内容によって変化する
-	font-size: calc(var(--font-size) / var(--width) * 100vw); // ✅ ビューポートが変数--widthだったときに--font-sizeになるvw値を表わす 値は--widthと--font-sizeの内容によって変化する
+	font-size: calc(36 / var(--inline-size) * 100vw); // ✅ ビューポートが変数--inline-sizeだったときに35pxになるvw値を表わす 値は--inline-sizeの内容によって変化する
+	font-size: calc(var(--font-size) / var(--inline-size) * 100vw); // ✅ ビューポートが変数--inline-sizeだったときに--font-sizeになるvw値を表わす 値は--inline-sizeと--font-sizeの内容によって変化する
 }
 ```
 <!-- prettier-ignore-end -->
@@ -744,43 +744,43 @@ selector {
 
 ### 幅・高さ
 
-`width` `height` `max-width` `max-height` `min-width` `min-height` `flex-basis` を対象としたルール
+`inline-size` `block-size` `max-inline-size` `max-block-size` `min-inline-size` `min-block-size` `flex-basis` を対象としたルール
 
 <!-- prettier-ignore-start -->
 ```scss
 selector {
 	// ゼロは単位を付けない
-	width: 0px; // ❌
-	width: 0; // ✅
+	inline-size: 0px; // ❌
+	inline-size: 0; // ✅
 
 	// 単位は `px` `%` `em` `rem` `vw` `vh` を使用する
-	width: 100px; // ✅
-	height: 5em; // ✅
-	max-width: 50rem; // ✅
-	max-height: 100vw; // ✅
-	min-height: 100vh; // ✅
+	inline-size: 100px; // ✅
+	block-size: 5em; // ✅
+	max-inline-size: 50rem; // ✅
+	max-block-size: 100vw; // ✅
+	min-block-size: 100vh; // ✅
 	flex-basis: 100%; // ✅
 
 	// ただし `%` `vw` `vh` の場合は何を基準にしているのかを明示的に `calc()` を使って指定する
-	width: 5%; // ❌
-	width: 50%; // ❌
+	inline-size: 5%; // ❌
+	inline-size: 50%; // ❌
 	flex-basis: 33.3%; // ❌
 	flex-basis: calc(100% / 3); // ✅ 明示的な三等分 「33.33333%」に変換されます
-	height: calc(160 / 320 * 100vw); // ✅ ビューポートが320pxだったときに160pxになるvw値を表わす 「50vw」に変換される
+	block-size: calc(160 / 320 * 100vw); // ✅ ビューポートが320pxだったときに160pxになるvw値を表わす 「50vw」に変換される
 
 	// `100%` `100vw` `100vh` 以外の基準は意図がわかりにくいので避ける
-	max-width: calc(160 / 320 * 54.2vw); // ❌
-	min-height: calc(2vw / 2); // ❌
-	min-height: calc(50vh / 2); // ❌
+	max-inline-size: calc(160 / 320 * 54.2vw); // ❌
+	min-block-size: calc(2vw / 2); // ❌
+	min-block-size: calc(50vh / 2); // ❌
 	flex-basis: calc(105% / 3); // ❌
 	flex-basis: calc(120% / 3); // ❌
 	flex-basis: calc(200% / 3); // ❌
 	flex-basis: calc(1000% / 3); // ❌
 
 	// その他の単位は混乱を避けるため使用しない
-	width: 16ex; // ❌
-	width: 16pt; // ❌
-	width: 16cm; // ❌
+	inline-size: 16ex; // ❌
+	inline-size: 16pt; // ❌
+	inline-size: 16cm; // ❌
 }
 ```
 <!-- prettier-ignore-end -->

@@ -1002,9 +1002,9 @@ WAI-ARIAをHTMLに付加することで、HTMLでは不足している要素の�
   - 親要素に依存せず画像を成り行きで表示させる場合
   - 親要素によって幅は変わるが、高さが画像によって可変する場合
 - 明示しなくていいケース
-  - CSS で `width`と `height` を同時に指定している場合（ただし `height` が `auto` でない）
-  - CSS で `width` か `height` のどちらかを指定していて、且つ `aspect-ratio` を指定している場合
-  - 幅と高さが親要素に完全に依存して、CSS の `object-fit` を使っている場合
+  - CSSで`inline-size`(`width`)と`block-size`(`height`)を同時に指定している場合（ただし`block-size`が`auto`でない）
+  - CSSで`inline-size`(`width`)か`block-size`(`height`)のどちらかを指定していて、且つ`aspect-ratio`を指定している場合
+  - 幅と高さが親要素に完全に依存して、CSSの`object-fit` を使っている場合
 
 :::tip 自動付与
 `width`属性と`height`属性はビルド自動的に付与されるので、開発時に気にする必要はそんなにありません。ただし、ビルド時に画像のサイズが取得できない場合は手動で指定してください。

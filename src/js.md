@@ -287,7 +287,7 @@ style属性からプロパティを直接書き換えて実装は避けてくだ
 ```js
 // ❌ style属性で直接プロパティを書き換えている
 document.querySelector('.c-component')?.addEventListener('click', (el) => {
-	el.style.width = '300px';
+	el.style.inlineSize = '300px';
 });
 
 // ✅ 状態を表す属性を変更する
@@ -298,7 +298,7 @@ document.querySelector('.c-component')?.addEventListener('click', (el) => {
 
 ```css
 [data-wide='true'] {
-	width: 300px;
+	inline-size: 300px;
 }
 ```
 
@@ -309,14 +309,14 @@ JavaScriptで動的な値を反映する場合は、カスタムプロパティ�
 ```js
 // ✅ カスタムプロパティを利用してスタイルを変更する
 document.querySelector('.c-component')?.addEventListener('click', (el) => {
-	el.style.setProperty('--height', anotherElement.clientHeight + 'px');
+	el.style.setProperty('--block-size', anotherElement.clientHeight + 'px');
 });
 ```
 
 ```css
 .c-component {
-	--height: 10em;
-	height: var(--height);
+	--block-size: 10em;
+	block-size: var(--block-size);
 }
 ```
 
