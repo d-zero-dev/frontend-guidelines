@@ -106,7 +106,7 @@ export default function (eleventyConfig) {
 	<script src="/js/jquery.min.js" defer></script>
 	<!-- ⚠️ jQueryを利用する場合は先に読み込む -->
 
-	<script src="/js/script.ts" type="module"></script>
+	<script src="/js/script.js" type="module"></script>
 </head>
 ```
 
