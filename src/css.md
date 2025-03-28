@@ -107,10 +107,9 @@ selector {
 ```
 # リソース管理
 📂 __assets/
-├── 📂 htdocs/
-│   └── 📂 theme/
-│       ├── style.scss
-│       └── bge_style.scss
+├── 📂 htdocs/css/
+│   ├── style.scss
+│   └── bge_style.scss
 └── 📂 _libs/
         ├── 📂 component/
         │   ├── c-component-name-a.scss
