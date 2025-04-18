@@ -1,6 +1,6 @@
 # CSS ガイドライン
 
-🔰 当ドキュメントは「[コーディングガイドライン](./index.md)」の一部です。
+🔰 当ドキュメントは「[コーディングガイドライン](../index.md)」の一部です。
 基本的なガイドライン・ルールについては先にそれから確認してください。
 
 ## 🎯 CSS ガイドラインの目的
@@ -111,20 +111,20 @@ selector {
 │   ├── style.scss
 │   └── bge_style.scss
 └── 📂 _libs/
-        ├── 📂 component/
-        │   ├── c-component-name-a.scss
-        │   ︙
-        │   └── c-component-name-z.scss
-        └── 📂 style/
-            ├── 📂 base/
-            │   └── root.scss
-            └── 📂 general/
-                ├── all.scss
-                ├── body.scss
-                ├── button.scss
-                ├── tag-name-a.scss
-                ︙
-                └── tag-name-z.scss
+		├── 📂 component/
+		│   ├── c-component-name-a.scss
+		│   ︙
+		│   └── c-component-name-z.scss
+		└── 📂 style/
+			├── 📂 base/
+			│   └── root.scss
+			└── 📂 general/
+				├── all.scss
+				├── body.scss
+				├── button.scss
+				├── tag-name-a.scss
+				︙
+				└── tag-name-z.scss
 
 # 公開ファイル
 📂 htdocs/css/
@@ -257,7 +257,7 @@ CSSレイヤーを利用してインポートするファイルを分類しま�
 
 ### `__assets/_libs/style/component/`
 
-要素はコンポーネント単位に分割して管理します。（👉[HTMLガイドライン &gt; コンポーネント](./html.md#component)）
+要素はコンポーネント単位に分割して管理します。（👉[HTMLガイドライン &gt; コンポーネント](../html/index.md#component)）
 ファイル名はコンポーネント名とします。 **ひとつのファイルの中に複数のコンポーネントを定義しないでください**。
 
 - 例) `<header class="c-header-page">` → `c-header-page.scss`
@@ -507,7 +507,7 @@ PostCSSによりカスタムクエリーは値に展開されます。
 | `--lg-gt`        | lg 超え                                |
 | `--hr`           | 高解像度（レティナディスプレイ対応他） |
 
-![図: ビューポートとブレークポイント](./breakpoint.png)
+![図: ビューポートとブレークポイント](../img/breakpoint.png)
 
 `--hr`は高解像度判定のクエリーなるので、低解像度と高解像度での出し分けを実装する差に利用することができます。
 

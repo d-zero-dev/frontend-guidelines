@@ -109,7 +109,7 @@
 - yarn
 
 Node.jsはプロジェクトのよってバージョンを切り替える必要があるため、バージョン管理ツールの利用してインストールしてください。
-管理ツールは[Volta](https://volta.sh/)を推奨します。[Voltaのセットアップ手順](./setup-volta.md)を参考に整備してください。
+管理ツールは[Volta](https://volta.sh/)を推奨します。[Voltaのセットアップ手順](./tools/setup-volta.md)を参考に整備してください。
 
 <details>
 <summary>過去利用を推奨したNode.jsバージョン管理ツール</summary>
@@ -259,7 +259,7 @@ yarn [オプション]
 
 ### Git
 
-- [Gitガイドライン](./git.md)
+- [Gitガイドライン](./git/index.md)
 
 ### Subversion
 
@@ -279,7 +279,7 @@ Subversion(SVN)は利用しません。古いプロジェクトで利用して�
 
 ### 納品ファイルの文字コード・改行コードを変更する
 
-納品ファイルの文字コード・改行コードはビルド設定で変更することができます。詳細は[HTMLガイドライン](./html.md#builder)を参照してください。
+納品ファイルの文字コード・改行コードはビルド設定で変更することができます。詳細は[HTMLガイドライン](./html/index.md#builder)を参照してください。
 
 ### 留意点
 
@@ -315,20 +315,20 @@ Android Chromeの検証は、検証機を使うか、もしくは[Android Studio
 
 ## 📛 識別子の命名規則
 
-- [識別子の命名規則](./naming.md)
+- [識別子の命名規則](./naming/index.md)
 
 ## 📗 HTML ガイドライン
 
-- [HTML ガイドライン](./html.md)
+- [HTML ガイドライン](./html/index.md)
 
 ## 📘 CSS ガイドライン
 
-- [CSS ガイドライン](./css.md)
+- [CSS ガイドライン](./css/index.md)
 
 ## 💿 画像・メディアリソースガイドライン
 
-- [画像・メディアリソースガイドライン](./media.md)
+- [画像・メディアリソースガイドライン](./media/index.md)
 
 ## 📙 JavaScript ガイドライン
 
-- [JavaScript ガイドライン](./js.md)
+- [JavaScript ガイドライン](./js/index.md)
