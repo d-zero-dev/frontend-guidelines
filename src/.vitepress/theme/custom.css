@@ -1,3 +1,9 @@
+.VPNav {
+	a.title {
+		text-wrap: auto;
+	}
+}
+
 .vp-doc div[class*='language-'] + div[class*='language-'],
 .vp-doc div[class$='-api'] + div[class*='language-'],
 .vp-doc div[class*='language-'] + div[class$='-api'] > div[class*='language-'] {
