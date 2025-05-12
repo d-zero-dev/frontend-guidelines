@@ -1,6 +1,6 @@
 # ビルド環境
 
-11tyのTransform機能から[ViteのCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。プリプロセッサーはSASSを利用します。
+11tyのTransform機能から[ViteのCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。プリプロセッサーはSassを利用します。
 
 ```mermaid
 flowchart LR

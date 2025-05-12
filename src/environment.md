@@ -114,11 +114,11 @@ HTML/CSS/JavaScirptなどのコードは、**開発ソースコード**と**製�
 | 対象       | プリプロセッサ/トランスパイラ/ビルドツール        |
 | ---------- | ------------------------------------------------- |
 | HTML       | Pug / 11ty                                        |
-| CSS        | SASS(SCSS 記法) + PostCSS(Autoprefixer 他) / Vite |
+| CSS        | Sass(SCSS 記法) + PostCSS(Autoprefixer 他) / Vite |
 | JavaScript | TypeScript / Vite                                 |
 
 HTMLは*HTML*と*Pug*どちらの言語でも記述ができます。
-CSSは*SCSS記法のSASS*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
+CSSは*SCSS記法のSass*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
 それぞれの対応する具体的なバージョンは`package.json`や各種コンフィグファイルを参照してください。
 
 ## ビルド方法

@@ -119,7 +119,7 @@ Pugでは`@`に指定したパスがルートとして解釈されます。次�
 | ファイル   | ベースディレクトリへの参照         |
 | ---------- | ---------------------------------- |
 | Pug        | `include /same-dir/a.pug`          |
-| SASS       | `@import '@/same-dir/a.scss'`      |
+| Sass       | `@import '@/same-dir/a.scss'`      |
 | TypeScript | `import {} from '@/same-dir/a.js'` |
 
 ### `imageSizes`
