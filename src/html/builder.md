@@ -128,11 +128,11 @@ Pugでは`@`に指定したパスがルートとして解釈されます。次�
 
 ### `prettier`
 
-Prettierによる整形を行います。デフォルトは`true`です。
+*Prettier*による整形を行います。デフォルトは`true`です。
 
 ### `minifier`
 
-[HTMLMinifier](https://terser.org/html-minifier-terser/)によって最適化を行います。必要であれば[設定](https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)を上書きしてください。
+[_HTMLMinifier_](https://terser.org/html-minifier-terser/)によって最適化を行います。必要であれば[設定](https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)を上書きしてください。
 
 ### `lineBreak`
 
@@ -166,7 +166,7 @@ eleventy(eleventyConfig, {
 | `directory` | ディレクトリを生成しページに対応する`index.html`ファイルをネスト |
 | `preserve`  | ソースフォルダに表示される通りにHTMLファイルを生成               |
 
-この設定は[Astro](https://docs.astro.build/ja/getting-started/)の[`build.format`](https://docs.astro.build/ja/reference/configuration-reference/#buildformat)を参考にしています。
+この設定は[_Astro_](https://docs.astro.build/ja/getting-started/)の[`build.format`](https://docs.astro.build/ja/reference/configuration-reference/#buildformat)を参考にしています。
 
 ## 開発用ローカルサーバーのオプション
 

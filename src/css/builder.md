@@ -1,6 +1,6 @@
 # ビルド環境
 
-11tyのTransform機能から[ViteのCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。プリプロセッサーはSassを利用します。
+*11ty*のTransform機能から[*Vite*のCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。プリプロセッサーはSassを利用します。
 
 ```mermaid
 flowchart LR
@@ -24,7 +24,7 @@ flowchart LR
 
 ## ベンダープレフィックス
 
-Autoprefixerを利用するのでベンダープレフィックス付きのプロパティは必要ありません。
+*Autoprefixer*を利用するのでベンダープレフィックス付きのプロパティは必要ありません。
 
 ```scss
 selector {
@@ -34,7 +34,7 @@ selector {
 }
 ```
 
-ただしCSSの標準規格でないものについては必要なケースがあります。Stylelintはその点を考慮して警告を出すので心配はありません。
+ただしCSSの標準規格でないものについては必要なケースがあります。*Stylelint*はその点を考慮して警告を出すので心配はありません。
 
 ```scss
 selector {

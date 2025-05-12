@@ -11,7 +11,7 @@ _EditorConfig_、_Stylelint_、_Prettier_ それぞれに設定されている�
 例外なく必ずリントエラーを修正してください。**リンターのルールが現状にそぐわない場合はルールの見直し、つまりConfigファイルの変更を行ってください**。
 :::
 
-::: warning Stylelintの`disable`コメント
+::: warning *Stylelint*の`disable`コメント
 
 `disable`コメントを利用することで、ルールを無視することができますが**原則行わない**でください。
 
