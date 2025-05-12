@@ -6,7 +6,7 @@
 
 WAI-ARIAをHTMLに付加することで、HTMLでは不足している要素のセマンティックを補うことができます。しかし、WAI-ARIAが必要なケースは多くなく、HTML標準では再現できないコンポーネントを作成するときのみ使用してください。その場合、[ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)を参考にして、インタラクションの要件や振る舞いを推奨されているものに近い実装をするようにしてください。
 
-- 🙆 WAI-ARAIを使う必要があるケース
+- 🙆 WAI-ARIAを使う必要があるケース
   - `button`要素が`aria-pressed`や`aria-expanded`などの状態をもつ必要がある場合
   - タブやカルーセルなどHTMLにないコンポーネントを扱う場合
 - 🙅 WAI-ARIAを使う必要がないケース
