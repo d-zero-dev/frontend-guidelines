@@ -6,7 +6,7 @@
 
 また、コーディング時の自動修正・自動警告を有効にするために以下のプラグインをインストールしてください。
 
-- [**editorconfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [**EditorConfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [**Stylelint**](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
