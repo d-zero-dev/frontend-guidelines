@@ -31,7 +31,7 @@ JavaScript のライブラリの利用など、クラス命名規則に当ては
 
 ```scss
 .c-hero {
-	// ⚠️ 通常はstylelintによる警告がでる
+	// ⚠️ 通常はStylelintによる警告がでる
 	.any-js-lib-class-name {
 		/* declaration */
 	}
