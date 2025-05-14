@@ -98,7 +98,7 @@ export default async () => {
 							{ text: 'コードスタイル', link: '/css/style' },
 							{ text: 'ビルド環境', link: '/css/builder' },
 							{ text: 'ファイル構成', link: '/css/structure' },
-							{ text: 'IDの利用の禁止', link: '/css/ids' },
+							{ text: 'IDセレクタの利用の禁止', link: '/css/ids' },
 							{ text: 'ルールの定義規則', link: '/css/rules' },
 							{ text: 'タイプセレクタの利用', link: '/css/selectors' },
 							{ text: '記述順番', link: '/css/order' },
