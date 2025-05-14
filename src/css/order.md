@@ -19,7 +19,7 @@
 /* EOF */
 ```
 
-また、プロパティについてはStylelintの設定に基づいて種類順に記述します。
+また、プロパティについては*Stylelint*の設定に基づいて種類順に記述します。
 
 ::: tip 👮‍♀️ 自動検知
 このルールは*Stylelint*によって警告されます。
@@ -31,7 +31,7 @@ JavaScript のライブラリの利用など、クラス命名規則に当ては
 
 ```scss
 .c-hero {
-	// ⚠️ 通常はstylelintによる警告がでる
+	// ⚠️ 通常はStylelintによる警告がでる
 	.any-js-lib-class-name {
 		/* declaration */
 	}

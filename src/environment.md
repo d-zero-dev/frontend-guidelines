@@ -6,7 +6,7 @@
 
 また、コーディング時の自動修正・自動警告を有効にするために以下のプラグインをインストールしてください。
 
-- [**editorconfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [**EditorConfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [**Stylelint**](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
@@ -45,8 +45,8 @@ Node.jsはプロジェクトのよってバージョンを切り替える必要�
 ::: tip Gitのインストール
 
 基本的に方法は問いません。
-macOSの場合、通常初めて`git`コマンドを利用すると*XCode*のライセンスに同意する必要があったり、*XCode*そのものをインストールする必要があります。
-*XCode*をどうしてもイントールできない場合、[Gitの本家](https://git-scm.com/)からインストーラを使ってインストールしても構いません。
+macOSの場合、通常初めて`git`コマンドを利用するとXCodeのライセンスに同意する必要があったり、XCodeそのものをインストールする必要があります。
+XCodeをどうしてもインストールできない場合、[Gitの本家](https://git-scm.com/)からインストーラを使ってインストールしても構いません。
 
 :::
 
@@ -68,7 +68,7 @@ npx @d-zero/create-frontend
 
 ## 開発ソースコードと製品ソースコード
 
-HTML/CSS/JavaScirptなどのコードは、**開発ソースコード**と**製品ソースコード**に分かれます。
+HTML/CSS/JavaScriptなどのコードは、**開発ソースコード**と**製品ソースコード**に分かれます。
 
 ```
 📂
@@ -114,11 +114,11 @@ HTML/CSS/JavaScirptなどのコードは、**開発ソースコード**と**製�
 | 対象       | プリプロセッサ/トランスパイラ/ビルドツール        |
 | ---------- | ------------------------------------------------- |
 | HTML       | Pug / 11ty                                        |
-| CSS        | SASS(SCSS 記法) + PostCSS(Autoprefixer 他) / Vite |
+| CSS        | Sass(SCSS 記法) + PostCSS(Autoprefixer 他) / Vite |
 | JavaScript | TypeScript / Vite                                 |
 
 HTMLは*HTML*と*Pug*どちらの言語でも記述ができます。
-CSSは*SCSS記法のSASS*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
+CSSは*SCSS記法のSass*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
 それぞれの対応する具体的なバージョンは`package.json`や各種コンフィグファイルを参照してください。
 
 ## ビルド方法
