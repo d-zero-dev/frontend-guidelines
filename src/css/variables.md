@@ -43,11 +43,13 @@
 `--hr`は高解像度判定のクエリーなるので、低解像度と高解像度での出し分けを実装する差に利用することができます。
 
 <!-- prettier-ignore-start -->
-```scss
+```css
 .c-anonymous {
 	background: url("/img/bg-anonymous.png");
+}
 
-	@media (--hr) {
+@media (--hr) {
+	.c-anonymous {
 		background: url("/img/bg-anonymous@2x.png");
 	}
 }
@@ -57,7 +59,7 @@
 ::: tip `image-set`の利用
 もしくは解像度による出し分けは`image-set`を利用しても構いません。
 
-```scss
+```css
 .c-anonymous {
 	background-image: image-set(
 		url('/img/bg-anonymous.png') 1x,
@@ -68,71 +70,11 @@
 
 :::
 
-## 変数
-
-`$`で始まるSassの変数が使用できますが**非推奨**です。
-
-::: danger Sass変数の非推奨
-CSSのエコシステム（*Stylelint*など）がSassのパースができなくなってきています。このため基本的にカスタムプロパティを利用してください。*Stylelint*が`parse`関連の警告を出す場合、Sass変数の利用を諦めて別の方法を検討してください。
-:::
-
-::: tip 👮‍♀️ 自動検知
-このルールは*Stylelint*によって警告されます。
-:::
-
 ## 関数
 
 関数の定義は原則禁止です。
 
-使用できるのはCSS標準によって規定されている関数や、Sassが標準機能としてもっている関数、*PostCSS*によりコンパイル時に変数を計算する`resolve`関数が使用できます。
-
-::: tip 👮‍♀️ 自動検知
-このルールは*Stylelint*によって警告されます。
-:::
-
-## ミックスイン
-
-### 宣言
-
-```scss
-@mixin mixin-name {
-	/* declaration */
-}
-```
-
-### 展開
-
-```scss
-selector {
-	@include mixin-name; // ここで展開
-}
-```
-
-## プレースホルダー
-
-コンポーネントファイル内であれば`%`で始まる識別子でプレースホルダー機能を使用できます。プロパティが展開されるのは`%`を宣言した場所になるため、カスケーディングには十分に気をつけてください。
-
-::: warning
-
-<!-- prettier-ignore-start -->
-```scss
-// ❌ コンポーネント外の利用は禁止
-%any-style {
-	any-property: any-value;
-}
-
-// ✅ コンポーネント内で利用する
-.c-component {
-	%any-style {
-		any-property: any-value;
-	}
-
-	&__element {
-		@extend %any-style;
-	}
-}
-```
-<!-- prettier-ignore-end -->
+使用できるのはCSS標準によって規定されている関数や、*PostCSS*によりコンパイル時に変数を計算する`resolve`関数が使用できます。
 
 ::: tip 👮‍♀️ 自動検知
 このルールは*Stylelint*によって警告されます。
