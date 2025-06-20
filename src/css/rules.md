@@ -46,21 +46,13 @@ headerコンポーネントの場合を例に解説します。
 
 	/* declaration */
 
-	@media (--sm-lte) {
-		/* declaration */
-	}
+	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
 
-	&:hover {
-		/* declaration */
-	}
+	&:hover { /* declaration */ } /* 疑似クラス */
 
-	&[data-compact-mode="true"] {
-		/* declaration */
-	}
+	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
 
-	&[aria-hidden="true"] {
-		/* declaration */
-	}
+	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
 
 	&[data-fat-mode="true"] {
 		/* declaration */
@@ -79,21 +71,13 @@ headerコンポーネントの場合を例に解説します。
 .c-header__body {
 	/* declaration */
 
-	@media (--sm-lte) {
-		/* declaration */
-	}
+	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
 
-	&:hover {
-		/* declaration */
-	}
+	&:hover { /* declaration */ } /* 疑似クラス */
 
-	&[data-compact-mode="true"] {
-		/* declaration */
-	}
+	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
 
-	&[aria-hidden="true"] {
-		/* declaration */
-	}
+	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
 }
 
 .c-header__body--compact-mode {
