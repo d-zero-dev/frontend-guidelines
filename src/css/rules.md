@@ -45,62 +45,30 @@ headerコンポーネントの場合を例に解説します。
 	--foo-baz: calc(32 / 16 * 1em); /* カスタムプロパティ */
 
 	/* declaration */
-}
 
-@media (--sm-lte) {
-	.c-header {
-		/* declaration */
-	}
-}
-
-.c-header:hover {
-	/* declaration */
-}
-
-.c-header--compact-mode {
-	/* declaration */
-}
-
-.c-header[data-compact-mode="true"] {
-	/* declaration */
-}
-
-.c-header[aria-hidden="true"] {
-	/* declaration */
+	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
+	&:hover { /* declaration */ } /* 疑似クラス */
+	&--compact-mode { /* declaration */ } /* 状態クラス */
+	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
+	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
 }
 
 .c-header__body {
 	/* declaration */
-}
-
-@media (--sm-lte) {
-	.c-header__body {
-		/* declaration */
-	}
-}
-
-.c-header__body:hover {
-	/* declaration */
-}
-
-.c-header__body--compact-mode {
-	/* declaration */
-}
-
-.c-header__body[data-compact-mode="true"] {
-	/* declaration */
-}
-
-.c-header__body[aria-hidden="true"] {
-	/* declaration */
+	/* 子孫要素も同様のルールになる */
+	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
+	&:hover { /* declaration */ } /* 疑似クラス */
+	&--compact-mode { /* declaration */ } /* 状態クラス */
+	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
+	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
 }
 
 .c-header[data-fat-mode="true"] {
 	/* declaration */
-}
 
-.c-header[data-fat-mode="true"] .c-header__body {
-	/* declaration */
+	.c-header__body {
+		/* declaration */
+	}
 }
 ```
 <!-- prettier-ignore-end -->
@@ -111,18 +79,11 @@ headerコンポーネントの場合を例に解説します。
 ```css
 .c-header {
 	/* declaration */
-}
 
-.c-header[data-compact-mode="true"] {
-	/* declaration */
-}
+	&[data-compact-mode="true"] { /* declaration */ }
 
-.c-header::before {
-	/* declaration */
-}
-
-.c-header::after {
-	/* declaration */
+	&::before { /* declaration */ }
+	&::after { /* declaration */ }
 }
 
 .c-header__body {

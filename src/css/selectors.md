@@ -9,14 +9,14 @@
 ```css
 .c-header {
 	/* declaration */
-}
 
-.c-header ul {
-	/* declaration */
-}
+	ul {
+		/* declaration */
+	}
 
-.c-header li {
-	/* declaration */
+	li {
+		/* declaration */
+	}
 }
 ```
 
