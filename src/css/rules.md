@@ -45,61 +45,57 @@ headerコンポーネントの場合を例に解説します。
 	--foo-baz: calc(32 / 16 * 1em); /* カスタムプロパティ */
 
 	/* declaration */
-}
 
-@media (--sm-lte) {
-	.c-header {
+	@media (--sm-lte) {
 		/* declaration */
 	}
-}
 
-.c-header:hover {
-	/* declaration */
+	&:hover {
+		/* declaration */
+	}
+
+	&[data-compact-mode="true"] {
+		/* declaration */
+	}
+
+	&[aria-hidden="true"] {
+		/* declaration */
+	}
+
+	&[data-fat-mode="true"] {
+		/* declaration */
+
+		.c-header__body {
+			/* declaration */
+		}
+	}
 }
 
 .c-header--compact-mode {
 	/* declaration */
 }
 
-.c-header[data-compact-mode="true"] {
-	/* declaration */
-}
-
-.c-header[aria-hidden="true"] {
-	/* declaration */
-}
-
 .c-header__body {
 	/* declaration */
-}
 
-@media (--sm-lte) {
-	.c-header__body {
+	@media (--sm-lte) {
+		/* declaration */
+	}
+
+	&:hover {
+		/* declaration */
+	}
+
+	&[data-compact-mode="true"] {
+		/* declaration */
+	}
+
+	&[aria-hidden="true"] {
 		/* declaration */
 	}
 }
 
-.c-header__body:hover {
-	/* declaration */
-}
-
 .c-header__body--compact-mode {
-	/* declaration */
-}
-
-.c-header__body[data-compact-mode="true"] {
-	/* declaration */
-}
-
-.c-header__body[aria-hidden="true"] {
-	/* declaration */
-}
-
-.c-header[data-fat-mode="true"] {
-	/* declaration */
-}
-
-.c-header[data-fat-mode="true"] .c-header__body {
 	/* declaration */
 }
 ```
@@ -111,18 +107,18 @@ headerコンポーネントの場合を例に解説します。
 ```css
 .c-header {
 	/* declaration */
-}
 
-.c-header[data-compact-mode="true"] {
-	/* declaration */
-}
+	&[data-compact-mode="true"] {
+		/* declaration */
+	}
 
-.c-header::before {
-	/* declaration */
-}
+	&::before {
+		/* declaration */
+	}
 
-.c-header::after {
-	/* declaration */
+	&::after {
+		/* declaration */
+	}
 }
 
 .c-header__body {
@@ -130,10 +126,6 @@ headerコンポーネントの場合を例に解説します。
 }
 ```
 <!-- prettier-ignore-end -->
-
-::: warning BEM記法での記述について
-フルのクラス名が検索にヒットしやすく、セレクタが明示的であることから、BEM記法に従ってフラットなセレクタで記述するルールを採用しています。コンポーネントのクラス名とファイル名が一致していることを前提にしています。
-:::
 
 ::: tip 👮‍♀️ 自動検知
 このルールは*Stylelint*によって警告されます。

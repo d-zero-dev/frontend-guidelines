@@ -40,29 +40,20 @@ CSSレイヤーを利用してインポートするファイルを分類しま�
 
 ```css
 @import 'destyle.css' layer(reset);
-
-@layer base {
-	@import '@/style/base/root.css';
-}
-
-@layer general {
-	@import '@/style/general/all.css';
-	@import '@/style/general/body.css';
-	@import '@/style/general/button.css';
-	@import '@/style/general/img.css';
-}
-
-@layer components {
-	@import '@/component/c-page-home.css';
-	@import '@/component/c-page-sub.css';
-	@import '@/component/c-header.css';
-	@import '@/component/c-footer.css';
-	@import '@/component/c-nav-global.css';
-	@import '@/component/c-nav-breadcrumb.css';
-	@import '@/component/c-title-page.css';
-	@import '@/component/c-pagination.css';
-	@import '@/component/c-content-main.css';
-}
+@import '@/style/base/root.css' layer(base);
+@import '@/style/general/all.css' layer(general);
+@import '@/style/general/body.css' layer(general);
+@import '@/style/general/button.css' layer(general);
+@import '@/style/general/img.css' layer(general);
+@import '@/component/c-page-home.css' layer(components);
+@import '@/component/c-page-sub.css' layer(components);
+@import '@/component/c-header.css' layer(components);
+@import '@/component/c-footer.css' layer(components);
+@import '@/component/c-nav-global.css' layer(components);
+@import '@/component/c-nav-breadcrumb.css' layer(components);
+@import '@/component/c-title-page.css' layer(components);
+@import '@/component/c-pagination.css' layer(components);
+@import '@/component/c-content-main.css' layer(components);
 
 @layer reset, base, general, components;
 ```

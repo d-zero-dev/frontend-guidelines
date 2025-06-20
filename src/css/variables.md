@@ -46,10 +46,8 @@
 ```css
 .c-anonymous {
 	background: url("/img/bg-anonymous.png");
-}
 
-@media (--hr) {
-	.c-anonymous {
+	@media (--hr) {
 		background: url("/img/bg-anonymous@2x.png");
 	}
 }
