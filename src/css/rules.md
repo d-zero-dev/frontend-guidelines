@@ -45,13 +45,9 @@ headerコンポーネントの場合を例に解説します。
 	--foo-baz: calc(32 / 16 * 1em); /* カスタムプロパティ */
 
 	/* declaration */
-
 	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
-
 	&:hover { /* declaration */ } /* 疑似クラス */
-
 	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
-
 	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
 
 	&[data-fat-mode="true"] {
@@ -70,13 +66,9 @@ headerコンポーネントの場合を例に解説します。
 
 .c-header__body {
 	/* declaration */
-
 	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
-
 	&:hover { /* declaration */ } /* 疑似クラス */
-
 	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
-
 	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
 }
 
