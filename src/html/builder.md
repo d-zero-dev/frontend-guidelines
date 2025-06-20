@@ -6,7 +6,7 @@
 flowchart LR
 	#inHTML["*.html"]
 	#inPug["*.pug"]
-	#inSCSS["*.scss"]
+	#inCSS["*.css"]
 	#inJS["*.{js,cjs,mjs}"]
 	#inTS["*.ts"]
 	#outHTML["*.html"]
@@ -15,7 +15,7 @@ flowchart LR
 
 	#inHTML --> #dzBuilder
 	#inPug --> #dzBuilder
-	#inSCSS --> #dzBuilder
+	#inCSS --> #dzBuilder
 	#inJS --> #dzBuilder
 	#inTS --> #dzBuilder
 	#dzBuilder --> #outHTML
@@ -28,7 +28,7 @@ flowchart LR
 		subgraph #eleventy["11ty"]
 			#html["*.html"]
 			#pug["*.pug"]
-			#scss["*.scss"]
+			#css["*.css"]
 			#js["*.{js,cjs,mjs}"]
 			#ts["*.ts"]
 
@@ -63,7 +63,7 @@ flowchart LR
 
 			#html --> #transformHTML
 			#pug --> #transformPug --> #transformHTML
-			#scss --> #transpileCSS
+			#css --> #transpileCSS
 			#js --> #transpileJS
 			#ts --> #transpileJS
 		end
@@ -119,7 +119,7 @@ Pugでは`@`に指定したパスがルートとして解釈されます。次�
 | ファイル   | ベースディレクトリへの参照         |
 | ---------- | ---------------------------------- |
 | Pug        | `include /same-dir/a.pug`          |
-| Sass       | `@import '@/same-dir/a.scss'`      |
+| CSS        | `@import '@/same-dir/a.css'`       |
 | TypeScript | `import {} from '@/same-dir/a.js'` |
 
 ### `imageSizes`
