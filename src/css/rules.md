@@ -48,9 +48,12 @@ headerコンポーネントの場合を例に解説します。
 
 	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
 	&:hover { /* declaration */ } /* 疑似クラス */
-	&--compact-mode { /* declaration */ } /* 状態クラス */
 	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
 	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
+}
+
+.c-header--compact-mode {
+	/* declaration */
 }
 
 .c-header__body {
@@ -58,9 +61,12 @@ headerコンポーネントの場合を例に解説します。
 	/* 子孫要素も同様のルールになる */
 	@media (--sm-lte) { /* declaration */ } /* メディアクエリ */
 	&:hover { /* declaration */ } /* 疑似クラス */
-	&--compact-mode { /* declaration */ } /* 状態クラス */
 	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
 	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
+}
+
+.c-header__body--compact-mode {
+	/* declaration */
 }
 
 .c-header[data-fat-mode="true"] {

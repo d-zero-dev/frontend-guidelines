@@ -92,10 +92,12 @@ CSSレイヤーを利用してインポートするファイルを分類しま�
 
 ```css
 /* all.cssの例 */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
 }
 ```
 
