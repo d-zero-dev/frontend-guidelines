@@ -1,12 +1,12 @@
 # ビルド環境
 
-*11ty*のTransform機能から[*Vite*のCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。プリプロセッサーはSassを利用します。
+*11ty*のTransform機能から*PostCSS*を利用してCSS変換を行います。プリプロセッサーはSassを利用します。
 
 ```mermaid
 flowchart LR
 	#in["*.scss"]
 	#out["*.css"]
-	#vite(["Vite"])
+	#postcss(["PostCSS"])
 
 	#in --> #dzBuilder --> #out
 
@@ -14,7 +14,7 @@ flowchart LR
 		direction LR
 
 		subgraph #11ty["11ty"]
-			subgraph #vite["vite"]
+			subgraph #postcss["PostCSS"]
 				direction TB
 				#sass --> #postcss
 			end
