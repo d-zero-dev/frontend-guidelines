@@ -1,12 +1,12 @@
 # ビルド環境
 
-*11ty*のTransform機能から[*Vite*のCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。CSSは*PostCSS*のみを使用します。
+*11ty*のTransform機能から*PostCSS*を利用してCSS変換を行います。CSSは*PostCSS*のみを使用します。
 
 ```mermaid
 flowchart LR
 	#in["*.css"]
 	#out["*.css"]
-	#vite(["Vite"])
+	#postcss(["PostCSS"])
 
 	#in --> #dzBuilder --> #out
 
@@ -14,7 +14,7 @@ flowchart LR
 		direction LR
 
 		subgraph #11ty["11ty"]
-			subgraph #vite["vite"]
+			subgraph #postcss["PostCSS"]
 				direction TB
 				#postcss["PostCSS"]
 			end

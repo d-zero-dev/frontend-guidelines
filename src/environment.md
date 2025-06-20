@@ -114,8 +114,8 @@ HTML/CSS/JavaScriptなどのコードは、**開発ソースコード**と**製�
 | 対象       | プリプロセッサ/トランスパイラ/ビルドツール |
 | ---------- | ------------------------------------------ |
 | HTML       | Pug / 11ty                                 |
-| CSS        | PostCSS(Autoprefixer 他) / Vite           |
-| JavaScript | TypeScript / Vite                         |
+| CSS        | PostCSS(Autoprefixer 他) / PostCSS        |
+| JavaScript | TypeScript / esbuild                      |
 
 HTMLは*HTML*と*Pug*どちらの言語でも記述ができます。
 CSSは*PostCSS*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。

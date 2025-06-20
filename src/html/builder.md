@@ -52,7 +52,7 @@ flowchart LR
 			subgraph #transpileCSS["addExtension"]
 				direction TB
 
-				#vite
+				#postcss
 			end
 
 			subgraph #transpileJS["addExtension"]
