@@ -36,15 +36,15 @@ JavaScript のライブラリの利用など、クラス命名規則に当ては
 ```css
 .c-hero {
 	/* ⚠️ 通常はStylelintによる警告がでる */
-}
 
-.c-hero .any-js-lib-class-name {
-	/* declaration */
-}
+	.any-js-lib-class-name {
+		/* declaration */
+	}
 
-.c-hero .any-js-lib-class-name {
-	/* ✅ .stylelintrcの設定変更によって警告がなくなる */
-	/* declaration */
+	.any-js-lib-class-name {
+		/* ✅ .stylelintrcの設定変更によって警告がなくなる */
+		/* declaration */
+	}
 }
 ```
 
