@@ -41,8 +41,8 @@ JavaScript のライブラリの利用など、クラス命名規則に当ては
 		/* declaration */
 	}
 
+	/* ✅ .stylelintrcの設定変更によって警告がなくなる */
 	.any-js-lib-class-name {
-		/* ✅ .stylelintrcの設定変更によって警告がなくなる */
 		/* declaration */
 	}
 }
