@@ -70,8 +70,10 @@ selector {
 ```css
 .c-header {
 	font-size: 1.8rem;
+}
 
-	@media (--sm-lte) {
+@media (--sm-lte) {
+	.c-header {
 		font-size: calc(18 / 320 * 100vw);
 	}
 }
