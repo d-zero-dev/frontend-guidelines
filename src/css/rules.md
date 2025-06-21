@@ -50,6 +50,15 @@ headerコンポーネントの場合を例に解説します。
 	&:hover { /* declaration */ } /* 疑似クラス */
 	&[data-compact-mode="true"] { /* declaration */ } /* data属性 */
 	&[aria-hidden="true"] { /* declaration */ } /* aria属性 */
+
+	/* 影響がエレメントを巻き込む場合は、後ろに記述する */
+	&[data-fat-mode="true"] {
+		/* declaration */
+
+		.c-header__body {
+			/* declaration */
+		}
+	}
 }
 
 .c-header--compact-mode {
@@ -69,13 +78,7 @@ headerコンポーネントの場合を例に解説します。
 	/* declaration */
 }
 
-.c-header[data-fat-mode="true"] {
-	/* declaration */
 
-	.c-header__body {
-		/* declaration */
-	}
-}
 ```
 <!-- prettier-ignore-end -->
 
