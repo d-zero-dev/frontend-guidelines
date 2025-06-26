@@ -678,13 +678,13 @@
     lint-staged "16.1.2"
     micromatch "4.0.8"
 
-"@d-zero/prettier-config@5.0.0-alpha.65":
-  version "5.0.0-alpha.65"
-  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.65.tgz#9f3049a71efabcf2b94ae463bf2c7850e33e3801"
-  integrity sha512-QMaW+utK5VlGFfKCf7L8XZkv/9jdWbfu67JTTTuGhamAXQr3asdC0sWJZ/6CJKL7S2x79KFdMJACQQm9qDL8ng==
+"@d-zero/prettier-config@5.0.0-alpha.67":
+  version "5.0.0-alpha.67"
+  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.67.tgz#fc9cc18fbda05893108e6b3f65120b8a7cf4afde"
+  integrity sha512-nXt82lJp76nUvVkn/TJ/YVBWMcZY/vA4a/1j0eomUQq7iBDGkj1rP0HrS37glMJ1dYYAO0003NFhcf+lTycbgQ==
   dependencies:
     "@prettier/plugin-pug" "3.4.0"
-    prettier "3.5.3"
+    prettier "3.6.1"
 
 "@d-zero/textlint-config@5.0.0-alpha.65":
   version "5.0.0-alpha.65"
@@ -5406,10 +5406,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier@3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.3.tgz#4fc2ce0d657e7a02e602549f053b239cb7dfe1b5"
-  integrity sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==
+prettier@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.6.1.tgz#cc3bce21c09a477b1e987b76ce9663925d86ae44"
+  integrity sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==
 
 prh@^5.4.4:
   version "5.4.4"
