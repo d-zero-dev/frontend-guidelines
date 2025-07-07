@@ -706,13 +706,13 @@
     textlint-rule-preset-japanese "10.0.4"
     textlint-rule-preset-jtf-style "3.0.2"
 
-"@d-zero/tsconfig@0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.4.1.tgz#1295b14687ae34056df54347118ef5976bb89c44"
-  integrity sha512-igfCrwtd4z6Y5FPZIksPBZCj9T1KUH3KYB+mPmjBgmrxAHq7fqBSeX66TK6rgpCcTHBI5jQdx47AVAdJE34UnQ==
+"@d-zero/tsconfig@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.5.0.tgz#02a2622df46cd113339a2675bb5b94811adbf319"
+  integrity sha512-ndFi3AXNALTr0kBT0KhVv9xP9Fow2zXYeUHDarbNvsCmOegYv0QadJGBSvyNA2rbyy+T1/MVkUEr7mEomREBHA==
   dependencies:
-    "@tsconfig/node-lts" "22.0.1"
-    "@tsconfig/recommended" "1.0.8"
+    "@tsconfig/node-lts" "22.0.2"
+    "@tsconfig/recommended" "1.0.10"
     "@tsconfig/strictest" "2.0.5"
 
 "@docsearch/css@3.8.2":
@@ -1527,15 +1527,15 @@
   resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-15.0.1.tgz#4ec6ce6c8338cda4b3f137e6f24270752356aa14"
   integrity sha512-W1FreIILp3TZ9//7hULI+QiWwdQvK6/WVpdvniFU85JIg9yZUJ3oOSGAVl4hSvc64qqRiYWYc7Ng8xAXNFA7hQ==
 
-"@tsconfig/node-lts@22.0.1":
-  version "22.0.1"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-22.0.1.tgz#dd9809fe37ac966d73a4ca468210a0c6cb09aa97"
-  integrity sha512-BwlbLiYurZKrj+Pa6etSE1jXmr3VEDdgJto1jEYKcpBVwZZSWVkCPyFEFYbHdIOaFMlSTtV206DYPlT109aqug==
+"@tsconfig/node-lts@22.0.2":
+  version "22.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-22.0.2.tgz#560c1eef149daf9accdaf8b061bcc6e916ed94fb"
+  integrity sha512-Kgq5yXTvnUnvlhob0xJpOH4na9PWtuFhHSf94MpDwnENWgiFeJKDNANQV2MT1WpXZYkK2WSWfVYKhVkR7bc8TA==
 
-"@tsconfig/recommended@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.8.tgz#16483d57b56bbbd32b8c3af0eff1a40c32d006fa"
-  integrity sha512-TotjFaaXveVUdsrXCdalyF6E5RyG6+7hHHQVZonQtdlk1rJZ1myDIvPUUKPhoYv+JAzThb2lQJh9+9ZfF46hsA==
+"@tsconfig/recommended@1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.10.tgz#5ed23fcf8cca7d78a9e3a6e4828cd96cf783994c"
+  integrity sha512-cGvydvg03lONp5Z9yaplW493Vw9/um7k588mvDkm+VFPF2PZUVPx0uswq4PFpeEySsLbQRETrDRhzh4Dmxaslw==
 
 "@tsconfig/strictest@2.0.5":
   version "2.0.5"
