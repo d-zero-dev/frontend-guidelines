@@ -79,7 +79,7 @@ HTML/CSS/JavaScriptなどのコードは、**開発ソースコード**と**製�
 │   │   │   ├── index.pug
 │   │   │   └── sub-page.pug
 │   │   ├── 📂 css/
-│   │   │   └── style.scss
+│   │   │   └── style.css
 │   │   └── 📂 js/
 │   │       └── script.js
 │   └ 📂 _libs/
@@ -111,14 +111,14 @@ HTML/CSS/JavaScriptなどのコードは、**開発ソースコード**と**製�
 
 各開発ソースコードは、次のプリプロセッサやトランスパイラ・ビルドツールを通して製品ソースコードに変換されます。
 
-| 対象       | プリプロセッサ/トランスパイラ/ビルドツール        |
-| ---------- | ------------------------------------------------- |
-| HTML       | Pug / 11ty                                        |
-| CSS        | Sass(SCSS 記法) + PostCSS(Autoprefixer 他) / PostCSS |
-| JavaScript | TypeScript / esbuild                             |
+| 対象       | プリプロセッサ/トランスパイラ/ビルドツール |
+| ---------- | ------------------------------------------ |
+| HTML       | Pug / 11ty                                 |
+| CSS        | PostCSS(Autoprefixer 他) / PostCSS        |
+| JavaScript | TypeScript / esbuild                      |
 
 HTMLは*HTML*と*Pug*どちらの言語でも記述ができます。
-CSSは*SCSS記法のSass*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
+CSSは*PostCSS*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
 それぞれの対応する具体的なバージョンは`package.json`や各種コンフィグファイルを参照してください。
 
 ## ビルド方法
@@ -169,7 +169,7 @@ yarn [オプション]
 
 クライアントや他ベンダーの制作したソースコードと共存させる場合、**開発ソースコード**の中ではリンターなどから除外するために`extraterritorial`を作っています。
 
-`__assets/htdocs/`のPugやSCSS、JavaScriptは、それぞれ`include`や`@use`、`import`を使って`extraterritorial`ディレクトリのソースコードを読み込み、**製品ソースコード**に反映させてください。
+`__assets/htdocs/`のPugやCSS、JavaScriptは、それぞれ`include`や`@import`、`import`を使って`extraterritorial`ディレクトリのソースコードを読み込み、**製品ソースコード**に反映させてください。
 
 ::: danger `extraterritorial`ディレクトリの利用にあたって
 あくまでも社内の責任の範囲の外にあるソースコードを共存させるものなので、社内で責任を持ち管理する必要があるコードに関してはこのディレクトリ内で管理しないでください。

@@ -15,10 +15,10 @@ _EditorConfig_、_Stylelint_、_Prettier_ それぞれに設定されている�
 
 `disable`コメントを利用することで、ルールを無視することができますが**原則行わない**でください。
 
-```scss
+```css
 .c-header {
 	/* ❌ 実装上やむを得ない場合を除いてdisableコメントは使用しないこと */
-	inline-size: 100px !important; // stylelint-disable-line declaration-no-important
+	inline-size: 100px !important; /* stylelint-disable-line declaration-no-important */
 }
 ```
 
