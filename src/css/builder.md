@@ -1,12 +1,12 @@
 # ビルド環境
 
-11tyのTransform機能から[ViteのCSS変換](https://ja.vitejs.dev/guide/features#css)を利用します。プリプロセッサーはSASSを利用します。
+*11ty*のTransform機能から*PostCSS*を利用してCSS変換を行います。CSSは*PostCSS*のみを使用します。
 
 ```mermaid
 flowchart LR
-	#in["*.scss"]
+	#in["*.css"]
 	#out["*.css"]
-	#vite(["Vite"])
+	#postcss(["PostCSS"])
 
 	#in --> #dzBuilder --> #out
 
@@ -14,9 +14,9 @@ flowchart LR
 		direction LR
 
 		subgraph #11ty["11ty"]
-			subgraph #vite["vite"]
+			subgraph #postcss["PostCSS"]
 				direction TB
-				#sass --> #postcss
+				#postcss["PostCSS"]
 			end
 		end
 	end
@@ -24,22 +24,22 @@ flowchart LR
 
 ## ベンダープレフィックス
 
-Autoprefixerを利用するのでベンダープレフィックス付きのプロパティは必要ありません。
+*Autoprefixer*を利用するのでベンダープレフィックス付きのプロパティは必要ありません。
 
-```scss
+```css
 selector {
 	transition: opacity 300ms;
-	-webkit-transition: opacity 300ms; // ❌ 不要
-	-moz-transition: opacity 300ms; // ❌ 不要
+	-webkit-transition: opacity 300ms; /* ❌ 不要 */
+	-moz-transition: opacity 300ms; /* ❌ 不要 */
 }
 ```
 
-ただしCSSの標準規格でないものについては必要なケースがあります。Stylelintはその点を考慮して警告を出すので心配はありません。
+ただしCSSの標準規格でないものについては必要なケースがあります。*Stylelint*はその点を考慮して警告を出すので心配はありません。
 
-```scss
+```css
 selector {
-	-moz-osx-font-smoothing: grayscale; // ✅ ブラウザ固有のプロパティのためプレフィックは必要
-	-webkit-font-smoothing: antialiased; // ✅ ブラウザ固有のプロパティのためプレフィックは必要
+	-moz-osx-font-smoothing: grayscale; /* ✅ ブラウザ固有のプロパティのためプレフィックは必要 */
+	-webkit-font-smoothing: antialiased; /* ✅ ブラウザ固有のプロパティのためプレフィックは必要 */
 }
 ```
 

@@ -6,13 +6,14 @@
 
 :::
 
-```scss
+```css
 .c-header {
 	/* declaration */
 
 	ul {
 		/* declaration */
 	}
+
 	li {
 		/* declaration */
 	}

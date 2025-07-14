@@ -6,7 +6,7 @@
 flowchart LR
 	#inHTML["*.html"]
 	#inPug["*.pug"]
-	#inSCSS["*.scss"]
+	#inCSS["*.css"]
 	#inJS["*.{js,cjs,mjs}"]
 	#inTS["*.ts"]
 	#outHTML["*.html"]
@@ -15,7 +15,7 @@ flowchart LR
 
 	#inHTML --> #dzBuilder
 	#inPug --> #dzBuilder
-	#inSCSS --> #dzBuilder
+	#inCSS --> #dzBuilder
 	#inJS --> #dzBuilder
 	#inTS --> #dzBuilder
 	#dzBuilder --> #outHTML
@@ -28,7 +28,7 @@ flowchart LR
 		subgraph #eleventy["11ty"]
 			#html["*.html"]
 			#pug["*.pug"]
-			#scss["*.scss"]
+			#css["*.css"]
 			#js["*.{js,cjs,mjs}"]
 			#ts["*.ts"]
 
@@ -52,7 +52,7 @@ flowchart LR
 			subgraph #transpileCSS["addExtension"]
 				direction TB
 
-				#vite
+				#postcss
 			end
 
 			subgraph #transpileJS["addExtension"]
@@ -63,7 +63,7 @@ flowchart LR
 
 			#html --> #transformHTML
 			#pug --> #transformPug --> #transformHTML
-			#scss --> #transpileCSS
+			#css --> #transpileCSS
 			#js --> #transpileJS
 			#ts --> #transpileJS
 		end
@@ -119,7 +119,7 @@ Pugでは`@`に指定したパスがルートとして解釈されます。次�
 | ファイル   | ベースディレクトリへの参照         |
 | ---------- | ---------------------------------- |
 | Pug        | `include /same-dir/a.pug`          |
-| SASS       | `@import '@/same-dir/a.scss'`      |
+| CSS        | `@import '@/same-dir/a.css'`       |
 | TypeScript | `import {} from '@/same-dir/a.js'` |
 
 ### `imageSizes`
@@ -128,11 +128,11 @@ Pugでは`@`に指定したパスがルートとして解釈されます。次�
 
 ### `prettier`
 
-Prettierによる整形を行います。デフォルトは`true`です。
+*Prettier*による整形を行います。デフォルトは`true`です。
 
 ### `minifier`
 
-[HTMLMinifier](https://terser.org/html-minifier-terser/)によって最適化を行います。必要であれば[設定](https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)を上書きしてください。
+[_HTMLMinifier_](https://terser.org/html-minifier-terser/)によって最適化を行います。必要であれば[設定](https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)を上書きしてください。
 
 ### `lineBreak`
 
@@ -166,7 +166,7 @@ eleventy(eleventyConfig, {
 | `directory` | ディレクトリを生成しページに対応する`index.html`ファイルをネスト |
 | `preserve`  | ソースフォルダに表示される通りにHTMLファイルを生成               |
 
-この設定は[Astro](https://docs.astro.build/ja/getting-started/)の[`build.format`](https://docs.astro.build/ja/reference/configuration-reference/#buildformat)を参考にしています。
+この設定は[_Astro_](https://docs.astro.build/ja/getting-started/)の[`build.format`](https://docs.astro.build/ja/reference/configuration-reference/#buildformat)を参考にしています。
 
 ## 開発用ローカルサーバーのオプション
 

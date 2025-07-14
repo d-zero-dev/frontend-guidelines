@@ -6,7 +6,7 @@
 
 また、コーディング時の自動修正・自動警告を有効にするために以下のプラグインをインストールしてください。
 
-- [**editorconfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [**EditorConfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [**ESLint**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [**Stylelint**](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
@@ -45,8 +45,8 @@ Node.jsはプロジェクトのよってバージョンを切り替える必要�
 ::: tip Gitのインストール
 
 基本的に方法は問いません。
-macOSの場合、通常初めて`git`コマンドを利用すると*XCode*のライセンスに同意する必要があったり、*XCode*そのものをインストールする必要があります。
-*XCode*をどうしてもイントールできない場合、[Gitの本家](https://git-scm.com/)からインストーラを使ってインストールしても構いません。
+macOSの場合、通常初めて`git`コマンドを利用するとXCodeのライセンスに同意する必要があったり、XCodeそのものをインストールする必要があります。
+XCodeをどうしてもインストールできない場合、[Gitの本家](https://git-scm.com/)からインストーラを使ってインストールしても構いません。
 
 :::
 
@@ -68,7 +68,7 @@ npx @d-zero/create-frontend
 
 ## 開発ソースコードと製品ソースコード
 
-HTML/CSS/JavaScirptなどのコードは、**開発ソースコード**と**製品ソースコード**に分かれます。
+HTML/CSS/JavaScriptなどのコードは、**開発ソースコード**と**製品ソースコード**に分かれます。
 
 ```
 📂
@@ -79,7 +79,7 @@ HTML/CSS/JavaScirptなどのコードは、**開発ソースコード**と**製�
 │   │   │   ├── index.pug
 │   │   │   └── sub-page.pug
 │   │   ├── 📂 css/
-│   │   │   └── style.scss
+│   │   │   └── style.css
 │   │   └── 📂 js/
 │   │       └── script.js
 │   └ 📂 _libs/
@@ -111,14 +111,14 @@ HTML/CSS/JavaScirptなどのコードは、**開発ソースコード**と**製�
 
 各開発ソースコードは、次のプリプロセッサやトランスパイラ・ビルドツールを通して製品ソースコードに変換されます。
 
-| 対象       | プリプロセッサ/トランスパイラ/ビルドツール        |
-| ---------- | ------------------------------------------------- |
-| HTML       | Pug / 11ty                                        |
-| CSS        | SASS(SCSS 記法) + PostCSS(Autoprefixer 他) / Vite |
-| JavaScript | TypeScript / Vite                                 |
+| 対象       | プリプロセッサ/トランスパイラ/ビルドツール |
+| ---------- | ------------------------------------------ |
+| HTML       | Pug / 11ty                                 |
+| CSS        | PostCSS(Autoprefixer 他) / PostCSS        |
+| JavaScript | TypeScript / esbuild                      |
 
 HTMLは*HTML*と*Pug*どちらの言語でも記述ができます。
-CSSは*SCSS記法のSASS*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
+CSSは*PostCSS*のみとなっており、JavaScriptは*TypeScript*もしくは最新の*ECMAScript*のどちらにも対応しています。
 それぞれの対応する具体的なバージョンは`package.json`や各種コンフィグファイルを参照してください。
 
 ## ビルド方法
@@ -169,7 +169,7 @@ yarn [オプション]
 
 クライアントや他ベンダーの制作したソースコードと共存させる場合、**開発ソースコード**の中ではリンターなどから除外するために`extraterritorial`を作っています。
 
-`__assets/htdocs/`のPugやSCSS、JavaScriptは、それぞれ`include`や`@use`、`import`を使って`extraterritorial`ディレクトリのソースコードを読み込み、**製品ソースコード**に反映させてください。
+`__assets/htdocs/`のPugやCSS、JavaScriptは、それぞれ`include`や`@import`、`import`を使って`extraterritorial`ディレクトリのソースコードを読み込み、**製品ソースコード**に反映させてください。
 
 ::: danger `extraterritorial`ディレクトリの利用にあたって
 あくまでも社内の責任の範囲の外にあるソースコードを共存させるものなので、社内で責任を持ち管理する必要があるコードに関してはこのディレクトリ内で管理しないでください。
