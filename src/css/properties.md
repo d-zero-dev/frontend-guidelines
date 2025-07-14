@@ -46,3 +46,25 @@ selector {
 ::: tip 👮‍♀️ 自動検知
 このルールは*Stylelint*によって警告されます。
 :::
+
+## transform
+
+`transform`プロパティは関数を利用せず、対応する各プロパティを利用します。
+
+```css
+selector {
+	transform: translate(10px, 20px); /* ❌️ */
+	transform: rotate(45deg); /* ❌️ */
+	transform: scale(1.5); /* ❌️ */
+	transform: translateX(100px); /* ❌️ */
+
+	translate: 10px 20px; /* ✅️ */
+	rotate: 45deg; /* ✅️ */
+	scale: 1.5; /* ✅️ */
+	translate: 100px; /* ✅️ */
+}
+```
+
+::: tip 👮‍♀️ 自動検知
+このルールは*Stylelint*によって警告されます。
+:::
