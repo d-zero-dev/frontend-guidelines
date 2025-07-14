@@ -106,6 +106,7 @@ export default async () => {
 								text: 'カスタムプロパティ・カスタムクエリー・変数・関数・ミックスイン・プレースホルダー',
 								link: '/css/variables',
 							},
+							{ text: 'プロパティのルール', link: '/css/properties' },
 							{ text: '値のルール', link: '/css/values' },
 						],
 					},
