@@ -679,10 +679,10 @@
     globals "16.3.0"
     typescript-eslint "8.37.0"
 
-"@d-zero/lint-staged-config@5.0.0-alpha.68":
-  version "5.0.0-alpha.68"
-  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.68.tgz#eeeb781f0f59ac0e3f878911b9a5163f1e147494"
-  integrity sha512-OhQ0RN1JniNjbyh0jkQwClpsF82lL6tfXagilcAP9Ri5CRJcPKMECkuLSnQ+ze2Yt/VlYFV5wh2ltnJzF6TtvA==
+"@d-zero/lint-staged-config@5.0.0-alpha.69":
+  version "5.0.0-alpha.69"
+  resolved "https://registry.yarnpkg.com/@d-zero/lint-staged-config/-/lint-staged-config-5.0.0-alpha.69.tgz#f3a65919d1eb35cb78a5007ed61afa9469ba534e"
+  integrity sha512-zMFEUXQHsMpT1MEob4IeQZm2XOWX/SbS+iAt84Xmiak9LCwOwmpW5C2rXd4uEMaxrDIPYMQgLASaKL8vlFN1sA==
   dependencies:
     lint-staged "16.1.2"
     micromatch "4.0.8"
