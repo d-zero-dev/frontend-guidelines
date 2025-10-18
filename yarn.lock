@@ -722,13 +722,14 @@
     lint-staged "16.2.4"
     micromatch "4.0.8"
 
-"@d-zero/prettier-config@5.0.0-alpha.71":
-  version "5.0.0-alpha.71"
-  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.71.tgz#c1db5bb3bf14026e08f711a31b18c6abe3c4b586"
-  integrity sha512-ZPUudYM3jISEfHpUoO4HiRTSKqVvcQikVd38fRMrlOCziifdRqWYSDivhUpzhinLZXYuuoN/V89WhAPIHItBxg==
+"@d-zero/prettier-config@5.0.0-alpha.73":
+  version "5.0.0-alpha.73"
+  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.73.tgz#1b68dbc7930a24234cc44aa277a0bc3d7ad80944"
+  integrity sha512-BzbJ9TCgQFYPUPIBgqwAJLsjQmOncdeI8NMhTpA1QHGT1cTzmFZ4W7xRxwkU32XckWkCZPX6VuMFuBrpJeE5cw==
   dependencies:
-    "@prettier/plugin-pug" "3.4.2"
     prettier "3.6.2"
+  optionalDependencies:
+    "@prettier/plugin-pug" ">=3.0.0"
 
 "@d-zero/textlint-config@5.0.0-alpha.71":
   version "5.0.0-alpha.71"
@@ -1203,7 +1204,7 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@prettier/plugin-pug@3.4.2":
+"@prettier/plugin-pug@>=3.0.0":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-3.4.2.tgz#76b14d1526a621fc6714eb219f1e5f7274983ad9"
   integrity sha512-/VOVeIscKYlPpsZrjrRV+44ZftCEIJq9Z/zR8PtAz/EDv82TKscw3z+fhTVqRz68G1TqQ/5COMFUVfPwPBH90w==
