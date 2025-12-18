@@ -1,25 +1,53 @@
 # ビルド環境
 
-*11ty*のTransform機能から*PostCSS*を利用してCSS変換を行います。CSSは*PostCSS*のみを使用します。
+`@kamado-io/style-compiler`を通して*PostCSS*を利用してCSS変換を行います。CSSは*PostCSS*のみを使用します。
 
 ```mermaid
 flowchart LR
 	#in["*.css"]
 	#out["*.css"]
-	#postcss(["PostCSS"])
+	#styleCompiler["@kamado-io/style-compiler"]
 
-	#in --> #dzBuilder --> #out
+	#in --> #styleCompiler --> #out
 
-	subgraph #dzBuilder["@d-zero/builder"]
-		direction LR
-
-		subgraph #11ty["11ty"]
-			subgraph #postcss["PostCSS"]
-				direction TB
-				#postcss["PostCSS"]
-			end
-		end
+	subgraph #styleCompiler["@kamado-io/style-compiler"]
+		direction TB
+		#postcss["PostCSS"]
 	end
+```
+
+`kamado.config.ts`で設定を行います。
+
+```ts
+import type { UserConfig } from 'kamado/config';
+
+import path from 'node:path';
+
+import { styleCompiler } from '@kamado-io/style-compiler';
+
+export const config: UserConfig = {
+	compilers: {
+		style: styleCompiler({
+			alias: {
+				'@': path.resolve(import.meta.dirname, '__assets', '_libs'),
+			},
+		}),
+	},
+};
+
+export default config;
+```
+
+## パスエイリアス
+
+`alias`オプションでパスエイリアスを設定できます。PostCSSの`@import`で使用されます。
+
+```ts
+styleCompiler({
+	alias: {
+		'@': path.resolve(import.meta.dirname, '__assets', '_libs'),
+	},
+})
 ```
 
 ## ベンダープレフィックス
