@@ -685,10 +685,10 @@
   resolved "https://registry.yarnpkg.com/@cspell/url/-/url-9.4.0.tgz#669845fe4673535c234bc1908dae979e25f01cf5"
   integrity sha512-nt88P6m20AaVbqMxsyPf8KqyWPaFEW2UANi0ijBxc2xTkD2KiUovxfZUYW6NMU9XBYZlovT5LztkEhst2yBcSA==
 
-"@d-zero/cspell-config@5.0.0-alpha.75":
-  version "5.0.0-alpha.75"
-  resolved "https://registry.yarnpkg.com/@d-zero/cspell-config/-/cspell-config-5.0.0-alpha.75.tgz#fc6a77cbab5543ab4dfe179ea45f2bcaeea51bad"
-  integrity sha512-feTJb6ogJH+VvNS6ChqPVT0b+hFA6z007eYMRxcyTuTCcOd89SI4HYFLgK1LKZPKWnEWWOZMZLFeMOTIIM8sCg==
+"@d-zero/cspell-config@5.0.0-alpha.76":
+  version "5.0.0-alpha.76"
+  resolved "https://registry.yarnpkg.com/@d-zero/cspell-config/-/cspell-config-5.0.0-alpha.76.tgz#bab1db138a0fa4564cf6201a1c2e9a4cc771ab74"
+  integrity sha512-dk1HRt7xgO37e0dPoT+s8eQTnklVl5BBjzQhYjzv23eGOSaItPu4PF17m8KCJX2f9aMTHgYAAxOeaFO3YFKW2Q==
   dependencies:
     cspell "9.4.0"
 
