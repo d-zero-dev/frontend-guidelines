@@ -18,20 +18,20 @@
 		"up": "yarn upgrade-interactive --latest"
 	},
 	"devDependencies": {
-		"@d-zero/cspell-config": "5.0.0-alpha.68",
-		"@d-zero/eslint-config": "5.0.0-alpha.68",
-		"@d-zero/lint-staged-config": "5.0.0-alpha.68",
-		"@d-zero/prettier-config": "5.0.0-alpha.68",
-		"@d-zero/textlint-config": "5.0.0-alpha.68",
+		"@d-zero/cspell-config": "5.0.0-alpha.75",
+		"@d-zero/eslint-config": "5.0.0-alpha.75",
+		"@d-zero/lint-staged-config": "5.0.0-alpha.75",
+		"@d-zero/prettier-config": "5.0.0-alpha.75",
+		"@d-zero/textlint-config": "5.0.0-alpha.75",
 		"@d-zero/tsconfig": "0.5.0",
-		"mermaid": "11.8.1",
+		"mermaid": "11.12.2",
 		"npm-run-all2": "8.0.4",
-		"typescript": "5.8.3",
-		"vitepress": "1.6.3",
+		"typescript": "5.9.3",
+		"vitepress": "1.6.4",
 		"vitepress-plugin-mermaid": "2.0.17"
 	},
 	"volta": {
-		"node": "22.17.0",
+		"node": "24.12.0",
 		"yarn": "1.22.22"
 	}
 }

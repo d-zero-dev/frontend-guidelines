@@ -20,6 +20,16 @@ Android Chromeの検証は、検証機を使うか、もしくは[Android Studio
 
 リンターが設定されています。エディタ上の警告、ビルド時・コミット時のリンターの警告を無視せずに修正してください。
 
+### テスト
+
+[Vitest](https://vitest.dev/)を使用してテストを実行できます。
+
+```zsh
+yarn test
+```
+
+テストファイルはプロジェクトの構成に従って配置してください。
+
 ### axe DevTools
 
 アクセシビリティの問題を検出するためにAxeを利用してください。ブラウザ拡張機能の[axe DevTools - Web Accessibility Testing](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)を利用して、localhost環境の時点でもチェックをしてください。指摘内容については基本的には修正をしてください。
