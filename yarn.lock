@@ -715,10 +715,10 @@
   dependencies:
     lint-staged "16.2.7"
 
-"@d-zero/prettier-config@5.0.0-alpha.76":
-  version "5.0.0-alpha.76"
-  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0-alpha.76.tgz#b789ed957c9bdcbea732da2a41fa75ce891281f5"
-  integrity sha512-wFut26QbvrunMNxhKewYBwJihnUbV7F47xCVwJIMH4rzkkpjvghcSv+WMdoVD8D3sjJhjFVshaGUHtljQOJ6gw==
+"@d-zero/prettier-config@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@d-zero/prettier-config/-/prettier-config-5.0.0.tgz#0f0fcaa2e6ebf69be5704ac193fbdc5cac449ee6"
+  integrity sha512-y2aDrin6j5SzdcA08rSh7Go4Ba807bCqkspZhhqx6YV/mQZTo2m3uKQNGMZO+22fsWo7NZynkzK11HsHNncnDA==
   dependencies:
     prettier "3.7.4"
   optionalDependencies:
