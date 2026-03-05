@@ -735,14 +735,14 @@
     textlint-rule-preset-japanese "10.0.4"
     textlint-rule-preset-jtf-style "3.0.3"
 
-"@d-zero/tsconfig@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-0.5.0.tgz#02a2622df46cd113339a2675bb5b94811adbf319"
-  integrity sha512-ndFi3AXNALTr0kBT0KhVv9xP9Fow2zXYeUHDarbNvsCmOegYv0QadJGBSvyNA2rbyy+T1/MVkUEr7mEomREBHA==
+"@d-zero/tsconfig@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@d-zero/tsconfig/-/tsconfig-1.0.0.tgz#2809f302a61a8bfc9aa82e57f647073d9a3af732"
+  integrity sha512-4oi64MB3mNWyexWjIAw8pyllwv/lylgj7iVVM3Ycmb2V+egYWVCrgl3Pn7vIn4OPGs9tlgmDkVGZJaUk0oniXA==
   dependencies:
-    "@tsconfig/node-lts" "22.0.2"
-    "@tsconfig/recommended" "1.0.10"
-    "@tsconfig/strictest" "2.0.5"
+    "@tsconfig/node-lts" "24.0.0"
+    "@tsconfig/recommended" "1.0.13"
+    "@tsconfig/strictest" "2.0.8"
 
 "@docsearch/css@3.8.2":
   version "3.8.2"
@@ -1553,20 +1553,20 @@
   resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-15.5.0.tgz#145a8d6cbefecafbb072f803c3037e014804bc4f"
   integrity sha512-r6IybQjfeAUKT2kMjsoSX7Z3eqGjBhJ6bucWt6JGMclfmrOmr9W8Xctm3lBgP12U2lEJs4kKlUh7npU44gHTlw==
 
-"@tsconfig/node-lts@22.0.2":
-  version "22.0.2"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-22.0.2.tgz#560c1eef149daf9accdaf8b061bcc6e916ed94fb"
-  integrity sha512-Kgq5yXTvnUnvlhob0xJpOH4na9PWtuFhHSf94MpDwnENWgiFeJKDNANQV2MT1WpXZYkK2WSWfVYKhVkR7bc8TA==
+"@tsconfig/node-lts@24.0.0":
+  version "24.0.0"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node-lts/-/node-lts-24.0.0.tgz#878ca566ef67902813f1101c4dde3d584f23cd56"
+  integrity sha512-8mSTqWwCd6aQpvxSrpQlMoA9RiUZSs7bYhL5qsLXIIaN9HQaINeoydrRu/Y7/fws4bvfuyhs0BRnW9/NI8tySg==
 
-"@tsconfig/recommended@1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.10.tgz#5ed23fcf8cca7d78a9e3a6e4828cd96cf783994c"
-  integrity sha512-cGvydvg03lONp5Z9yaplW493Vw9/um7k588mvDkm+VFPF2PZUVPx0uswq4PFpeEySsLbQRETrDRhzh4Dmxaslw==
+"@tsconfig/recommended@1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.13.tgz#269fce3ad04ca70b93269ff44cca81b950f542da"
+  integrity sha512-sySRuBfMKyKO/j2ZAhR8kSembhjuPEV4Ra3AHtmWLq51+iGaudr45crPSzNC5b7/Ctrh9dfUpBuTlYrH6rM58Q==
 
-"@tsconfig/strictest@2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@tsconfig/strictest/-/strictest-2.0.5.tgz#2cbc67f207ba87fdec2a84ad79b1708cf4edd93b"
-  integrity sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==
+"@tsconfig/strictest@2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@tsconfig/strictest/-/strictest-2.0.8.tgz#d6be87c11d29370357cd27d1cdedf97c979103d5"
+  integrity sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==
 
 "@tybys/wasm-util@^0.10.0":
   version "0.10.1"
