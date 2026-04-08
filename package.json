@@ -15,6 +15,9 @@
 		"lint:eslint": "eslint --fix \"*.{js,cjs,mjs}\"",
 		"lint:prettier": "prettier --write \"{*,src/{**,.vitepress/**}/*}.{md,json,js,cjs,mjs,jsx,ts,cts,mts,tsx}\"",
 		"lint:textlint": "textlint --fix ./src/{**,.vitepress/**}/*.md; textlint ./src/{**,.vitepress/**}/*.md",
+		"release:major": "npm version major",
+		"release:minor": "npm version minor",
+		"release:patch": "npm version patch",
 		"up": "yarn upgrade-interactive --latest"
 	},
 	"devDependencies": {
