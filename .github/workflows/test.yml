@@ -15,6 +15,10 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+      - name: Enable Corepack and setup Yarn v4
+        run: |
+          corepack enable
+          yarn --version
       - name: Cache dependencies
         id: cache-depends
         uses: actions/cache@v5
@@ -23,7 +27,7 @@ jobs:
           key: depends-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         if: steps.cache-depends.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile --check-files
+        run: yarn install --immutable
       - name: Lint
         run: yarn lint
       - name: Build
