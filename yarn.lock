@@ -940,7 +940,7 @@ __metadata:
     "@d-zero/cspell-config": "npm:5.1.0"
     "@d-zero/eslint-config": "npm:5.0.0"
     "@d-zero/lint-staged-config": "npm:5.1.0"
-    "@d-zero/prettier-config": "npm:5.0.0"
+    "@d-zero/prettier-config": "npm:5.1.0"
     "@d-zero/textlint-config": "npm:5.0.0"
     "@d-zero/tsconfig": "npm:0.5.0"
     mermaid: "npm:11.15.0"
@@ -960,16 +960,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d-zero/prettier-config@npm:5.0.0":
-  version: 5.0.0
-  resolution: "@d-zero/prettier-config@npm:5.0.0"
+"@d-zero/prettier-config@npm:5.1.0":
+  version: 5.1.0
+  resolution: "@d-zero/prettier-config@npm:5.1.0"
   dependencies:
     "@prettier/plugin-pug": "npm:>=3.0.0"
-    prettier: "npm:3.7.4"
+    prettier: "npm:3.8.1"
   dependenciesMeta:
     "@prettier/plugin-pug":
       optional: true
-  checksum: 10c0/4fe6a175b82a6cb12a112e583b7297d580557d1845b359ca9e18e1ed96e81e51eaa084b3dfbb51dca421c0dbb4444c4649d7a3d4de75fb6d92a90e23bd331eb5
+  checksum: 10c0/f8db122bab9c1548864d3d39f263813b0bd949dac0b249c2328e0e806662cacf55456d58c34e251ba3b5ef58a9af003472f17aeb140ae5e88032c49a10f21912
   languageName: node
   linkType: hard
 
@@ -7398,12 +7398,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.7.4":
-  version: 3.7.4
-  resolution: "prettier@npm:3.7.4"
+"prettier@npm:3.8.1":
+  version: 3.8.1
+  resolution: "prettier@npm:3.8.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/9675d2cd08eacb1faf1d1a2dbfe24bfab6a912b059fc9defdb380a408893d88213e794a40a2700bd29b140eb3172e0b07c852853f6e22f16f3374659a1a13389
+  checksum: 10c0/33169b594009e48f570471271be7eac7cdcf88a209eed39ac3b8d6d78984039bfa9132f82b7e6ba3b06711f3bfe0222a62a1bfb87c43f50c25a83df1b78a2c42
   languageName: node
   linkType: hard
 
