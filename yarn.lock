@@ -942,7 +942,7 @@ __metadata:
     "@d-zero/lint-staged-config": "npm:5.1.0"
     "@d-zero/prettier-config": "npm:5.1.0"
     "@d-zero/textlint-config": "npm:5.1.0"
-    "@d-zero/tsconfig": "npm:0.5.0"
+    "@d-zero/tsconfig": "npm:2.0.0"
     mermaid: "npm:11.16.1"
     npm-run-all2: "npm:9.0.3"
     typescript: "npm:5.9.3"
@@ -986,14 +986,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d-zero/tsconfig@npm:0.5.0":
-  version: 0.5.0
-  resolution: "@d-zero/tsconfig@npm:0.5.0"
+"@d-zero/tsconfig@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@d-zero/tsconfig@npm:2.0.0"
   dependencies:
-    "@tsconfig/node-lts": "npm:22.0.2"
-    "@tsconfig/recommended": "npm:1.0.10"
-    "@tsconfig/strictest": "npm:2.0.5"
-  checksum: 10c0/b2ec947353cbf7afbc82e4e4572e38d23ed91a67d19fc2add4a2ca3ff6ecabaa27566f1e9fe549c5c1cbd0a79bf54f6f4c860d31185d313cbea8fa923cb342c8
+    "@tsconfig/node-lts": "npm:24.0.0"
+    "@tsconfig/recommended": "npm:1.0.13"
+    "@tsconfig/strictest": "npm:2.0.8"
+  checksum: 10c0/70304b454145c976d985264a0d4e4eaaf47dde4b52ab7fe334e6e170a1c2bca83bcdb18baefbff02104737d5dd65397bfc8cb514fb0717fda2d51f84f3bb8002
   languageName: node
   linkType: hard
 
@@ -2105,24 +2105,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node-lts@npm:22.0.2":
-  version: 22.0.2
-  resolution: "@tsconfig/node-lts@npm:22.0.2"
-  checksum: 10c0/7bfe370ed78494ba03aab3a54d48a74e3e19c5244fe6a84e7934457ea03440147a4fb0dab05afa9a20895af96cfdd2c8459a14cc1861cbffd49fa26624a6d5ed
+"@tsconfig/node-lts@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@tsconfig/node-lts@npm:24.0.0"
+  checksum: 10c0/63f5e2c576d4beb19e92ce32b22b132b013b66327137d7c54ee15f9b19812e2ed81bcc5d16ce32450ac7114e774d57100cabd4442571827ed50bfba58aaded0e
   languageName: node
   linkType: hard
 
-"@tsconfig/recommended@npm:1.0.10":
-  version: 1.0.10
-  resolution: "@tsconfig/recommended@npm:1.0.10"
-  checksum: 10c0/402ef03da7300ea0f9f9d6e0507dcb8782c6b764c1f45b946a6c34f2bd3153571a1a85f10659606c24d1052aed699c3e32dd0da876e8f7eea577374eeeb80d17
+"@tsconfig/recommended@npm:1.0.13":
+  version: 1.0.13
+  resolution: "@tsconfig/recommended@npm:1.0.13"
+  checksum: 10c0/b0fae7ff8243621da68cd7a259499e1fd536e1aa3b3e3be233d30ab8d5bf046ec3dcc4ff68fc640435f421575e41e56bc735f61a1fe8a47b4475f3f2bf5ed882
   languageName: node
   linkType: hard
 
-"@tsconfig/strictest@npm:2.0.5":
-  version: 2.0.5
-  resolution: "@tsconfig/strictest@npm:2.0.5"
-  checksum: 10c0/cfc86da2d57f7b4b0827701b132c37a4974284e5c40649656c0e474866dfd8a69f57c6718230d8a8139967e2a95438586b8224c13ab0ff9d3a43eda771c50cc4
+"@tsconfig/strictest@npm:2.0.8":
+  version: 2.0.8
+  resolution: "@tsconfig/strictest@npm:2.0.8"
+  checksum: 10c0/96d7f1c6988c284886e7f2caea87415a6ebc779dc24c3f102cfa83b7d924da1363176b09c4600d11a1205bf2d819f35515c542a4bbcbe2fe13c1d7833376d203
   languageName: node
   linkType: hard
 
