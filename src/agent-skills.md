@@ -30,7 +30,7 @@
 ```json
 {
 	"scripts": {
-		"skills:sync": "npx skills@1.5.22 add https://github.com/d-zero-dev/frontend-guidelines/tree/main/skills --skill '*' --agent claude-code --copy -y"
+		"skills:sync": "npx --yes skills@1.5.22 add https://github.com/d-zero-dev/frontend-guidelines/tree/main/skills --skill '*' --agent claude-code --copy -y"
 	}
 }
 ```
