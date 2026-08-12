@@ -23,14 +23,20 @@
 
 ## 既存プロジェクトへの導入手順
 
-### 1. `package.json`にスクリプトを追加する
+### 1. skills CLIと同期スクリプトを追加する
 
-`scripts`に次を追加します。
+[skills](https://www.npmjs.com/package/skills)をバージョン固定で`devDependencies`に追加します（Renovateなど通常の依存更新フローでバージョンを管理するため、`scripts`側にはバージョンを書きません）。
+
+```sh
+yarn add -D skills@1.5.22
+```
+
+`scripts`に次を追加します（`npx`はローカルにインストールされた`skills`を解決します）。
 
 ```json
 {
 	"scripts": {
-		"skills:sync": "npx --yes skills@1.5.22 add https://github.com/d-zero-dev/frontend-guidelines/tree/main/skills --skill '*' --agent claude-code --copy -y"
+		"skills:sync": "npx skills add https://github.com/d-zero-dev/frontend-guidelines/tree/main/skills --skill '*' --agent claude-code --copy -y"
 	}
 }
 ```
