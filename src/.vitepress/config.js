@@ -45,6 +45,7 @@ export default async () => {
 							{ text: 'バージョン管理', link: '/versioning' },
 							{ text: 'テキストファイルに関して', link: '/text-files' },
 							{ text: '検証とテスト', link: '/testing' },
+							{ text: 'AIエージェントスキル', link: '/agent-skills' },
 						],
 					},
 					{
