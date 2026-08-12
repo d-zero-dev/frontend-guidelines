@@ -26,7 +26,7 @@
 		"@d-zero/lint-staged-config": "5.1.0",
 		"@d-zero/prettier-config": "5.1.0",
 		"@d-zero/textlint-config": "5.1.0",
-		"@d-zero/tsconfig": "0.5.0",
+		"@d-zero/tsconfig": "2.0.0",
 		"mermaid": "11.16.1",
 		"npm-run-all2": "8.0.4",
 		"typescript": "5.9.3",
