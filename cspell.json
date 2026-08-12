@@ -3,6 +3,7 @@
 	"ignorePaths": [".vscode/*", "**/CODEOWNERS"],
 	"words": [
 		//
+		"dzero",
 		"huskyrc",
 		"kamado",
 		"nodist",
