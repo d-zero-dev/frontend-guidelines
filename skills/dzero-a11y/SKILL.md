@@ -18,7 +18,7 @@ license: CC-BY-NC-SA-4.0
 
 - **WAI-ARIA を使うのは HTML 標準では再現できないコンポーネントを作成するときのみ**。HTML 標準に要素がある場合や Popover などで済む場合は使わない
 - 使う必要があるケース: `button` が `aria-pressed` / `aria-expanded` などの状態を持つ場合、タブやカルーセルなど HTML にないコンポーネントを扱う場合
-- 使う場合は [APG](https://www.w3.org/WAI/ARIA/apg/) を参考に、インタラクション要件・キーボード操作・振る舞いを推奨実装に近づける（特別な理由がない限り APG に則る）
+- 使う場合は [APG](https://www.w3.org/WAI/ARIA/apg/) を参考に、インタラクション要件・キーボード操作・振る舞いを推奨実装に近づける（特別な理由がない限り APG に則る）。実装例は [APG Patterns Examples](https://masup9.github.io/apg-patterns-examples/) も参考にする
 - 状態を表す属性の使い分けは `dzero-html` の状態管理に従う
 
 ### 代替テキスト
@@ -33,7 +33,7 @@ license: CC-BY-NC-SA-4.0
 
 ### キーボード操作とフォーカス
 
-- キーボード操作の要件は APG の該当パターンに則る
+- キーボード操作の要件は [APG](https://www.w3.org/WAI/ARIA/apg/) の該当パターンに則る（実装例の参考: [APG Patterns Examples](https://masup9.github.io/apg-patterns-examples/)）
 - インタラクティブ要素には `:focus-visible` によるフォーカス表示を実装する。デザインカンプに描かれていなくても省略しない（`dzero-design-to-code` 参照）
 
 ## レビュー観点
