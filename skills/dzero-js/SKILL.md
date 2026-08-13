@@ -48,11 +48,3 @@ license: CC-BY-NC-SA-4.0
 ### lint
 
 - リントエラー（ESLint / Prettier）は例外なく必ず修正する。`eslint-disable` で逃げず、ルールが現状にそぐわない場合は Config ファイルの変更を提案する
-
-## レビュー観点
-
-- HTML / CSS で実現できる処理が JavaScript で書かれていないか（`dzero-tech-selection` の対応表と照合）
-- `style` 属性の直接書き換え、クラス付け替えによる状態変更がないか（`data-*` + CSS になっているか）
-- `scroll` / `resize` 等の頻発イベントの監視が代替 API に置き換えられているか
-- import 副作用のあるモジュールがないか
-- 許可リスト外のライブラリ・CDN 直接参照が追加されていないか

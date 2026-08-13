@@ -36,7 +36,7 @@ description: このリポジトリにルール（ガイドライン本文・配�
 | 機械的に検出可能だが linters に未導入（値の形式、プロパティ、セレクタ等） | スキル化せず [linters](https://github.com/d-zero-dev/linters) への追加を提案。lint 導入までの暫定記載は明示合意がある場合のみ（削除メモ必須） |
 | 実装レイヤー（HTML/CSS/JS）の選定に関わる                                 | `skills/dzero-tech-selection`                                                                                                                 |
 | デザインカンプの解釈・デザインとの突き合わせに関わる                      | `skills/dzero-design-to-code`                                                                                                                 |
-| 技術軸の設計判断・文脈依存の規範（lint で拾えない）                       | `skills/dzero-css` / `dzero-js` / `dzero-a11y` / `dzero-html` の「実装規範」または「レビュー観点」                                            |
+| 技術軸の設計判断・文脈依存の規範（lint で拾えない）                       | `skills/dzero-css` / `dzero-js` / `dzero-a11y` / `dzero-html` の「実装規範」（レビュー観点は独立して書かない。規範がレビューの基準を兼ねる）  |
 | レビューの進め方そのもの                                                  | `skills/dzero-review`                                                                                                                         |
 | ビルダー（kamado）や scaffold 構成に固有                                  | frontend-env リポジトリ（scaffold テンプレートの AGENTS.md / commands）へ提案                                                                 |
 | 常時ロードが必要な短い原則                                                | scaffold テンプレートの AGENTS.md へ提案                                                                                                      |

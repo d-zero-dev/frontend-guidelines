@@ -34,12 +34,4 @@ license: CC-BY-NC-SA-4.0
 ### キーボード操作とフォーカス
 
 - キーボード操作の要件は [APG](https://www.w3.org/WAI/ARIA/apg/) の該当パターンに則る（実装例の参考: [APG Patterns Examples](https://masup9.github.io/apg-patterns-examples/)）
-- インタラクティブ要素には `:focus-visible` によるフォーカス表示を実装する。デザインカンプに描かれていなくても省略しない（`dzero-design-to-code` 参照）
-
-## レビュー観点
-
-- 通常の `img` への `aria-hidden` 付与、空 alt への `role="none"` 重ね掛けがないか
-- HTML 標準で再現できるものに WAI-ARIA が使われていないか（過剰な ARIA）
-- ARIA を使ったコンポーネントが APG のキーボード要件を満たしているか
-- ランドマークに属さないコンテンツがないか
-- `:focus-visible` の欠落、フォーカス表示を消すだけのスタイルがないか
+- インタラクティブ要素には `:focus-visible` によるフォーカス表示を実装する。デザインカンプに描かれていなくても省略しない（`dzero-design-to-code` 参照）。フォーカス表示を消すだけのスタイル（`outline: none` 等）を書かない
