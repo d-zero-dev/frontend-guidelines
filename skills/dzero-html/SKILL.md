@@ -13,7 +13,7 @@ license: CC-BY-NC-SA-4.0
 ### 大原則
 
 - HTML Living Standard の規定には例外なく従う
-- WCAG 2.2 の 4 原則に基づきマシンリーダブルにマークアップする。ARIA 属性・キーボード操作は APG に則る（詳細は `dzero-a11y`）
+- アクセシビリティの基準と判断（WAI-ARIA・代替テキスト・キーボード操作）は `dzero-a11y` に従う
 - リントエラー（Markuplint / pug-lint / Prettier）は例外なく必ず修正する。ルールが現状にそぐわない場合はコードを曲げず Config ファイルの変更を提案する
 
 ### コンポーネント
