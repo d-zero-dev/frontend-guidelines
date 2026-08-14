@@ -1,6 +1,6 @@
 {
 	"import": ["@d-zero/cspell-config"],
-	"ignorePaths": [".vscode/*", "**/CODEOWNERS"],
+	"ignorePaths": [".vscode/*", "**/CODEOWNERS", ".claude/settings.local.json"],
 	"words": [
 		//
 		"huskyrc",
