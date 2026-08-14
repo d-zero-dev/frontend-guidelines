@@ -1,0 +1,19 @@
+{
+	"permissions": {
+		"deny": [
+			"Read(**/.env)",
+			"Read(**/.env.*)",
+			"Edit(**/.env)",
+			"Edit(**/.env.*)",
+			"Write(**/.env)",
+			"Write(**/.env.*)",
+			"Bash(git push *)",
+			"Bash(gh pr create *)",
+			"Bash(rm -rf *)",
+			"Bash(git reset --hard *)",
+			"Bash(git checkout -- . *)",
+			"Bash(git clean -f *)",
+			"Bash(git branch -D *)"
+		]
+	}
+}
