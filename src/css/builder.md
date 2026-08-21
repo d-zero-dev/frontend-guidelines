@@ -47,7 +47,7 @@ styleCompiler({
 	alias: {
 		'@': path.resolve(import.meta.dirname, '__assets', '_libs'),
 	},
-})
+});
 ```
 
 ## ベンダープレフィックス

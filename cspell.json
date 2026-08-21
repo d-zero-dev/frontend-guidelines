@@ -3,6 +3,7 @@
 	"ignorePaths": [".vscode/*", "**/CODEOWNERS", ".claude/settings.local.json"],
 	"words": [
 		//
+		"dzero",
 		"hmarr",
 		"huskyrc",
 		"kamado",
