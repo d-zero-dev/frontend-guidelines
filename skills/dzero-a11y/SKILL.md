@@ -1,6 +1,7 @@
 ---
 name: dzero-a11y
 description: D-ZERO のアクセシビリティ規約。マークアップやインタラクションの実装・変更・レビューで、WAI-ARIA、代替テキスト（alt）、ランドマーク、見出し、キーボード操作、フォーカスを扱うときに使う。
+paths: ['**/*.html', '**/*.pug']
 license: CC-BY-NC-SA-4.0
 ---
 

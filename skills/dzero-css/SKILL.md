@@ -1,6 +1,7 @@
 ---
 name: dzero-css
 description: D-ZERO の CSS コーディング規約。CSS を書く・編集する・レビューするときに使う。コンポーネントのスタイル、レイアウト、レスポンシブ、カスタムプロパティ、セレクタ設計に適用する。
+paths: ['**/*.css']
 license: CC-BY-NC-SA-4.0
 ---
 

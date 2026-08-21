@@ -22,11 +22,13 @@ Cursor との互換性のため、次のフィールドのみ使用する:
 ---
 name: dzero-xxx
 description: <このスキルが何をするか + どんな場面で使うか（起動トリガーとなる語彙を含める）>
+paths: ['**/*.css'] # 特定のファイルタイプに紐づくスキルのみ設定する
 license: CC-BY-NC-SA-4.0
 ---
 ```
 
-- `paths` / `context` / `hooks` 等の Claude Code 拡張フィールドは**使わない**（Cursor では機能しないため）
+- `paths` は Cursor・Claude Code の両方でサポートされる（Cursor では[スキルを特定ファイルにスコープするフィールド](https://cursor.com/en-US/docs/skills#scoping-a-skill-to-specific-files)として使用可）。技術軸スキル（css / js / html / a11y）のように対象ファイルタイプが明確な場合に設定する。判断・レビュー系などファイルタイプに紐づかないスキルでは省略する
+- `context` / `hooks` 等その他の Claude Code 拡張フィールドは**使わない**（Cursor では機能しないため）
 - `description` はエージェントの自動起動判定に使われる。「CSS を書く・編集するとき」のように具体的な使用場面と語彙を明記する
 
 ### 構成

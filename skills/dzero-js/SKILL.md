@@ -1,6 +1,7 @@
 ---
 name: dzero-js
 description: D-ZERO の JavaScript/TypeScript コーディング規約。JS/TS を書く・編集する・レビューするときに使う。イベント処理、DOM 操作、状態変更、ライブラリ追加、スクリプト読み込みに適用する。
+paths: ['**/*.js', '**/*.ts']
 license: CC-BY-NC-SA-4.0
 ---
 

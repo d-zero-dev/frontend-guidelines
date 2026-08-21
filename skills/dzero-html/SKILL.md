@@ -1,6 +1,7 @@
 ---
 name: dzero-html
 description: D-ZERO の HTML/Pug マークアップ規約。HTML や Pug を書く・編集する・レビューするときに使う。コンポーネント設計、クラス命名、文書構造、画像、リンク、メタ情報に適用する。
+paths: ['**/*.html', '**/*.pug']
 license: CC-BY-NC-SA-4.0
 ---
 
