@@ -943,7 +943,7 @@ __metadata:
     "@d-zero/prettier-config": "npm:5.1.0"
     "@d-zero/textlint-config": "npm:5.1.0"
     "@d-zero/tsconfig": "npm:2.0.0"
-    mermaid: "npm:11.17.1"
+    mermaid: "npm:11.17.2"
     npm-run-all2: "npm:9.0.3"
     typescript: "npm:5.9.3"
     vitepress: "npm:1.6.4"
@@ -6560,9 +6560,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mermaid@npm:11.17.1":
-  version: 11.17.1
-  resolution: "mermaid@npm:11.17.1"
+"mermaid@npm:11.17.2":
+  version: 11.17.2
+  resolution: "mermaid@npm:11.17.2"
   dependencies:
     "@braintree/sanitize-url": "npm:^7.1.2"
     "@iconify/utils": "npm:^3.0.2"
@@ -6586,7 +6586,7 @@ __metadata:
     stylis: "npm:^4.3.6"
     ts-dedent: "npm:^2.2.0"
     uuid: "npm:^11.1.0 || ^12 || ^13 || ^14.0.0"
-  checksum: 10c0/7e09c9981f31ee74a76dc6fde5bd50b2f2b417345342753aad834d119190daf3e3ea648f9fec6f404c1e56e384cf90dc05fc55792a46fe8f3350acef57befd8a
+  checksum: 10c0/2381b991b2cb131abb9ac925a7cc05f17454968cb480ac28d95f12aeb14fd5bb7b9d101c50388e07f1862a2255594ab722216b3e75c45a3aab04416061dbdf77
   languageName: node
   linkType: hard
 
