@@ -88,7 +88,7 @@ selector {
 
 ## フォントウェイト
 
-`400` `700` の場合はそれぞれ `normal` `bold` キーワードにする
+`400` `700`の場合はそれぞれ`normal` `bold`キーワードにする
 
 ```css
 selector {
@@ -104,7 +104,7 @@ selector {
 
 ## 幅・高さ
 
-`inline-size` `block-size` `max-inline-size` `max-block-size` `min-inline-size` `min-block-size` `flex-basis` を対象としたルール
+`inline-size` `block-size` `max-inline-size` `max-block-size` `min-inline-size` `min-block-size` `flex-basis`を対象としたルール
 
 <!-- prettier-ignore-start -->
 ```css

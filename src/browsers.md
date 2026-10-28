@@ -1,7 +1,7 @@
 # 対応ブラウザとデバイス
 
-- Windows Edge / Chrome / Firefox: いずれもリリース時点での最新版
-- macOS Chrome / Firefox: いずれもリリース時点での最新版
+- Windows Edge/Chrome/Firefox: いずれもリリース時点での最新版
+- macOS Chrome/Firefox: いずれもリリース時点での最新版
 - macOS Safari : リリース時点での最新版とその 1 つ前のマイナーバージョン
 - Android Chrome: リリース時点での最新版
 - iOS Safari : リリース時点での最新版とその 1 つ前のマイナーバージョン

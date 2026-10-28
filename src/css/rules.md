@@ -3,7 +3,7 @@
 headerコンポーネントの場合を例に解説します。
 
 1階層目のセレクタはコンポーネントの定義となり、CSSファイル内に一度だけ登場するようにします。
-ファイルパスは `__assets/_libs/style/component/c-header.css` となります。
+ファイルパスは`__assets/_libs/style/component/c-header.css`となります。
 
 ```css
 .c-header {

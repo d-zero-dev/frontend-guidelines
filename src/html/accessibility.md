@@ -56,7 +56,7 @@ WAI-ARIAをHTMLに付加することで、HTMLでは不足している要素の�
 - 明示しなくていいケース
   - CSSで`inline-size`(`width`)と`block-size`(`height`)を同時に指定している場合（ただし`block-size`が`auto`でない）
   - CSSで`inline-size`(`width`)か`block-size`(`height`)のどちらかを指定していて、且つ`aspect-ratio`を指定している場合
-  - 幅と高さが親要素に完全に依存して、CSSの`object-fit` を使っている場合
+  - 幅と高さが親要素に完全に依存して、CSSの`object-fit`を使っている場合
 
 :::tip 自動付与
 `width`属性と`height`属性はビルド自動的に付与されるので、開発時に気にする必要はそんなにありません。ただし、ビルド時に画像のサイズが取得できない場合は手動で指定してください。
