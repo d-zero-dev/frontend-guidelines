@@ -158,7 +158,7 @@ window.addEventListener('scroll', () => {
 });
 ```
 
-::: danger ❌ スタイルのみの目的に `data-*` 属性を利用する
+::: danger ❌ スタイルのみの目的に`data-*`属性を利用する
 `data-*`属性はあくまでもJavaScriptで**状態**を変化させるケースで扱います。スタイルのみの目的で`data-*`属性を利用することは避けてください。
 
 ```html

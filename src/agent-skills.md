@@ -1,6 +1,6 @@
 # AIエージェントスキル
 
-このリポジトリの [`skills/` ディレクトリ](https://github.com/d-zero-dev/frontend-guidelines/tree/main/skills)では、AIコーディングエージェント（Claude Code・Cursorなど）向けのスキルを管理・配布しています。
+このリポジトリの[`skills/`ディレクトリ](https://github.com/d-zero-dev/frontend-guidelines/tree/main/skills)では、AIコーディングエージェント（Claude Code・Cursorなど）向けのスキルを管理・配布しています。
 ガイドラインの規範を、エージェントが実装時・レビュー時に参照できる形に蒸留したものです。
 
 ## スキル一覧
