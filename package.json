@@ -28,7 +28,7 @@
 		"@d-zero/textlint-config": "5.1.2",
 		"@d-zero/tsconfig": "2.0.0",
 		"mermaid": "11.17.2",
-		"npm-run-all2": "9.0.3",
+		"npm-run-all2": "9.0.4",
 		"typescript": "5.9.3",
 		"vitepress": "1.6.4",
 		"vitepress-plugin-mermaid": "2.0.17"
